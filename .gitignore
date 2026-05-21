@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+*.HEIC
+temporary screenshots/
+.claude/
+claude-code-prompt.md
+screenshot.mjs
+serve.mjs
