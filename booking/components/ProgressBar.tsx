@@ -1,0 +1,56 @@
+"use client";
+import { useLang } from "@/contexts/LanguageContext";
+
+const TOTAL = 5;
+
+export default function ProgressBar({ step }: { step: number }) {
+  const { tr } = useLang();
+  const labels = [tr.step1, tr.step2, tr.step3, tr.step4, tr.step5];
+  const pct = ((step - 1) / (TOTAL - 1)) * 100;
+
+  return (
+    <div className="w-full mb-8">
+      {/* Bar */}
+      <div className="relative h-1 bg-white/10 rounded-full mb-4 overflow-hidden">
+        <div
+          className="absolute left-0 top-0 h-full bg-[#E8890A] rounded-full transition-all duration-500 ease-out"
+          style={{ width: `${pct}%` }}
+        />
+      </div>
+      {/* Step dots + labels */}
+      <div className="flex justify-between">
+        {labels.map((label, i) => {
+          const n = i + 1;
+          const done = n < step;
+          const active = n === step;
+          return (
+            <div key={n} className="flex flex-col items-center gap-1 flex-1">
+              <div
+                className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold border transition-all duration-300 ${
+                  done
+                    ? "bg-[#E8890A] border-[#E8890A] text-white"
+                    : active
+                    ? "border-[#E8890A] text-[#E8890A] bg-transparent ring-2 ring-[#E8890A]/30"
+                    : "border-white/20 text-white/30 bg-transparent"
+                }`}
+              >
+                {done ? (
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                ) : (
+                  n
+                )}
+              </div>
+              <span
+                className={`text-[10px] font-medium text-center hidden sm:block transition-colors ${
+                  active ? "text-[#E8890A]" : done ? "text-white/50" : "text-white/25"
+                }`}
+              >
+                {label}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}

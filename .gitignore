@@ -6,3 +6,5 @@ temporary screenshots/
 claude-code-prompt.md
 screenshot.mjs
 serve.mjs
+booking/.env.local
+booking/.next/
