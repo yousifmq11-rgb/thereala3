@@ -38,7 +38,7 @@ export default function SuccessScreen({ onReset }: { onReset: () => void }) {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
-        className="text-2xl sm:text-3xl font-bold text-white mb-4 max-w-lg leading-tight"
+        className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 max-w-lg leading-tight"
       >
         {tr.successTitle}
       </motion.h2>
@@ -47,7 +47,7 @@ export default function SuccessScreen({ onReset }: { onReset: () => void }) {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.65 }}
-        className="text-white/60 text-base mb-2"
+        className="text-gray-500 text-base mb-2"
       >
         {tr.successDesc}
       </motion.p>
@@ -55,7 +55,7 @@ export default function SuccessScreen({ onReset }: { onReset: () => void }) {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.75 }}
-        className="text-white/40 text-sm mb-10"
+        className="text-gray-400 text-sm mb-10"
       >
         {tr.successDetail}
       </motion.p>
@@ -68,13 +68,13 @@ export default function SuccessScreen({ onReset }: { onReset: () => void }) {
       >
         <button
           onClick={onReset}
-          className="px-8 py-3 bg-[#E8890A] hover:bg-[#C4720A] text-white font-bold rounded-xl transition-all text-sm"
+          className="px-8 py-3 bg-[#E8890A] hover:bg-[#C4720A] text-gray-900 font-bold rounded-xl transition-all text-sm"
         >
           {tr.newBooking}
         </button>
         <a
           href="/"
-          className="px-8 py-3 border border-white/15 hover:border-white/30 text-white/70 hover:text-white font-medium rounded-xl transition-all text-sm text-center"
+          className="px-8 py-3 border border-gray-200 hover:border-gray-400 text-gray-600 hover:text-gray-900 font-medium rounded-xl transition-all text-sm text-center"
         >
           3aservice.fi →
         </a>

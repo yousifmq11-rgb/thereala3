@@ -6,20 +6,19 @@ import { useLang } from "@/contexts/LanguageContext";
 
 interface Props {
   booking: BookingState;
-  onConfirm: () => void;
   onSuccess: () => void;
 }
 
 function Row({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex justify-between items-start gap-4 py-3 border-b border-white/6 last:border-0">
-      <span className="text-white/40 text-sm shrink-0">{label}</span>
-      <span className="text-white text-sm font-medium text-right">{value}</span>
+    <div className="flex justify-between items-start gap-4 py-3 border-b border-gray-100 last:border-0">
+      <span className="text-gray-400 text-sm shrink-0">{label}</span>
+      <span className="text-gray-900 text-sm font-medium text-right">{value}</span>
     </div>
   );
 }
 
-export default function Step5Review({ booking, onConfirm, onSuccess }: Props) {
+export default function Step5Review({ booking, onSuccess }: Props) {
   const { tr, lang } = useLang();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -60,36 +59,44 @@ export default function Step5Review({ booking, onConfirm, onSuccess }: Props) {
   return (
     <div className="space-y-5">
       <div>
-        <h2 className="text-2xl font-bold text-white mb-1">{tr.reviewTitle}</h2>
-        <p className="text-white/50 text-sm">{tr.reviewDesc}</p>
+        <h2 className="text-2xl font-bold text-gray-900 mb-1">{tr.reviewTitle}</h2>
+        <p className="text-gray-500 text-sm">{tr.reviewDesc}</p>
       </div>
 
       {/* Services */}
       <div className="glass rounded-2xl p-4 sm:p-5">
-        <div className="text-[11px] font-bold uppercase tracking-widest text-white/30 mb-3">{tr.step1}</div>
+        <div className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-3">{tr.step1}</div>
         <div className="flex flex-wrap gap-2 mb-3">
           {booking.services.map((s) => (
             <span key={s.id} className="px-3 py-1 bg-[#E8890A]/15 border border-[#E8890A]/30 rounded-full text-sm text-[#E8890A] font-medium">
               {lang === "fi" ? s.nameFi : s.nameEn}
             </span>
           ))}
+          {booking.customRequest && (
+            <span className="px-3 py-1 bg-[#E8890A]/15 border border-[#E8890A]/30 rounded-full text-sm text-[#E8890A] font-medium">
+              ✏️ {lang === "fi" ? "Oma pyyntö" : "Custom Request"}
+            </span>
+          )}
         </div>
-        <div className="flex items-center justify-between pt-3 border-t border-white/8">
-          <span className="text-white/40 text-sm">{tr.totalEstimate}</span>
-          <span className="text-[#E8890A] font-bold">{tr.from} {total}€</span>
+        {booking.customRequest && (
+          <p className="text-gray-500 text-xs mb-3 italic">"{booking.customRequest}"</p>
+        )}
+        <div className="flex items-center justify-between pt-3 border-t border-gray-100">
+          <span className="text-gray-400 text-sm">{tr.totalEstimate}</span>
+          <span className="text-[#E8890A] font-bold">{total > 0 ? `${tr.from} ${total}€` : "—"}</span>
         </div>
       </div>
 
       {/* Date + time */}
       <div className="glass rounded-2xl p-4 sm:p-5">
-        <div className="text-[11px] font-bold uppercase tracking-widest text-white/30 mb-3">{tr.step2}</div>
+        <div className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-3">{tr.step2}</div>
         <Row label={tr.selectDate} value={booking.date} />
         <Row label={tr.selectTime} value={booking.time} />
       </div>
 
       {/* Vehicle */}
       <div className="glass rounded-2xl p-4 sm:p-5">
-        <div className="text-[11px] font-bold uppercase tracking-widest text-white/30 mb-3">{tr.step3}</div>
+        <div className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-3">{tr.step3}</div>
         <Row label={tr.carBrand} value={booking.carBrand} />
         <Row label={tr.carModel} value={booking.carModel} />
         <Row label={tr.carYear} value={booking.carYear} />
@@ -101,7 +108,7 @@ export default function Step5Review({ booking, onConfirm, onSuccess }: Props) {
 
       {/* Customer */}
       <div className="glass rounded-2xl p-4 sm:p-5">
-        <div className="text-[11px] font-bold uppercase tracking-widest text-white/30 mb-3">{tr.step4}</div>
+        <div className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-3">{tr.step4}</div>
         <Row label={tr.customerName} value={booking.customerName} />
         <Row label={tr.phone} value={booking.phone} />
         <Row label={tr.email} value={booking.email} />
@@ -125,7 +132,7 @@ export default function Step5Review({ booking, onConfirm, onSuccess }: Props) {
         whileTap={{ scale: 0.98 }}
         onClick={handleSubmit}
         disabled={loading}
-        className="w-full py-4 bg-[#E8890A] hover:bg-[#C4720A] disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold rounded-2xl transition-all text-base shadow-lg shadow-[#E8890A]/25"
+        className="w-full py-4 bg-[#E8890A] hover:bg-[#C4720A] disabled:opacity-60 disabled:cursor-not-allowed text-gray-900 font-bold rounded-2xl transition-all text-base shadow-lg shadow-[#E8890A]/25"
       >
         {loading ? (
           <span className="flex items-center justify-center gap-2">
@@ -137,7 +144,7 @@ export default function Step5Review({ booking, onConfirm, onSuccess }: Props) {
         ) : tr.confirmBooking}
       </motion.button>
 
-      <p className="text-white/25 text-xs text-center">{tr.confirmNote}</p>
+      <p className="text-gray-300 text-xs text-center">{tr.confirmNote}</p>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { BookingState, Service } from "@/types/booking";
 import { useLang } from "@/contexts/LanguageContext";
@@ -14,6 +15,7 @@ import Step5Review from "./steps/Step5Review";
 
 const EMPTY: BookingState = {
   services: [],
+  customRequest: "",
   date: "",
   time: "",
   carBrand: "",
@@ -28,7 +30,7 @@ const EMPTY: BookingState = {
 };
 
 function canAdvance(step: number, b: BookingState): boolean {
-  if (step === 1) return b.services.length > 0;
+  if (step === 1) return b.services.length > 0 || b.customRequest.trim().length > 0;
   if (step === 2) return !!b.date && !!b.time;
   if (step === 3) return !!b.carBrand && !!b.carModel && !!b.carYear && !!b.licensePlate;
   if (step === 4) return !!b.customerName && !!b.phone && !!b.email;
@@ -40,7 +42,7 @@ export default function BookingWizard() {
   const [step, setStep] = useState(1);
   const [booking, setBooking] = useState<BookingState>(EMPTY);
   const [done, setDone] = useState(false);
-  const [dir, setDir] = useState(1); // 1=forward, -1=back
+  const [dir, setDir] = useState(1);
 
   const set = (field: string, value: string) =>
     setBooking((b) => ({ ...b, [field]: value }));
@@ -58,30 +60,38 @@ export default function BookingWizard() {
   const reset = () => { setBooking(EMPTY); setStep(1); setDone(false); };
 
   const variants = {
-    enter:  (d: number) => ({ opacity: 0, x: d > 0 ? 48  : -48 }),
+    enter:  (d: number) => ({ opacity: 0, x: d > 0 ? 40 : -40 }),
     center: { opacity: 1, x: 0 },
-    exit:   (d: number) => ({ opacity: 0, x: d > 0 ? -48 : 48  }),
+    exit:   (d: number) => ({ opacity: 0, x: d > 0 ? -40 : 40 }),
   };
 
   if (done) return <SuccessScreen onReset={reset} />;
 
   return (
-    <div className="min-h-screen bg-[#0D0D0D] flex flex-col">
-      {/* Top bar */}
-      <header className="flex items-center justify-between px-4 sm:px-8 py-4 border-b border-white/6">
-        <a href="/" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 rounded-lg bg-[#E8890A] flex items-center justify-center">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-            </svg>
+    <div className="min-h-screen flex flex-col" style={{ background: "linear-gradient(160deg,#F0EFE9 0%,#F4F3EF 60%,#EEEDE8 100%)" }}>
+      {/* Header */}
+      <header className="flex items-center justify-between px-4 sm:px-8 py-4 border-b border-gray-100 backdrop-blur-sm sticky top-0 z-20" style={{ background: "rgba(244,243,239,0.92)" }}>
+        <a href="/" className="flex items-center gap-3">
+          <div className="relative h-9 w-32">
+            <Image src="/logo.png" alt="3A Service" fill className="object-contain object-left" priority />
           </div>
-          <span className="font-bold text-white text-sm">3A Service</span>
         </a>
         <LanguageSwitcher />
       </header>
 
+      {/* Hero strip */}
+      <div className="px-4 sm:px-8 py-5 border-b border-gray-100" style={{ background: "linear-gradient(90deg,#E8890A10,transparent)" }}>
+        <div className="max-w-lg mx-auto">
+          <div className="flex items-center gap-2 mb-1">
+            <div className="w-1 h-5 rounded-full bg-[#E8890A]" />
+            <span className="text-[#E8890A] text-xs font-bold uppercase tracking-widest">AD-Valtuutettu · Espoo</span>
+          </div>
+          <h1 className="text-gray-900 font-bold text-lg">{tr.title}</h1>
+        </div>
+      </div>
+
       {/* Main */}
-      <main className="flex-1 flex items-start justify-center px-4 py-8 sm:py-12">
+      <main className="flex-1 flex items-start justify-center px-4 py-8">
         <div className="w-full max-w-lg">
           <ProgressBar step={step} />
 
@@ -94,74 +104,67 @@ export default function BookingWizard() {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                transition={{ duration: 0.28, ease: "easeInOut" }}
+                transition={{ duration: 0.26, ease: "easeInOut" }}
               >
                 {step === 1 && (
-                  <Step1Services selected={booking.services} onToggle={toggleService} />
+                  <Step1Services
+                    selected={booking.services}
+                    customRequest={booking.customRequest}
+                    onToggle={toggleService}
+                    onCustomRequest={(v) => set("customRequest", v)}
+                  />
                 )}
                 {step === 2 && (
                   <Step2DateTime
-                    date={booking.date}
-                    time={booking.time}
-                    onDate={(d) => set("date", d)}
-                    onTime={(t) => set("time", t)}
+                    date={booking.date} time={booking.time}
+                    onDate={(d) => set("date", d)} onTime={(t) => set("time", t)}
                   />
                 )}
                 {step === 3 && (
                   <Step3Vehicle
-                    carBrand={booking.carBrand}
-                    carModel={booking.carModel}
-                    carYear={booking.carYear}
-                    licensePlate={booking.licensePlate}
-                    additionalInfo={booking.additionalInfo}
-                    onChange={set}
+                    carBrand={booking.carBrand} carModel={booking.carModel}
+                    carYear={booking.carYear} licensePlate={booking.licensePlate}
+                    additionalInfo={booking.additionalInfo} onChange={set}
                   />
                 )}
                 {step === 4 && (
                   <Step4Customer
-                    customerName={booking.customerName}
-                    phone={booking.phone}
-                    email={booking.email}
-                    contactMethod={booking.contactMethod}
+                    customerName={booking.customerName} phone={booking.phone}
+                    email={booking.email} contactMethod={booking.contactMethod}
                     onChange={set}
                   />
                 )}
                 {step === 5 && (
-                  <Step5Review
-                    booking={booking}
-                    onConfirm={next}
-                    onSuccess={() => setDone(true)}
-                  />
+                  <Step5Review booking={booking} onSuccess={() => setDone(true)} />
                 )}
               </motion.div>
             </AnimatePresence>
           </div>
 
-          {/* Navigation buttons */}
-          {step < 5 && (
-            <div className="flex items-center justify-between mt-8 gap-3">
-              {step > 1 ? (
-                <button
-                  onClick={back}
-                  className="flex items-center gap-2 px-5 py-3 rounded-xl border border-white/12 text-white/60 hover:text-white hover:border-white/25 text-sm font-medium transition-all"
-                >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>
-                  {tr.back}
-                </button>
-              ) : <div />}
+          <div className="flex items-center justify-between mt-8 gap-3">
+            {step > 1 ? (
+              <button onClick={back}
+                className="flex items-center gap-2 px-5 py-3 rounded-xl border border-gray-200 text-gray-500 hover:text-gray-900 hover:border-gray-300 text-sm font-medium transition-all">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+                {tr.back}
+              </button>
+            ) : <div />}
 
-              <button
-                onClick={next}
-                disabled={!canAdvance(step, booking)}
-                className="flex items-center gap-2 px-6 py-3 bg-[#E8890A] hover:bg-[#C4720A] disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold rounded-xl transition-all text-sm shadow-lg shadow-[#E8890A]/20 ml-auto"
-              >
+            {step < 5 && (
+              <button onClick={next} disabled={!canAdvance(step, booking)}
+                className="flex items-center gap-2 px-6 py-3 bg-[#E8890A] hover:bg-[#d07a09] disabled:opacity-35 disabled:cursor-not-allowed text-gray-900 font-bold rounded-xl transition-all text-sm shadow-lg shadow-[#E8890A]/20 ml-auto">
                 {tr.next}
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="9 18 15 12 9 6"/></svg>
               </button>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="text-center py-4 text-gray-300 text-xs border-t border-gray-100">
+        3A Service Oy · Espoo · <a href="tel:+358000000000" className="hover:text-gray-500 transition-colors">Puh. 000 000 0000</a>
+      </footer>
     </div>
   );
 }

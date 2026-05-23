@@ -4,7 +4,7 @@ import BookingWizard from "@/components/BookingWizard";
 export default function Home() {
   return (
     <LanguageProvider>
-      <main className="min-h-screen" style={{ background: "linear-gradient(135deg,#0C0C0E 0%,#111115 100%)" }}>
+      <main className="min-h-screen bg-[#F4F3EF]">
         <BookingWizard />
       </main>
     </LanguageProvider>

@@ -78,14 +78,25 @@
     <div style="flex:1;"></div>
     <div class="lang-pill hide-mobile"><button class="lang-btn active" data-lang="fi" onclick="setLang('fi')">FI</button><button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button></div>
     <a href="tel:+358449773677" class="hide-mobile" style="font-size:14px;font-weight:500;color:rgba(255,255,255,0.78);text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.78)'">+358 44 977 3677</a>
+    <a href="/booking" class="btn-primary hide-mobile fi-text" style="padding:9px 20px;font-size:13px;">📅 Varaa aika</a>
+    <a href="/booking" class="btn-primary hide-mobile en-text" style="padding:9px 20px;font-size:13px;display:none;">📅 Book Now</a>
     <button class="hide-desktop" onclick="openDrawer()" style="background:none;border:none;cursor:pointer;padding:4px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
 </header>
 
 <!-- HERO -->
-<section style="position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-  <canvas id="particle-bg" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;background:#0a0a0a;"></canvas>
-  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,0.75) 0%,rgba(10,10,10,0.85) 100%);z-index:1;"></div>
+<section style="position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0a0a0a;">
+  <!-- Vimeo background video -->
+  <div style="position:absolute;inset:0;z-index:0;overflow:hidden;">
+    <iframe
+      src="https://player.vimeo.com/video/1194944503?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+      style="position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:100vh;min-width:177.78vh;transform:translate(-50%,-50%);pointer-events:none;"
+    ></iframe>
+  </div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,5,5,0.60) 0%,rgba(5,5,5,0.75) 100%);z-index:1;"></div>
   <div style="position:relative;z-index:2;text-align:center;max-width:900px;padding:40px 24px;">
     <div class="fade-up d1" style="display:inline-flex;align-items:center;gap:10px;background:rgba(232,137,10,0.18);border:1px solid rgba(232,137,10,0.4);border-radius:99px;padding:8px 18px;margin-bottom:32px;">
       <span style="font-size:13px;font-weight:700;color:#FFD97A;">★ 4.9 · 100+ Google</span>

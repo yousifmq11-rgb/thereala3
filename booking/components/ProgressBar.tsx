@@ -11,7 +11,7 @@ export default function ProgressBar({ step }: { step: number }) {
   return (
     <div className="w-full mb-8">
       {/* Bar */}
-      <div className="relative h-1 bg-white/10 rounded-full mb-4 overflow-hidden">
+      <div className="relative h-1 bg-gray-100 rounded-full mb-4 overflow-hidden">
         <div
           className="absolute left-0 top-0 h-full bg-[#E8890A] rounded-full transition-all duration-500 ease-out"
           style={{ width: `${pct}%` }}
@@ -28,10 +28,10 @@ export default function ProgressBar({ step }: { step: number }) {
               <div
                 className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold border transition-all duration-300 ${
                   done
-                    ? "bg-[#E8890A] border-[#E8890A] text-white"
+                    ? "bg-[#E8890A] border-[#E8890A] text-gray-900"
                     : active
-                    ? "border-[#E8890A] text-[#E8890A] bg-transparent ring-2 ring-[#E8890A]/30"
-                    : "border-white/20 text-white/30 bg-transparent"
+                    ? "border-[#E8890A] text-[#E8890A] bg-transparent ring-2 ring-[#E8890A]/20"
+                    : "border-gray-200 text-gray-400 bg-transparent"
                 }`}
               >
                 {done ? (
@@ -42,7 +42,7 @@ export default function ProgressBar({ step }: { step: number }) {
               </div>
               <span
                 className={`text-[10px] font-medium text-center hidden sm:block transition-colors ${
-                  active ? "text-[#E8890A]" : done ? "text-white/50" : "text-white/25"
+                  active ? "text-[#E8890A]" : done ? "text-gray-500" : "text-gray-300"
                 }`}
               >
                 {label}

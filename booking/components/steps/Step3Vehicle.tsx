@@ -30,7 +30,7 @@ export default function Step3Vehicle({ carBrand, carModel, carYear, licensePlate
     required?: boolean
   ) => (
     <div>
-      <label className="block text-white/70 text-xs font-bold uppercase tracking-wider mb-1.5">
+      <label className="block text-gray-600 text-xs font-bold uppercase tracking-wider mb-1.5">
         {label}{required && <span className="text-[#E8890A] ml-0.5">*</span>}
       </label>
       <input
@@ -38,7 +38,7 @@ export default function Step3Vehicle({ carBrand, carModel, carYear, licensePlate
         value={value}
         onChange={(e) => onChange(key, e.target.value)}
         placeholder={placeholder}
-        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/25 text-sm focus:outline-none focus:border-[#E8890A]/60 focus:bg-white/8 transition-all"
+        className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-300 text-sm focus:outline-none focus:border-[#E8890A]/60 focus:bg-gray-50 transition-all"
       />
     </div>
   );
@@ -46,24 +46,24 @@ export default function Step3Vehicle({ carBrand, carModel, carYear, licensePlate
   return (
     <div className="space-y-5">
       <div>
-        <h2 className="text-2xl font-bold text-white mb-1">{tr.vehicleInfo}</h2>
-        <p className="text-white/50 text-sm">{tr.vehicleInfoDesc}</p>
+        <h2 className="text-2xl font-bold text-gray-900 mb-1">{tr.vehicleInfo}</h2>
+        <p className="text-gray-500 text-sm">{tr.vehicleInfoDesc}</p>
       </div>
 
       {/* Brand select */}
       <div>
-        <label className="block text-white/70 text-xs font-bold uppercase tracking-wider mb-1.5">
+        <label className="block text-gray-600 text-xs font-bold uppercase tracking-wider mb-1.5">
           {tr.carBrand}<span className="text-[#E8890A] ml-0.5">*</span>
         </label>
         <select
           value={carBrand}
           onChange={(e) => onChange("carBrand", e.target.value)}
-          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E8890A]/60 transition-all appearance-none"
+          className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#E8890A]/60 transition-all appearance-none"
           style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23ffffff60' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 16px center" }}
         >
-          <option value="" disabled style={{ background: "#1a1a1a" }}>{tr.selectBrand}</option>
+          <option value="" disabled style={{ background: "#ffffff" }}>{tr.selectBrand}</option>
           {BRANDS.map((b) => (
-            <option key={b} value={b} style={{ background: "#1a1a1a" }}>{b}</option>
+            <option key={b} value={b} style={{ background: "#ffffff" }}>{b}</option>
           ))}
         </select>
       </div>
@@ -73,25 +73,25 @@ export default function Step3Vehicle({ carBrand, carModel, carYear, licensePlate
 
       {/* Year select */}
       <div>
-        <label className="block text-white/70 text-xs font-bold uppercase tracking-wider mb-1.5">
+        <label className="block text-gray-600 text-xs font-bold uppercase tracking-wider mb-1.5">
           {tr.carYear}<span className="text-[#E8890A] ml-0.5">*</span>
         </label>
         <select
           value={carYear}
           onChange={(e) => onChange("carYear", e.target.value)}
-          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E8890A]/60 transition-all appearance-none"
+          className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#E8890A]/60 transition-all appearance-none"
           style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23ffffff60' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 16px center" }}
         >
-          <option value="" disabled style={{ background: "#1a1a1a" }}>{tr.selectYear}</option>
+          <option value="" disabled style={{ background: "#ffffff" }}>{tr.selectYear}</option>
           {YEARS.map((y) => (
-            <option key={y} value={y} style={{ background: "#1a1a1a" }}>{y}</option>
+            <option key={y} value={y} style={{ background: "#ffffff" }}>{y}</option>
           ))}
         </select>
       </div>
 
       {/* License plate */}
       <div>
-        <label className="block text-white/70 text-xs font-bold uppercase tracking-wider mb-1.5">
+        <label className="block text-gray-600 text-xs font-bold uppercase tracking-wider mb-1.5">
           {tr.licensePlate}<span className="text-[#E8890A] ml-0.5">*</span>
         </label>
         <input
@@ -100,13 +100,13 @@ export default function Step3Vehicle({ carBrand, carModel, carYear, licensePlate
           onChange={(e) => onChange("licensePlate", e.target.value.toUpperCase())}
           placeholder="ABC-123"
           maxLength={8}
-          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/25 text-sm font-mono tracking-widest focus:outline-none focus:border-[#E8890A]/60 focus:bg-white/8 transition-all uppercase"
+          className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-300 text-sm font-mono tracking-widest focus:outline-none focus:border-[#E8890A]/60 focus:bg-gray-50 transition-all uppercase"
         />
       </div>
 
       {/* Additional info */}
       <div>
-        <label className="block text-white/70 text-xs font-bold uppercase tracking-wider mb-1.5">
+        <label className="block text-gray-600 text-xs font-bold uppercase tracking-wider mb-1.5">
           {tr.additionalInfo}
         </label>
         <textarea
@@ -114,7 +114,7 @@ export default function Step3Vehicle({ carBrand, carModel, carYear, licensePlate
           onChange={(e) => onChange("additionalInfo", e.target.value)}
           placeholder={tr.additionalInfoPlaceholder}
           rows={3}
-          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/25 text-sm focus:outline-none focus:border-[#E8890A]/60 focus:bg-white/8 transition-all resize-none"
+          className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-300 text-sm focus:outline-none focus:border-[#E8890A]/60 focus:bg-gray-50 transition-all resize-none"
         />
       </div>
     </div>

@@ -16,6 +16,7 @@ export const t = {
     selected: "Valittu",
     totalEstimate: "Arvioitu yhteishinta",
     // Step 2
+    partsDelayNote: "Huom! Suurempien töiden varaosat voivat kestää 1–3 päivää. Varaa aika hyvissä ajoin, jotta työ voidaan aloittaa sovittuna päivänä.",
     selectDate: "Valitse päivä",
     selectTime: "Valitse aika",
     availableSlots: "Vapaat ajat",
@@ -93,6 +94,7 @@ export const t = {
     from: "from",
     selected: "Selected",
     totalEstimate: "Estimated total",
+    partsDelayNote: "Note: Parts for larger jobs may take 1–3 days to arrive. Please book in advance so work can start on the agreed day.",
     selectDate: "Select Date",
     selectTime: "Select Time",
     availableSlots: "Available slots",
