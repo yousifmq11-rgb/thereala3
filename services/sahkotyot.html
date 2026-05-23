@@ -67,6 +67,18 @@
     ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-thumb{background:var(--brand);border-radius:3px;}
     .hero-layout{position:relative;z-index:2;display:grid;grid-template-columns:1fr 360px;gap:48px;align-items:center;padding:0 max(24px,calc((100vw - 1100px)/2 + 24px));width:100%;}
     @media(max-width:900px){.hero-layout{grid-template-columns:1fr;padding:60px 24px;}.hero-right-panel{display:none!important;}}
+    /* Service page mobile layout */
+    .srv-main-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;max-width:1100px;margin:0 auto;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;}
+    @media(max-width:900px){
+      .hero-layout>div:first-child{padding:40px 0 0!important;}
+    }
+    @media(max-width:768px){
+      .srv-main-grid{grid-template-columns:1fr!important;gap:32px!important;}
+      .footer-grid{grid-template-columns:1fr!important;gap:24px!important;}
+      .testimonials-grid{grid-template-columns:1fr!important;}
+      .t-col:nth-child(2),.t-col:nth-child(3){display:none!important;}
+    }
   </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"AutoRepair","@id":"https://3aservice.fi/#business","name":"3A Service Oy | Autohuolto","telephone":"+358449773677","email":"info@3aservice.fi","url":"https://3aservice.fi","address":{"@type":"PostalAddress","streetAddress":"Sillankorva 8","addressLocality":"Espoo","postalCode":"02300","addressCountry":"FI"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","bestRating":"5","reviewCount":"47"},"areaServed":["Espoo","Uusimaa"]},{"@type":"Service","name":"Auton Sähkötyöt","alternateName":"Automotive Electrical Work","description":"Ammattimainen autojen sähködiagnostiikka ja korjaukset Espoossa. Akut, generaattorit, anturit, ECU — kaikki merkit.","provider":{"@id":"https://3aservice.fi/#business"},"areaServed":"Espoo, Uusimaa","url":"https://3aservice.fi/services/sahkotyot.html","serviceType":"Automotive Electrical Repair"}]}
@@ -186,7 +198,7 @@
 
 <!-- WHAT'S INCLUDED -->
 <section style="padding:80px 24px;background:#fff;">
-  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+  <div class="srv-main-grid">
     <div class="reveal">
       <p class="section-tag fi-text">Mitä teemme</p><p class="section-tag en-text" style="display:none;">What we do</p>
       <h2 style="font-size:clamp(28px,3.5vw,42px);font-weight:900;letter-spacing:-0.03em;margin:12px 0 32px;line-height:1.1;">
@@ -349,7 +361,7 @@
 <!-- FOOTER -->
 <footer style="padding:48px 24px 0;">
   <div style="max-width:1100px;margin:0 auto;">
-    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:40px;">
+    <div class="footer-grid" style="padding-bottom:40px;">
       <div><img src="../logo/pomelli_bdna_image_0509.png" alt="3A Service Oy" style="height:48px;width:auto;margin-bottom:14px;display:block;"><p style="font-size:14px;"><span class="fi-text">Luotettavaa autohuoltoa Espoossa.</span><span class="en-text" style="display:none;">Reliable car service in Espoo.</span></p><div style="display:flex;gap:8px;margin-top:16px;"><a href="https://www.facebook.com/profile.php?id=61556218666083" target="_blank" style="width:34px;height:34px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);transition:background .15s;" onmouseover="this.style.background='var(--brand)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/3a_service_oy/" target="_blank" style="width:34px;height:34px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);transition:background .15s;" onmouseover="this.style.background='var(--brand)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a></div></div>
       <div><h4><span class="fi-text">Palvelut</span><span class="en-text" style="display:none;">Services</span></h4><a href="maaraikaishuolto.html"><span class="fi-text">Määräaikaishuolto</span><span class="en-text" style="display:none;">Scheduled Maintenance</span></a><a href="jakohihna.html"><span class="fi-text">Jakohihnan Vaihto</span><span class="en-text" style="display:none;">Timing Belt</span></a><a href="katsastus.html"><span class="fi-text">Katsastushuolto</span><span class="en-text" style="display:none;">Inspection</span></a><a href="sahkotyot.html"><span class="fi-text">Sähkötyöt</span><span class="en-text" style="display:none;">Electrical</span></a><a href="vikadiagnostiikka.html"><span class="fi-text">Vikadiagnostiikka</span><span class="en-text" style="display:none;">Diagnostics</span></a><a href="renkaat.html"><span class="fi-text">Renkaiden Palvelut</span><span class="en-text" style="display:none;">Tire Services</span></a></div>
       <div><h4><span class="fi-text">Yhteystiedot</span><span class="en-text" style="display:none;">Contact</span></h4><a href="tel:+358449773677">+358 44 977 3677</a><a href="mailto:info@3aservice.fi">info@3aservice.fi</a><a href="https://maps.app.goo.gl/68533AxtrqMYACAVA" target="_blank">Sillankorva 8, 02300 Espoo</a><a href="/index.html#contact" style="margin-top:6px;"><span class="fi-text">Ma–Pe 8:00–17:00</span><span class="en-text" style="display:none;">Mon–Fri 8:00–17:00</span></a></div>
