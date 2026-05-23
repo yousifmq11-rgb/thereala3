@@ -43,7 +43,7 @@ export default function Step1Services({ selected, customRequest, onToggle, onCus
                   : "border-gray-200 text-gray-500 hover:text-gray-700 hover:border-gray-200"
               }`}
             >
-              <span>{cat.icon}</span>
+              <span dangerouslySetInnerHTML={{ __html: cat.icon }} />
               <span>{lang === "fi" ? cat.nameFi : cat.nameEn}</span>
               {hasSelected && <span className="w-1.5 h-1.5 rounded-full bg-[#E8890A] ml-0.5" />}
             </button>
@@ -59,7 +59,7 @@ export default function Step1Services({ selected, customRequest, onToggle, onCus
               : "border-gray-200 text-gray-500 hover:text-gray-700 hover:border-gray-200"
           }`}
         >
-          <span>✏️</span>
+          <span dangerouslySetInnerHTML={{ __html: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>` }} />
           <span>{lang === "fi" ? "Oma pyyntö" : "Custom"}</span>
           {customRequest && <span className="w-1.5 h-1.5 rounded-full bg-[#E8890A] ml-0.5" />}
         </button>
@@ -74,7 +74,7 @@ export default function Step1Services({ selected, customRequest, onToggle, onCus
             className="glass rounded-2xl p-5"
           >
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-3xl">✏️</span>
+              <div className="w-10 h-10 rounded-xl bg-[#E8890A]/10 flex items-center justify-center text-[#E8890A]" dangerouslySetInnerHTML={{ __html: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>` }} />
               <div>
                 <div className="font-bold text-gray-900 text-sm">
                   {lang === "fi" ? "Kerro mitä tarvitset" : "Tell us what you need"}
@@ -122,7 +122,7 @@ export default function Step1Services({ selected, customRequest, onToggle, onCus
                     </motion.div>
                   )}
                   <div className="flex items-start gap-3 pr-8">
-                    <span className="text-2xl mt-0.5 shrink-0">{svc.icon}</span>
+                    <div className="w-10 h-10 rounded-xl bg-[#E8890A]/10 flex items-center justify-center shrink-0 text-[#E8890A]" dangerouslySetInnerHTML={{ __html: svc.icon }} />
                     <div className="flex-1 min-w-0">
                       <div className="font-bold text-gray-900 text-sm mb-0.5">
                         {lang === "fi" ? svc.nameFi : svc.nameEn}
