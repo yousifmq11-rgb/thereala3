@@ -58,6 +58,8 @@
     #mobile-drawer{position:fixed;inset:0;z-index:150;background:#fff;transform:translateX(100%);transition:transform .35s cubic-bezier(.77,0,.175,1);display:flex;flex-direction:column;}
     #mobile-drawer.open{transform:translateX(0);}
     .drawer-link{display:flex;align-items:center;padding:18px 24px;font-size:20px;font-weight:900;border-bottom:1px solid var(--border);text-decoration:none;color:var(--ink);transition:color .15s;}.drawer-link:hover{color:var(--brand);}
+    .drawer-sub{padding:13px 24px 13px 44px!important;font-size:15px!important;font-weight:500!important;color:var(--ink-60)!important;border-bottom-color:transparent!important;}.drawer-sub:hover{color:var(--brand)!important;}
+    .drawer-section-label{padding:14px 24px 6px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-60);border-bottom:1px solid var(--border);}
     *:focus-visible{outline:2px solid var(--brand);outline-offset:2px;}
     ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-thumb{background:var(--brand);border-radius:3px;}
     .alert-banner{background:rgba(232,137,10,0.08);border:1.5px solid rgba(232,137,10,0.3);border-radius:12px;padding:16px 20px;display:flex;align-items:flex-start;gap:12px;margin-bottom:20px;}
@@ -182,7 +184,7 @@
         <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--brand);margin-bottom:12px;"><span class="fi-text">Hinnoittelu</span><span class="en-text" style="display:none;">Pricing</span></div>
         <h3 style="font-size:22px;font-weight:900;margin-bottom:10px;"><span class="fi-text">Ilmainen tarjous</span><span class="en-text" style="display:none;">Free quote</span></h3>
         <p style="font-size:14px;color:var(--ink-60);line-height:1.65;margin-bottom:20px;font-weight:300;"><span class="fi-text">Hinta riippuu automallista ja valituista osista. Pyydä ilmainen tarjous — ei sitoumuksia.</span><span class="en-text" style="display:none;">Price depends on car model and chosen parts. Request a free quote — no commitment.</span></p>
-        <a href="tel:+358449773677" class="btn-primary" style="width:100%;justify-content:center;padding:13px;">+358 44 977 3677</a>
+        <a href="https://timely-speculoos-505175.netlify.app" class="btn-primary" style="width:100%;justify-content:center;padding:13px;gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span class="fi-text">Varaa aika</span><span class="en-text" style="display:none;">Book Now</span></a>
       </div>
       <div style="background:var(--surface);border-radius:16px;padding:24px;border:1.5px solid var(--border);">
         <div style="display:flex;align-items:center;gap:12px;">
@@ -312,13 +314,36 @@
 </footer>
 
 <div id="mobile-sticky">
-  <a href="tel:+358449773677" class="btn-primary" style="flex:1;justify-content:center;padding:13px;font-size:15px;">+358 44 977 3677</a>
+  <a href="https://timely-speculoos-505175.netlify.app" class="btn-primary" style="flex:1;justify-content:center;padding:13px;font-size:15px;gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span class="fi-text">Varaa aika</span><span class="en-text" style="display:none;">Book Now</span></a>
+  <a href="tel:+358449773677" style="width:46px;height:46px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--border);border-radius:8px;color:var(--ink-60);flex-shrink:0;" aria-label="+358 44 977 3677"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.34a16 16 0 0 0 5.75 5.75l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"/></svg></a>
 </div>
 
 <div id="mobile-drawer">
   <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1.5px solid var(--border);"><img src="../logo/pomelli_bdna_image_0509.png" alt="3A Service Oy" style="height:38px;"><button onclick="closeDrawer()" style="background:var(--surface);border:1.5px solid var(--border);cursor:pointer;border-radius:8px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
-  <div style="flex:1;overflow-y:auto;"><a href="/index.html" class="drawer-link" onclick="closeDrawer()"><span class="fi-text">Etusivu</span><span class="en-text" style="display:none;">Home</span></a><a href="/index.html#services-scroll-wrapper" class="drawer-link" onclick="closeDrawer()"><span class="fi-text">Palvelut</span><span class="en-text" style="display:none;">Services</span></a><a href="/index.html#contact" class="drawer-link" onclick="closeDrawer()"><span class="fi-text">Yhteystiedot</span><span class="en-text" style="display:none;">Contact</span></a></div>
-  <div style="padding:20px 24px;border-top:1.5px solid var(--border);display:flex;flex-direction:column;gap:10px;"><div style="display:flex;align-items:center;justify-content:space-between;"><span style="font-size:14px;font-weight:500;color:var(--ink-60);">Kieli / Language</span><div class="lang-pill"><button class="lang-btn active" data-lang="fi" onclick="setLang('fi')">FI</button><button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button></div></div></div>
+  <div style="flex:1;overflow-y:auto;">
+    <a href="/index.html" class="drawer-link" onclick="closeDrawer()"><span class="fi-text">Etusivu</span><span class="en-text" style="display:none;">Home</span></a>
+    <div class="drawer-section-label"><span class="fi-text">Palvelut</span><span class="en-text" style="display:none;">Services</span></div>
+    <a href="/services/maaraikaishuolto.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">🔧 Määräaikaishuolto</span><span class="en-text" style="display:none;">🔧 Scheduled Maintenance</span></a>
+    <a href="/services/jakohihna.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">⚙️ Jakohihnan Vaihto</span><span class="en-text" style="display:none;">⚙️ Timing Belt</span></a>
+    <a href="/services/katsastus.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">✅ Katsastushuolto</span><span class="en-text" style="display:none;">✅ Inspection Service</span></a>
+    <a href="/services/sahkotyot.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">⚡ Sähkötyöt</span><span class="en-text" style="display:none;">⚡ Electrical Work</span></a>
+    <a href="/services/vikadiagnostiikka.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">🔍 Vikadiagnostiikka</span><span class="en-text" style="display:none;">🔍 Car Diagnostics</span></a>
+    <a href="/services/renkaat.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">🛞 Renkaiden Palvelut</span><span class="en-text" style="display:none;">🛞 Tire Services</span></a>
+    <a href="/index.html#contact" class="drawer-link" onclick="closeDrawer()" style="margin-top:4px;"><span class="fi-text">Yhteystiedot</span><span class="en-text" style="display:none;">Contact</span></a>
+  </div>
+  <div style="padding:16px 20px;border-top:1.5px solid var(--border);display:flex;flex-direction:column;gap:10px;">
+    <a href="https://timely-speculoos-505175.netlify.app" class="btn-primary" style="justify-content:center;padding:13px;font-size:15px;gap:8px;" onclick="closeDrawer()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span class="fi-text">Varaa aika nyt</span><span class="en-text" style="display:none;">Book Now</span>
+    </a>
+    <div style="display:flex;align-items:center;justify-content:space-between;">
+      <a href="tel:+358449773677" style="display:flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:var(--ink-60);text-decoration:none;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.34a16 16 0 0 0 5.75 5.75l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"/></svg>
+        +358 44 977 3677
+      </a>
+      <div class="lang-pill"><button class="lang-btn active" data-lang="fi" onclick="setLang('fi')">FI</button><button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button></div>
+    </div>
+  </div>
 </div>
 
 <script>
