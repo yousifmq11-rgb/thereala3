@@ -57,8 +57,9 @@ export default function Step2DateTime({ date, time, onDate, onTime }: Props) {
     const dow = cell.getDay(); // 0=Sun,6=Sat
     if (dow === 0 || dow === 6) return true; // weekend
     cell.setHours(0, 0, 0, 0);
-    today.setHours(0, 0, 0, 0);
-    return cell < today;
+    const todayMidnight = new Date(today);
+    todayMidnight.setHours(0, 0, 0, 0);
+    return cell < todayMidnight;
   };
 
   const prevMonth = () => {
@@ -86,7 +87,7 @@ export default function Step2DateTime({ date, time, onDate, onTime }: Props) {
       </div>
 
       {/* Calendar */}
-      <div className="glass rounded-2xl p-4 sm:p-6">
+      <div className="glass rounded-2xl p-3 sm:p-5">
         {/* Month nav */}
         <div className="flex items-center justify-between mb-4">
           <button onClick={prevMonth} className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-all">
@@ -108,7 +109,7 @@ export default function Step2DateTime({ date, time, onDate, onTime }: Props) {
         </div>
 
         {/* Days grid */}
-        <div className="grid grid-cols-7 gap-1">
+        <div className="grid grid-cols-7 gap-0.5 sm:gap-1">
           {cells.map((d, i) => {
             if (!d) return <div key={`e-${i}`} />;
             const dateStr = fmt(viewYear, viewMonth, d);
@@ -119,7 +120,7 @@ export default function Step2DateTime({ date, time, onDate, onTime }: Props) {
                 key={d}
                 disabled={disabled}
                 onClick={() => { onDate(dateStr); onTime(""); }}
-                className={`aspect-square rounded-xl text-sm font-medium transition-all duration-150 ${
+                className={`aspect-square min-h-[36px] rounded-lg sm:rounded-xl text-sm font-medium transition-all duration-150 active:scale-95 ${
                   selected
                     ? "bg-[#E8890A] text-gray-900 shadow-lg shadow-[#E8890A]/30"
                     : disabled
