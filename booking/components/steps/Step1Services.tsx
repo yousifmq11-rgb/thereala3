@@ -28,7 +28,7 @@ export default function Step1Services({ selected, customRequest, onToggle, onCus
         <p className="text-gray-500 text-sm">{tr.selectServicesDesc}</p>
       </div>
 
-      <div className="flex gap-1.5 mb-4 overflow-x-auto pb-1">
+      <div className="flex flex-wrap gap-1.5 mb-4">
         {SERVICE_CATEGORIES.map((cat) => {
           const hasSelected = SERVICES.filter(s => s.category === cat.id).some(s => isSelected(s.id));
           return (
