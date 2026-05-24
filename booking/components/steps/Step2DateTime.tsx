@@ -72,28 +72,28 @@ export default function Step2DateTime({ date, time, onDate, onTime }: Props) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-3">
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-1">{tr.selectDate}</h2>
-        <p className="text-gray-500 text-sm">{tr.availableSlots}: Ma–Pe 08:00–17:00</p>
+        <h2 className="text-xl font-bold text-gray-900 mb-0.5">{tr.selectDate}</h2>
+        <p className="text-gray-500 text-xs">{tr.availableSlots}: Ma–Pe 08:00–17:00</p>
       </div>
 
       {/* Parts delivery notice */}
-      <div className="flex items-start gap-3 p-3.5 bg-amber-50 border border-amber-200 rounded-xl">
-        <span className="text-amber-400 text-base shrink-0 mt-0.5">⚠️</span>
-        <p className="text-amber-700 text-xs leading-relaxed">
+      <div className="flex items-center gap-2 p-2.5 bg-amber-50 border border-amber-200 rounded-xl">
+        <span className="text-amber-400 text-sm shrink-0">⚠️</span>
+        <p className="text-amber-700 text-[11px] leading-snug">
           {tr.partsDelayNote}
         </p>
       </div>
 
       {/* Calendar */}
-      <div className="glass rounded-2xl p-3 sm:p-5">
+      <div className="glass rounded-2xl p-3">
         {/* Month nav */}
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-2">
           <button onClick={prevMonth} className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-all">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>
           </button>
-          <div className="font-bold text-gray-900 text-base">
+          <div className="font-bold text-gray-900 text-sm">
             {tr.months[viewMonth]} {viewYear}
           </div>
           <button onClick={nextMonth} className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-all">
@@ -102,14 +102,14 @@ export default function Step2DateTime({ date, time, onDate, onTime }: Props) {
         </div>
 
         {/* Weekday headers */}
-        <div className="grid grid-cols-7 mb-2">
+        <div className="grid grid-cols-7 mb-1">
           {tr.weekdays.map((d) => (
-            <div key={d} className="text-center text-[11px] font-bold text-gray-400 py-1">{d}</div>
+            <div key={d} className="text-center text-[10px] font-bold text-gray-400 py-0.5">{d}</div>
           ))}
         </div>
 
         {/* Days grid */}
-        <div className="grid grid-cols-7 gap-0.5 sm:gap-1">
+        <div className="grid grid-cols-7 gap-0.5">
           {cells.map((d, i) => {
             if (!d) return <div key={`e-${i}`} />;
             const dateStr = fmt(viewYear, viewMonth, d);
@@ -120,7 +120,7 @@ export default function Step2DateTime({ date, time, onDate, onTime }: Props) {
                 key={d}
                 disabled={disabled}
                 onClick={() => { onDate(dateStr); onTime(""); }}
-                className={`aspect-square min-h-[36px] rounded-lg sm:rounded-xl text-sm font-medium transition-all duration-150 active:scale-95 ${
+                className={`aspect-square min-h-[34px] rounded-lg text-xs font-medium transition-all duration-150 active:scale-95 ${
                   selected
                     ? "bg-[#E8890A] text-gray-900 shadow-lg shadow-[#E8890A]/30"
                     : disabled
