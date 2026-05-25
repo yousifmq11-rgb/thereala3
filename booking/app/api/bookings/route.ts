@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { sendCustomerConfirmation, sendShopNotification } from "@/lib/email";
 
 const SHEET_URL = process.env.GOOGLE_SCRIPT_URL || "";
 
@@ -51,7 +52,18 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
 
   if (!SHEET_URL) {
-    return NextResponse.json({ status: "ok" }); // dev mode
+    // dev mode — still send emails if configured
+    if (body.email) {
+      try {
+        await Promise.all([
+          sendCustomerConfirmation(body),
+          sendShopNotification(body),
+        ]);
+      } catch (e) {
+        console.error("Email error (dev):", e);
+      }
+    }
+    return NextResponse.json({ status: "ok" });
   }
 
   try {
@@ -59,6 +71,14 @@ export async function POST(req: NextRequest) {
 
     if (data?.error === "conflict") {
       return NextResponse.json({ error: "TIME_TAKEN" }, { status: 409 });
+    }
+
+    // Send confirmation emails (non-blocking — don't fail booking if email fails)
+    if (body.email) {
+      Promise.all([
+        sendCustomerConfirmation(body),
+        sendShopNotification(body),
+      ]).catch((e) => console.error("Email error:", e));
     }
 
     return NextResponse.json({ status: "ok" });
