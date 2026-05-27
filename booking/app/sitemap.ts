@@ -11,6 +11,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/services/sahkotyot.html`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/services/vikadiagnostiikka.html`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/services/renkaat.html`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `https://timely-speculoos-505175.netlify.app`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/services/oljynvaihto.html`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/services/jarrut.html`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/services/ilmastointi.html`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/services/vaihteisto-kytkin.html`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/services/alusta.html`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/services/pesula.html`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `https://bucolic-bavarois-096a81.netlify.app`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
   ];
 }

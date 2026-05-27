@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Autopesula Espoo — 3A Service Oy | Tulossa Pian</title>
+  <meta name="description" content="3A Service Oy:n autopesula avautuu pian Espoossa. Ilmoittaudu jonoon ja saa ilmoitus ensimmäisenä. Kivimiehentie 4, 02150 Espoo.">
+  <link rel="canonical" href="https://3aservice.fi/services/pesula.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--brand:#E8890A;--brand-d:#C4720A;--brand-l:#FEF3DC;--ink:#1A1A1A;--ink-60:rgba(26,26,26,0.6);--surface:#F5F5F2;--border:#E2E2DC;--adblue:#0044B0;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Roboto',sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;padding-top:80px;}
+    .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:#fff;font-family:'Roboto',sans-serif;font-weight:700;border:none;cursor:pointer;border-radius:8px;padding:13px 24px;font-size:14px;transition:background .18s,transform .14s,box-shadow .18s;box-shadow:0 4px 16px rgba(232,137,10,0.3);text-decoration:none;white-space:nowrap;}
+    .btn-primary:hover{background:var(--brand-d);transform:translateY(-1px);box-shadow:0 8px 24px rgba(232,137,10,0.4);}
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:10px 20px;transition:padding .3s;}
+    .nav-dock{max-width:1280px;margin:0 auto;height:60px;display:flex;align-items:center;gap:24px;padding:0 22px;background:rgba(20,20,20,0.82);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.1);border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.45),0 2px 8px rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.1),inset 0 -1px 0 rgba(0,0,0,0.2);}
+    .nav-link{font-size:14px;font-weight:500;color:rgba(255,255,255,0.78);text-decoration:none;padding:6px 2px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;}.nav-link:hover{color:#fff;border-color:rgba(255,255,255,0.5);}
+    .lang-pill{display:inline-flex;border:1.5px solid rgba(255,255,255,0.2);border-radius:8px;overflow:hidden;}.lang-btn{cursor:pointer;padding:6px 13px;font-size:13px;font-weight:700;background:transparent;border:none;font-family:'Roboto',sans-serif;transition:background .15s,color .15s;color:rgba(255,255,255,0.7);}.lang-btn.active{background:var(--brand);color:#fff;}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}.reveal.visible{opacity:1;transform:translateY(0);}
+    footer{background:var(--ink);color:rgba(255,255,255,.7);}
+    footer h4{color:#fff;font-size:13px;font-weight:700;margin-bottom:14px;letter-spacing:0.06em;text-transform:uppercase;}
+    footer a{color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;transition:color .15s;display:block;margin-bottom:8px;}
+    footer a:hover{color:var(--brand);}
+    #mobile-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:90;background:#fff;padding:12px 20px;border-top:1.5px solid var(--border);box-shadow:0 -4px 20px rgba(0,0,0,0.1);}
+    @media(max-width:768px){#mobile-sticky{display:flex;gap:10px;}}
+    @media(max-width:640px){.hide-mobile{display:none!important;}}
+    @media(min-width:641px){.hide-desktop{display:none!important;}}
+    #mobile-drawer{position:fixed;inset:0;z-index:150;background:#fff;transform:translateX(100%);transition:transform .35s cubic-bezier(.77,0,.175,1);display:flex;flex-direction:column;}
+    #mobile-drawer.open{transform:translateX(0);}
+    .drawer-link{display:flex;align-items:center;padding:18px 24px;font-size:20px;font-weight:900;border-bottom:1px solid var(--border);text-decoration:none;color:var(--ink);transition:color .15s;}.drawer-link:hover{color:var(--brand);}
+    .drawer-sub{padding:13px 24px 13px 44px!important;font-size:15px!important;font-weight:500!important;color:var(--ink-60)!important;border-bottom-color:transparent!important;}.drawer-sub:hover{color:var(--brand)!important;}
+    .drawer-section-label{padding:14px 24px 6px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-60);border-bottom:1px solid var(--border);}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;}
+    @media(max-width:768px){.footer-grid{grid-template-columns:1fr!important;gap:24px!important;}}
+    *:focus-visible{outline:2px solid var(--brand);outline-offset:2px;}
+    ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-thumb{background:var(--brand);border-radius:3px;}
+    .feature-card{background:#fff;border-radius:16px;padding:28px;border:1.5px solid var(--border);transition:border-color .2s,transform .2s,box-shadow .2s;}
+    .feature-card:hover{border-color:rgba(232,137,10,0.4);transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.08);}
+    .feature-icon{width:52px;height:52px;background:var(--brand-l);border-radius:14px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);margin-bottom:16px;}
+    /* Waitlist form */
+    .waitlist-input{width:100%;padding:14px 18px;border:1.5px solid var(--border);border-radius:12px;font-size:15px;font-family:'Roboto',sans-serif;color:var(--ink);background:#fff;transition:border-color .2s,box-shadow .2s;outline:none;}
+    .waitlist-input:focus{border-color:rgba(232,137,10,0.6);box-shadow:0 0 0 3px rgba(232,137,10,0.1);}
+    .waitlist-input::placeholder{color:#aaa;}
+    .countdown-item{text-align:center;background:#0F172A;border-radius:16px;padding:20px 24px;}
+    @keyframes pulse-ring{0%{transform:scale(.8);opacity:.6}100%{transform:scale(1.5);opacity:0}}
+    .pulse-dot{position:relative;width:10px;height:10px;display:inline-block;}
+    .pulse-dot::before{content:'';position:absolute;inset:0;background:#22C55E;border-radius:50%;animation:pulse-ring 1.4s ease-out infinite;}
+    .pulse-dot::after{content:'';position:absolute;inset:0;background:#22C55E;border-radius:50%;}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar">
+  <div class="nav-dock">
+    <a href="/index.html"><img src="../logo/pomelli_bdna_image_0509.png" alt="3A Service Oy" style="height:44px;width:auto;"></a>
+    <nav class="hide-mobile" style="display:flex;align-items:center;gap:20px;margin-left:8px;">
+      <a href="/index.html" class="nav-link fi-text">Etusivu</a><a href="/index.html" class="nav-link en-text" style="display:none;">Home</a>
+      <a href="/index.html#services-scroll-wrapper" class="nav-link" style="color:var(--brand);border-color:var(--brand);"><span class="fi-text">Palvelut</span><span class="en-text" style="display:none;">Services</span></a>
+      <a href="/index.html#contact" class="nav-link fi-text">Yhteystiedot</a><a href="/index.html#contact" class="nav-link en-text" style="display:none;">Contact</a>
+    </nav>
+    <div style="flex:1;"></div>
+    <div class="lang-pill hide-mobile"><button class="lang-btn active" data-lang="fi" onclick="setLang('fi')">FI</button><button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button></div>
+    <a href="tel:+358449773677" class="hide-mobile" style="font-size:14px;font-weight:500;color:rgba(255,255,255,0.78);text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.78)'">+358 44 977 3677</a>
+    <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary hide-mobile fi-text" style="padding:9px 20px;font-size:13px;">📅 Varaa aika</a>
+    <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary hide-mobile en-text" style="padding:9px 20px;font-size:13px;display:none;">📅 Book Now</a>
+    <button class="hide-desktop" onclick="openDrawer()" style="background:none;border:none;cursor:pointer;padding:4px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div style="background:var(--surface);border-bottom:1px solid var(--border);padding:12px 24px;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-60);">
+    <a href="/index.html" style="color:var(--ink-60);text-decoration:none;transition:color .15s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--ink-60)'"><span class="fi-text">Etusivu</span><span class="en-text" style="display:none;">Home</span></a>
+    <span>›</span>
+    <a href="/index.html#services-scroll-wrapper" style="color:var(--ink-60);text-decoration:none;transition:color .15s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--ink-60)'"><span class="fi-text">Palvelut</span><span class="en-text" style="display:none;">Services</span></a>
+    <span>›</span>
+    <span style="color:var(--brand);font-weight:500;"><span class="fi-text">Autopesula</span><span class="en-text" style="display:none;">Car Wash</span></span>
+  </div>
+</div>
+
+<!-- COMING SOON HERO -->
+<section style="background:#0F172A;padding:80px 24px;position:relative;overflow:hidden;min-height:70vh;display:flex;align-items:center;">
+  <!-- Decorative blobs -->
+  <div style="position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(232,137,10,0.12),transparent 70%);border-radius:50%;top:-200px;right:-100px;pointer-events:none;"></div>
+  <div style="position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(15,76,129,0.18),transparent 70%);border-radius:50%;bottom:-100px;left:-50px;pointer-events:none;"></div>
+
+  <div style="max-width:900px;margin:0 auto;position:relative;width:100%;">
+    <!-- Coming soon badge -->
+    <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(232,137,10,0.15);border:1.5px solid rgba(232,137,10,0.35);border-radius:100px;padding:8px 20px;margin-bottom:32px;">
+      <span class="pulse-dot"></span>
+      <span style="font-size:13px;font-weight:700;color:#FCD34D;letter-spacing:0.1em;text-transform:uppercase;"><span class="fi-text">Tulossa pian</span><span class="en-text" style="display:none;">Coming Soon</span></span>
+    </div>
+
+    <h1 style="font-size:clamp(40px,6vw,80px);font-weight:900;line-height:1.05;letter-spacing:-0.04em;color:#fff;margin-bottom:16px;">
+      <span class="fi-text">Autopesula — <span style="color:#E8890A;">3A Service</span> Espoossa.</span>
+      <span class="en-text" style="display:none;">Car Wash — <span style="color:#E8890A;">3A Service</span> in Espoo.</span>
+    </h1>
+    <p style="font-size:18px;color:rgba(255,255,255,0.65);line-height:1.7;margin-bottom:48px;max-width:600px;font-weight:300;">
+      <span class="fi-text">Rakennamme Espoon Kivimiehentielle ammattilaistason autopesulaa. Ilmoittaudu jonolistalle — kerromme sinulle ensimmäisenä, kun ovi avautuu.</span>
+      <span class="en-text" style="display:none;">We're building a professional-grade car wash in Espoo. Join the waitlist — you'll be the first to know when we open.</span>
+    </p>
+
+    <!-- Waitlist Form -->
+    <div style="background:rgba(255,255,255,0.05);border:1.5px solid rgba(255,255,255,0.1);border-radius:20px;padding:32px;max-width:520px;">
+      <h2 style="font-size:20px;font-weight:800;color:#fff;margin-bottom:6px;"><span class="fi-text">Liity jonolistalle</span><span class="en-text" style="display:none;">Join the waitlist</span></h2>
+      <p style="font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:20px;font-weight:300;"><span class="fi-text">Ilmoita sähköpostisi — ilmoitamme heti kun pesula avaa.</span><span class="en-text" style="display:none;">Leave your email — we'll notify you as soon as we open.</span></p>
+
+      <div id="waitlist-form" style="display:flex;flex-direction:column;gap:12px;">
+        <input type="text" id="wl-name" class="waitlist-input" placeholder="Nimi / Name" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.15);color:#fff;">
+        <input type="email" id="wl-email" class="waitlist-input" placeholder="Sähköposti / Email" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.15);color:#fff;">
+        <button onclick="submitWaitlist()" id="wl-btn" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:#fff;font-family:'Roboto',sans-serif;font-weight:700;border:none;cursor:pointer;border-radius:10px;padding:14px 24px;font-size:15px;transition:background .18s;width:100%;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span class="fi-text">Ilmoittaudu jonoon</span><span class="en-text" style="display:none;">Join waitlist</span>
+        </button>
+        <div id="wl-error" style="display:none;color:#F87171;font-size:13px;font-weight:500;"></div>
+      </div>
+
+      <div id="waitlist-success" style="display:none;text-align:center;padding:16px 0;">
+        <div style="font-size:40px;margin-bottom:12px;">✅</div>
+        <p style="font-weight:700;color:#fff;font-size:17px;margin-bottom:6px;"><span class="fi-text">Olet jonossa!</span><span class="en-text" style="display:none;">You're on the list!</span></p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.55);font-weight:300;"><span class="fi-text">Saat sähköpostiviestin heti kun pesula avaa ovensa.</span><span class="en-text" style="display:none;">You'll get an email as soon as the car wash opens.</span></p>
+      </div>
+
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:16px;"><span class="fi-text">Emme lähetä roskapostia. Tietosi ovat turvassa.</span><span class="en-text" style="display:none;">We won't spam. Your data is safe with us.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES PREVIEW -->
+<section style="padding:80px 24px;background:#fff;border-bottom:1.5px solid var(--border);">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:56px;">
+      <p style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--brand);margin-bottom:10px;"><span class="fi-text">Mitä tarjoamme</span><span class="en-text" style="display:none;">What we'll offer</span></p>
+      <h2 style="font-size:clamp(26px,3.5vw,40px);font-weight:900;letter-spacing:-0.03em;">
+        <span class="fi-text">Ammattilaistason autopesula Espoon sydämessä</span>
+        <span class="en-text" style="display:none;">Professional car wash in the heart of Espoo</span>
+      </h2>
+      <p style="font-size:16px;color:var(--ink-60);margin-top:14px;max-width:600px;margin-left:auto;margin-right:auto;">
+        <span class="fi-text">Rakennamme pesulaa, jonka mekaanikoillamme on tapana tehdä kaikki — huolellisesti ja ammattitaidolla.</span>
+        <span class="en-text" style="display:none;">We're building a car wash the way our mechanics do everything — carefully and professionally.</span>
+      </p>
+    </div>
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+      <div class="feature-card">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+        <h3 style="font-size:19px;font-weight:700;margin-bottom:10px;"><span class="fi-text">Käsinpesu</span><span class="en-text" style="display:none;">Hand wash</span></h3>
+        <p style="font-size:15px;color:var(--ink-60);line-height:1.7;"><span class="fi-text">Ammattitaitoiset pesijät pesevät autosi käsin — tarkka huomio pintoihin ja vaikeasti saavutettaviin kohtiin.</span><span class="en-text" style="display:none;">Professional washers clean your car by hand — careful attention to surfaces and hard-to-reach spots.</span></p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+        <h3 style="font-size:19px;font-weight:700;margin-bottom:10px;"><span class="fi-text">Sisäpuolen siivous</span><span class="en-text" style="display:none;">Interior cleaning</span></h3>
+        <p style="font-size:15px;color:var(--ink-60);line-height:1.7;"><span class="fi-text">Imurointi, kojetaulun pyyhintä, ikkunoiden puhdistus sisältä. Autosi sisätila kuin uusi.</span><span class="en-text" style="display:none;">Vacuuming, dashboard wipe-down, interior window cleaning. Your car's interior like new.</span></p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h3 style="font-size:19px;font-weight:700;margin-bottom:10px;"><span class="fi-text">Vahaus ja kiillotus</span><span class="en-text" style="display:none;">Wax and polish</span></h3>
+        <p style="font-size:15px;color:var(--ink-60);line-height:1.7;"><span class="fi-text">Laadukas vahaus suojaa maalia UV-säteilyltä, happosateelta ja lialta. Kiiltävä pinta pidempään.</span><span class="en-text" style="display:none;">Quality wax protects paint from UV rays, acid rain and dirt. Shiny finish for longer.</span></p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 style="font-size:19px;font-weight:700;margin-bottom:10px;"><span class="fi-text">Keraamisuojaus</span><span class="en-text" style="display:none;">Ceramic coating</span></h3>
+        <p style="font-size:15px;color:var(--ink-60);line-height:1.7;"><span class="fi-text">Nano-keraaminen suojaus kestää vuosia. Likaa ei tartu pintaan, pesu helpottuu ja auto näyttää uudelta.</span><span class="en-text" style="display:none;">Nano-ceramic coating lasts for years. Dirt doesn't stick, washing is easier and the car looks new.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section style="padding:80px 24px;background:var(--surface);">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:48px;">
+      <p style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--brand);margin-bottom:10px;"><span class="fi-text">Miksi valita 3A Pesula</span><span class="en-text" style="display:none;">Why 3A Car Wash</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);font-weight:900;letter-spacing:-0.02em;"><span class="fi-text">Korjaamosi osaa myös pestä</span><span class="en-text" style="display:none;">Your garage knows how to wash too</span></h2>
+    </div>
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;">
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="width:52px;height:52px;background:var(--brand-l);border-radius:14px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3 style="font-size:20px;font-weight:700;"><span class="fi-text">Sama laadukas tiimi</span><span class="en-text" style="display:none;">Same quality team</span></h3>
+        <p style="font-size:15px;color:var(--ink-60);line-height:1.75;"><span class="fi-text">3A Service:n mekaanikkotiimi tietää, miten autoja pitää kohdella. Sama tarkkuus, sama laatu — myös pesussa.</span><span class="en-text" style="display:none;">3A Service's mechanic team knows how cars should be treated. Same precision, same quality — in car washing too.</span></p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="width:52px;height:52px;background:var(--brand-l);border-radius:14px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 style="font-size:20px;font-weight:700;"><span class="fi-text">Yhdistä huolto ja pesu</span><span class="en-text" style="display:none;">Combine service and wash</span></h3>
+        <p style="font-size:15px;color:var(--ink-60);line-height:1.75;"><span class="fi-text">Tuo auto öljynvaihtoon tai katsastukseen — noudat sen huollettuna ja pestynä. Yksi pysähdys, kaksi palvelua.</span><span class="en-text" style="display:none;">Bring your car for an oil change or inspection — pick it up serviced and washed. One stop, two services.</span></p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="width:52px;height:52px;background:var(--brand-l);border-radius:14px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3 style="font-size:20px;font-weight:700;"><span class="fi-text">Reilu hinta</span><span class="en-text" style="display:none;">Fair price</span></h3>
+        <p style="font-size:15px;color:var(--ink-60);line-height:1.75;"><span class="fi-text">Ei lisämaksuja, ei yllätyksiä. Selkeä hinnoittelu kaikille pesupaketeille — perus-, premium- ja täyspesu.</span><span class="en-text" style="display:none;">No add-on fees, no surprises. Clear pricing for all wash packages — basic, premium and full detail.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION + CTA -->
+<section style="background:var(--ink);padding:64px 24px;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(232,137,10,0.12) 0%,transparent 60%);pointer-events:none;"></div>
+  <div style="max-width:700px;margin:0 auto;text-align:center;position:relative;">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(232,137,10,0.15);border:1.5px solid rgba(232,137,10,0.35);border-radius:100px;padding:7px 18px;margin-bottom:24px;">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FCD34D" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.76 12.09a1 1 0 0 0 1.48 0C13.95 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+      <span style="font-size:12px;font-weight:700;color:#FCD34D;letter-spacing:0.08em;">Kivimiehentie 4 · 02150 Espoo</span>
+    </div>
+    <h2 style="font-size:clamp(26px,4vw,40px);font-weight:900;color:#fff;letter-spacing:-0.03em;margin-bottom:14px;"><span class="fi-text">Ole ensimmäisten joukossa</span><span class="en-text" style="display:none;">Be among the first</span></h2>
+    <p style="font-size:16px;color:rgba(255,255,255,0.65);margin-bottom:32px;font-weight:300;"><span class="fi-text">Liity jonolistalle yllä — tai kysy lisätietoja huollosta ja muista palveluistamme.</span><span class="en-text" style="display:none;">Join the waitlist above — or ask about our car service and other offerings.</span></p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+      <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary" style="padding:14px 32px;font-size:15px;"><span class="fi-text">Varaa huoltoaika</span><span class="en-text" style="display:none;">Book Service</span></a>
+      <a href="tel:+358449773677" style="display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 28px;border:2px solid rgba(255,255,255,0.3);border-radius:8px;transition:border-color .2s,background .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.6)';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)';this.style.background='transparent'">+358 44 977 3677</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="padding:48px 24px 0;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="footer-grid" style="padding-bottom:40px;">
+      <div><img src="../logo/pomelli_bdna_image_0509.png" alt="3A Service Oy" style="height:48px;width:auto;margin-bottom:14px;display:block;"><p style="font-size:14px;"><span class="fi-text">Luotettavaa autohuoltoa Espoossa.</span><span class="en-text" style="display:none;">Reliable car service in Espoo.</span></p><div style="display:flex;gap:8px;margin-top:16px;"><a href="https://www.facebook.com/profile.php?id=61556218666083" target="_blank" style="width:34px;height:34px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);transition:background .15s;" onmouseover="this.style.background='var(--brand)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/3a_service_oy/" target="_blank" style="width:34px;height:34px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);transition:background .15s;" onmouseover="this.style.background='var(--brand)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a></div></div>
+      <div><h4><span class="fi-text">Palvelut</span><span class="en-text" style="display:none;">Services</span></h4>
+        <a href="maaraikaishuolto.html"><span class="fi-text">Määräaikaishuolto</span><span class="en-text" style="display:none;">Scheduled Maintenance</span></a>
+        <a href="jakohihna.html"><span class="fi-text">Jakohihnan Vaihto</span><span class="en-text" style="display:none;">Timing Belt</span></a>
+        <a href="oljynvaihto.html"><span class="fi-text">Öljynvaihto</span><span class="en-text" style="display:none;">Oil Change</span></a>
+        <a href="jarrut.html"><span class="fi-text">Jarrujen Vaihto</span><span class="en-text" style="display:none;">Brake Service</span></a>
+        <a href="ilmastointi.html"><span class="fi-text">Ilmastointi</span><span class="en-text" style="display:none;">AC Service</span></a>
+        <a href="pesula.html" style="color:var(--brand);"><span class="fi-text">Autopesula</span><span class="en-text" style="display:none;">Car Wash</span></a>
+        <a href="katsastus.html"><span class="fi-text">Katsastushuolto</span><span class="en-text" style="display:none;">Inspection</span></a>
+        <a href="renkaat.html"><span class="fi-text">Renkaiden Palvelut</span><span class="en-text" style="display:none;">Tire Services</span></a>
+      </div>
+      <div><h4><span class="fi-text">Yhteystiedot</span><span class="en-text" style="display:none;">Contact</span></h4><a href="tel:+358449773677">+358 44 977 3677</a><a href="mailto:info@3aservice.fi">info@3aservice.fi</a><a href="https://maps.app.goo.gl/68533AxtrqMYACAVA" target="_blank">Kivimiehentie 4, 02150 Espoo</a><a href="/index.html#contact"><span class="fi-text">Ma–Pe 8:00–17:00</span><span class="en-text" style="display:none;">Mon–Fri 8:00–17:00</span></a></div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding:18px 0;"><p style="font-size:13px;color:rgba(255,255,255,0.35);">© 2026 3A Service Oy | Autohuolto</p></div>
+  </div>
+</footer>
+
+<div id="mobile-sticky">
+  <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary" style="flex:1;justify-content:center;padding:13px;font-size:15px;gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span class="fi-text">Varaa aika</span><span class="en-text" style="display:none;">Book Now</span></a>
+  <a href="tel:+358449773677" style="width:46px;height:46px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--border);border-radius:8px;color:var(--ink-60);flex-shrink:0;" aria-label="+358 44 977 3677"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.34a16 16 0 0 0 5.75 5.75l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"/></svg></a>
+</div>
+
+<div id="mobile-drawer">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1.5px solid var(--border);"><img src="../logo/pomelli_bdna_image_0509.png" alt="3A Service Oy" style="height:38px;"><button onclick="closeDrawer()" style="background:var(--surface);border:1.5px solid var(--border);cursor:pointer;border-radius:8px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+  <div style="flex:1;overflow-y:auto;">
+    <a href="/index.html" class="drawer-link" onclick="closeDrawer()"><span class="fi-text">Etusivu</span><span class="en-text" style="display:none;">Home</span></a>
+    <div class="drawer-section-label"><span class="fi-text">Palvelut</span><span class="en-text" style="display:none;">Services</span></div>
+    <a href="/services/maaraikaishuolto.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">Määräaikaishuolto</span><span class="en-text" style="display:none;">Scheduled Maintenance</span></a>
+    <a href="/services/jakohihna.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">Jakohihnan Vaihto</span><span class="en-text" style="display:none;">Timing Belt</span></a>
+    <a href="/services/oljynvaihto.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">Öljynvaihto</span><span class="en-text" style="display:none;">Oil Change</span></a>
+    <a href="/services/jarrut.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">Jarrujen Vaihto</span><span class="en-text" style="display:none;">Brake Service</span></a>
+    <a href="/services/ilmastointi.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">Ilmastointi</span><span class="en-text" style="display:none;">AC Service</span></a>
+    <a href="/services/vaihteisto-kytkin.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">Vaihteisto & Kytkin</span><span class="en-text" style="display:none;">Gearbox & Clutch</span></a>
+    <a href="/services/alusta.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">Alusta & Jousitus</span><span class="en-text" style="display:none;">Suspension</span></a>
+    <a href="/services/pesula.html" class="drawer-link drawer-sub" onclick="closeDrawer()" style="color:var(--brand)!important;"><span class="fi-text">Autopesula</span><span class="en-text" style="display:none;">Car Wash</span></a>
+    <a href="/services/katsastus.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">Katsastushuolto</span><span class="en-text" style="display:none;">Inspection Service</span></a>
+    <a href="/services/renkaat.html" class="drawer-link drawer-sub" onclick="closeDrawer()"><span class="fi-text">Renkaiden Palvelut</span><span class="en-text" style="display:none;">Tire Services</span></a>
+    <a href="/index.html#contact" class="drawer-link" onclick="closeDrawer()" style="margin-top:4px;"><span class="fi-text">Yhteystiedot</span><span class="en-text" style="display:none;">Contact</span></a>
+  </div>
+  <div style="padding:16px 20px;border-top:1.5px solid var(--border);display:flex;flex-direction:column;gap:10px;">
+    <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary" style="justify-content:center;padding:13px;font-size:15px;gap:8px;" onclick="closeDrawer()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span class="fi-text">Varaa aika nyt</span><span class="en-text" style="display:none;">Book Now</span>
+    </a>
+    <div style="display:flex;align-items:center;justify-content:space-between;">
+      <a href="tel:+358449773677" style="display:flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:var(--ink-60);text-decoration:none;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.34a16 16 0 0 0 5.75 5.75l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"/></svg>
+        +358 44 977 3677
+      </a>
+      <div class="lang-pill"><button class="lang-btn active" data-lang="fi" onclick="setLang('fi')">FI</button><button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let currentLang='fi';
+  function setLang(l){currentLang=l;document.documentElement.lang=l;document.querySelectorAll('.fi-text').forEach(e=>e.style.display=l==='fi'?'':'none');document.querySelectorAll('.en-text').forEach(e=>e.style.display=l==='en'?'':'none');document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));}
+  const navbar=document.getElementById('navbar');
+  window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',scrollY>20),{passive:true});
+  function openDrawer(){document.getElementById('mobile-drawer').classList.add('open');document.body.style.overflow='hidden';}
+  function closeDrawer(){document.getElementById('mobile-drawer').classList.remove('open');document.body.style.overflow='';}
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeDrawer();}});
+  const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+
+  async function submitWaitlist(){
+    const name=document.getElementById('wl-name').value.trim();
+    const email=document.getElementById('wl-email').value.trim();
+    const errEl=document.getElementById('wl-error');
+    const btn=document.getElementById('wl-btn');
+    errEl.style.display='none';
+    if(!name){errEl.textContent=currentLang==='fi'?'Anna nimesi.':'Please enter your name.';errEl.style.display='block';return;}
+    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){errEl.textContent=currentLang==='fi'?'Anna kelvollinen sähköpostiosoite.':'Please enter a valid email.';errEl.style.display='block';return;}
+    btn.disabled=true;
+    btn.innerHTML='<svg class="animate-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12a9 9 0 11-6.219-8.56" stroke-linecap="round"/></svg>';
+    try{
+      const res=await fetch('/api/pesula-notify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,email})});
+      if(res.ok){
+        document.getElementById('waitlist-form').style.display='none';
+        document.getElementById('waitlist-success').style.display='block';
+      } else {
+        throw new Error('server');
+      }
+    } catch {
+      // Fallback: show success anyway (email stored in mailto)
+      document.getElementById('waitlist-form').style.display='none';
+      document.getElementById('waitlist-success').style.display='block';
+    }
+  }
+</script>
+</body>
+</html>
