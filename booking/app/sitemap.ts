@@ -18,5 +18,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/services/alusta.html`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/services/pesula.html`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `https://bucolic-bavarois-096a81.netlify.app`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `https://bucolic-bavarois-096a81.netlify.app/services/oljynvaihto`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `https://bucolic-bavarois-096a81.netlify.app/services/jarrut`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `https://bucolic-bavarois-096a81.netlify.app/services/ilmastointi`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `https://bucolic-bavarois-096a81.netlify.app/services/vaihteisto-kytkin`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `https://bucolic-bavarois-096a81.netlify.app/services/alusta`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
   ];
 }
