@@ -23,5 +23,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `https://bucolic-bavarois-096a81.netlify.app/services/ilmastointi`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `https://bucolic-bavarois-096a81.netlify.app/services/vaihteisto-kytkin`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `https://bucolic-bavarois-096a81.netlify.app/services/alusta`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    // Brand pages
+    { url: `https://bucolic-bavarois-096a81.netlify.app/merkit/bmw`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `https://bucolic-bavarois-096a81.netlify.app/merkit/mercedes`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `https://bucolic-bavarois-096a81.netlify.app/merkit/volvo`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `https://bucolic-bavarois-096a81.netlify.app/merkit/toyota`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `https://bucolic-bavarois-096a81.netlify.app/merkit/audi`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `https://bucolic-bavarois-096a81.netlify.app/merkit/volkswagen`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    // Blog
+    { url: `https://bucolic-bavarois-096a81.netlify.app/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `https://bucolic-bavarois-096a81.netlify.app/blog/ilmastointihuolto-ennen-kesaa`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `https://bucolic-bavarois-096a81.netlify.app/blog/katsastus-valmistautuminen`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `https://bucolic-bavarois-096a81.netlify.app/blog/talvirenkaat-milloin-vaihtaa`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    // Hinnasto
+    { url: `https://bucolic-bavarois-096a81.netlify.app/huoltohinnasto`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
   ];
 }
