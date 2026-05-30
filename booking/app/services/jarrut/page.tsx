@@ -179,7 +179,7 @@ export default function JarrutPage() {
                 {[
                   { icon: "M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4 12 14.01 9 11.01", label: "Ilmainen jarrutarkistus" },
                   { icon: "M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4 12 14.01 9 11.01", label: "Kaikki automerkit" },
-                  { icon: "M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4 12 14.01 9 11.01", label: "Takuu säilyy EU 461/2010" },
+                  { icon: "M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4 12 14.01 9 11.01", label: "Takuu säilyy" },
                   { icon: "M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4 12 14.01 9 11.01", label: "12 kk takuu töille" },
                 ].map((pill) => (
                   <div key={pill.label} style={{ display: "flex", alignItems: "center", gap: "7px", background: "#F8FAFC", border: "1.5px solid #E2E8F0", borderRadius: "10px", padding: "8px 14px" }}>
@@ -516,7 +516,7 @@ export default function JarrutPage() {
               },
               {
                 q: "Vaikuttaako jarrujen vaihto takuuseen?",
-                a: "Ei. AD-valtuutettuna korjaamona teemme jarruhuollot EU-lain 461/2010 mukaisesti — takuu säilyy.",
+                a: "Ei. AD-valtuutettuna korjaamona teemme jarruhuollot EU-lain mukaisesti — takuu säilyy.",
               },
             ].map((item, i) => (
               <details key={i} className="faq-item">

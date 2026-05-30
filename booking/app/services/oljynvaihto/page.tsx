@@ -107,7 +107,7 @@ export default function OljynvaihtoPage() {
               <div style={{display:'flex',flexWrap:'wrap',gap:'10px',marginBottom:'36px'}}>
                 <div style={{display:'flex',alignItems:'center',gap:'7px',background:'#F8FAFC',border:'1.5px solid #E2E8F0',borderRadius:'10px',padding:'8px 14px'}}>
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0F4C81" strokeWidth="2.5" strokeLinecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  <span style={{fontSize:'12px',fontWeight:600,color:'#0F172A'}}>Takuu säilyy EU 461/2010</span>
+                  <span style={{fontSize:'12px',fontWeight:600,color:'#0F172A'}}>Takuu säilyy</span>
                 </div>
                 <div style={{display:'flex',alignItems:'center',gap:'7px',background:'#F8FAFC',border:'1.5px solid #E2E8F0',borderRadius:'10px',padding:'8px 14px'}}>
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0F4C81" strokeWidth="2.5" strokeLinecap="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
@@ -440,7 +440,7 @@ export default function OljynvaihtoPage() {
               },
               {
                 q:'Säilyykö uuden auton takuu jos teen öljynvaihdon teillä?',
-                a:'Kyllä. EU-laki 461/2010 takaa, että voit valita huoltopaikan vapaasti ilman takuun menettämistä. AD-valtuutettuna korjaamona kirjaamme kaikki huollot valmistajan ohjeiden mukaan huoltokirjaan.'
+                a:'Kyllä. EU-laki takaa, että voit valita huoltopaikan vapaasti ilman takuun menettämistä. AD-valtuutettuna korjaamona kirjaamme kaikki huollot valmistajan ohjeiden mukaan huoltokirjaan.'
               },
               {
                 q:'Mitä eroa on synteettisellä ja puolisynteettisellä öljyllä?',
