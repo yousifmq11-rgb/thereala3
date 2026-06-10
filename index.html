@@ -9,20 +9,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    @font-face{font-family:'Norwester';src:url('/font/norwester.otf') format('opentype');font-weight:normal;font-style:normal;}
     :root{--brand:#E8890A;--brand-d:#C4720A;--brand-l:#FEF3DC;--ink:#1A1A1A;--ink-60:rgba(26,26,26,0.6);--surface:#F5F5F2;--border:#E2E2DC;--adblue:#0044B0;--hero:#111;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
     body{font-family:'Roboto',sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;}
-    .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:#fff;font-family:'Roboto',sans-serif;font-weight:700;border:none;cursor:pointer;border-radius:8px;padding:13px 24px;font-size:14px;transition:background .18s,transform .14s,box-shadow .18s;box-shadow:0 4px 16px rgba(232,137,10,0.3);text-decoration:none;white-space:nowrap;}
+    .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:#fff;font-family:'Roboto',sans-serif;font-weight:700;border:none;cursor:pointer;border-radius:8px;padding:13px 24px;font-size:18px;transition:background .18s,transform .14s,box-shadow .18s;box-shadow:0 4px 16px rgba(232,137,10,0.3);text-decoration:none;white-space:nowrap;}
     .btn-primary:hover{background:var(--brand-d);transform:translateY(-1px);box-shadow:0 8px 24px rgba(232,137,10,0.4);}
-    .btn-outline{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:var(--ink);font-family:'Roboto',sans-serif;font-weight:700;border:2px solid var(--ink);cursor:pointer;border-radius:8px;padding:11px 24px;font-size:14px;transition:background .18s,color .18s,transform .14s;text-decoration:none;}
+    .btn-outline{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:var(--ink);font-family:'Roboto',sans-serif;font-weight:700;border:2px solid var(--ink);cursor:pointer;border-radius:8px;padding:11px 24px;font-size:18px;transition:background .18s,color .18s,transform .14s;text-decoration:none;}
     .btn-outline:hover{background:var(--ink);color:#fff;transform:translateY(-1px);}
     #navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:10px 20px;transition:padding .3s;}
     .nav-dock{max-width:1280px;margin:0 auto;height:60px;display:flex;align-items:center;gap:24px;padding:0 22px;background:rgba(20,20,20,0.82);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.1);border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.45),0 2px 8px rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.1),inset 0 -1px 0 rgba(0,0,0,0.2);}
-    .nav-link{font-size:14px;font-weight:500;color:rgba(255,255,255,0.78);text-decoration:none;padding:6px 2px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;}.nav-link:hover{color:#fff;border-color:rgba(255,255,255,0.5);}
-    .lang-pill{display:inline-flex;border:1.5px solid rgba(255,255,255,0.2);border-radius:8px;overflow:hidden;}.lang-btn{cursor:pointer;padding:6px 13px;font-size:13px;font-weight:700;background:transparent;border:none;font-family:'Roboto',sans-serif;transition:background .15s,color .15s;color:rgba(255,255,255,0.7);}.lang-btn.active{background:var(--brand);color:#fff;}
+    .nav-link{font-size:18px;font-weight:500;color:rgba(255,255,255,0.78);text-decoration:none;padding:6px 2px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;}.nav-link:hover{color:#fff;border-color:rgba(255,255,255,0.5);}
+    .lang-pill{display:inline-flex;border:1.5px solid rgba(255,255,255,0.2);border-radius:8px;overflow:hidden;}.lang-btn{cursor:pointer;padding:6px 13px;font-size:17px;font-weight:700;background:transparent;border:none;font-family:'Roboto',sans-serif;transition:background .15s,color .15s;color:rgba(255,255,255,0.7);}.lang-btn.active{background:var(--brand);color:#fff;}
     .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}.reveal.visible{opacity:1;transform:translateY(0);}
-    .section-tag{font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--brand);}
+    .section-tag{font-size:17px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--brand);}
     .why-icon{width:52px;height:52px;background:var(--brand-l);border-radius:14px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);margin-bottom:16px;}
     .srv-card{background:#fff;border-radius:20px;border:1.5px solid var(--border);overflow:hidden;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s;}
     .srv-card:hover{transform:translateY(-6px);box-shadow:0 20px 56px rgba(0,0,0,0.12);border-color:rgba(232,137,10,0.35);}
@@ -45,12 +46,12 @@
     .t-col:nth-child(3) .t-col-inner{animation-duration:23s;animation-delay:-14s;}
     @keyframes scrollUp{0%{transform:translateY(0);}100%{transform:translateY(-50%);}}
     .t-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:20px;}
-    .t-stars{color:#F5A623;font-size:13px;letter-spacing:1px;margin-bottom:10px;}
-    .t-text{font-size:15px;color:var(--ink-60);line-height:1.7;font-weight:400;margin-bottom:14px;}
-    .t-avatar{width:38px;height:38px;border-radius:50%;background:#9e9e9e;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;}
+    .t-stars{color:#F5A623;font-size:17px;letter-spacing:1px;margin-bottom:10px;}
+    .t-text{font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;margin-bottom:14px;}
+    .t-avatar{width:38px;height:38px;border-radius:50%;background:#9e9e9e;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700;color:#fff;flex-shrink:0;}
     footer{background:var(--ink);color:rgba(255,255,255,.7);}
-    footer h4{color:#fff;font-size:13px;font-weight:700;margin-bottom:14px;letter-spacing:0.06em;text-transform:uppercase;}
-    footer a{color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;transition:color .15s;display:block;margin-bottom:8px;}
+    footer h4{color:#fff;font-size:17px;font-weight:700;margin-bottom:14px;letter-spacing:0.06em;text-transform:uppercase;}
+    footer a{color:rgba(255,255,255,.7);text-decoration:none;font-size:18px;transition:color .15s;display:block;margin-bottom:8px;}
     footer a:hover{color:var(--brand);}
     #mobile-drawer{position:fixed;inset:0;z-index:150;background:#fff;transform:translateX(100%);transition:transform .35s cubic-bezier(.77,0,.175,1);display:flex;flex-direction:column;}
     #mobile-drawer.open{transform:translateX(0);}
@@ -67,7 +68,7 @@
     .nav-services{position:relative;}
     .nav-services-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-6px);background:rgba(16,16,16,0.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:6px;min-width:250px;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:200;box-shadow:0 20px 48px rgba(0,0,0,0.55);}
     .nav-services.open .nav-services-menu{opacity:1;pointer-events:all;transform:translateX(-50%) translateY(0);}
-    .nav-services-menu a{display:flex;align-items:center;gap:10px;padding:8px 10px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.72);text-decoration:none;border-radius:8px;transition:background .12s,color .12s;white-space:nowrap;}
+    .nav-services-menu a{display:flex;align-items:center;gap:10px;padding:8px 10px;font-size:17px;font-weight:500;color:rgba(255,255,255,0.72);text-decoration:none;border-radius:8px;transition:background .12s,color .12s;white-space:nowrap;}
     .nav-services-menu a:hover{background:rgba(255,255,255,0.09);color:#fff;}
     .nav-services-menu a .nav-svc-icon{width:32px;height:32px;background:#1a3a5c;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .12s;}
     .nav-services-menu a:hover .nav-svc-icon{background:#1e4d80;}
@@ -84,7 +85,27 @@
     /* Mobile drawer sub-links */
     .drawer-sub{padding:13px 24px 13px 44px!important;font-size:15px!important;font-weight:500!important;color:var(--ink-60)!important;border-bottom-color:transparent!important;}
     .drawer-sub:hover{color:var(--brand)!important;}
-    .drawer-section-label{padding:14px 24px 6px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-60);border-bottom:1px solid var(--border);}
+    .drawer-section-label{padding:14px 24px 6px;font-size:15px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-60);border-bottom:1px solid var(--border);}
+    /* Why Us section responsive */
+    @media(max-width:768px){
+      .why-us-grid{grid-template-columns:1fr!important;}
+      .why-us-image{height:300px!important;}
+      .why-us-title{font-size:28px!important;}
+    }
+    /* How it works responsive */
+    @media(max-width:1024px){
+      .how-steps{grid-template-columns:repeat(2,1fr)!important;}
+    }
+    @media(max-width:640px){
+      .how-steps{grid-template-columns:1fr!important;}
+    }
+    /* Brands carousel */
+    .brands-carousel{overflow:hidden;position:relative;background:#fff;}
+    .brands-track{display:flex;gap:40px;animation:scrollBrands 20s linear infinite;width:max-content;}
+    .brands-track:hover{animation-play-state:paused;}
+    @keyframes scrollBrands{0%{transform:translateX(0);}100%{transform:translateX(calc(-50% - 20px));}}
+    .brand-item{flex-shrink:0;display:flex;align-items:center;justify-content:center;height:120px;width:160px;background:#fff;border-radius:12px;border:1.5px solid var(--border);}
+    .brand-item img{max-width:90%;max-height:90%;object-fit:contain;}
   </style>
 </head>
 <body>
@@ -158,8 +179,8 @@
     <a href="tel:+358449773677" class="hide-mobile" title="+358 44 977 3677" aria-label="Soita meille" style="width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.75);transition:background .15s,color .15s;" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='rgba(255,255,255,0.75)'">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.34a16 16 0 0 0 5.75 5.75l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"/></svg>
     </a>
-    <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary hide-mobile fi-text" style="padding:9px 20px;font-size:13px;">📅 Varaa aika</a>
-    <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary hide-mobile en-text" style="padding:9px 20px;font-size:13px;display:none;">📅 Book Now</a>
+    <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary hide-mobile fi-text" style="padding:9px 20px;font-size:17px;">📅 Varaa aika</a>
+    <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary hide-mobile en-text" style="padding:9px 20px;font-size:17px;display:none;">📅 Book Now</a>
     <button class="hide-desktop" onclick="openDrawer()" style="background:none;border:none;cursor:pointer;padding:4px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
 </header>
@@ -179,17 +200,17 @@
   <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,5,5,0.60) 0%,rgba(5,5,5,0.75) 100%);z-index:1;"></div>
   <div style="position:relative;z-index:2;text-align:center;max-width:900px;padding:40px 24px;">
     <div class="fade-up d1" style="display:inline-flex;align-items:center;gap:10px;background:rgba(232,137,10,0.18);border:1px solid rgba(232,137,10,0.4);border-radius:99px;padding:8px 18px;margin-bottom:32px;">
-      <span style="font-size:13px;font-weight:700;color:#FFD97A;">★ 4.9 · 100+ Google</span>
+      <span style="font-size:17px;font-weight:700;color:#FFD97A;">★ 4.9 · 100+ Google</span>
       <span style="width:1px;height:14px;background:rgba(255,255,255,0.25);"></span>
-      <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.85);">AD-Valtuutettu</span>
+      <span style="font-size:17px;font-weight:700;color:rgba(255,255,255,0.85);">AD-Valtuutettu</span>
     </div>
-    <h1 class="fade-up d2" style="font-size:clamp(48px,8vw,96px);font-weight:900;line-height:1.0;letter-spacing:-0.04em;margin-bottom:24px;color:#fff;">
+    <h1 class="fade-up d2" style="font-family:'Norwester',sans-serif;font-size:clamp(48px,8vw,96px);font-weight:normal;line-height:1.1;letter-spacing:0.01em;margin-bottom:24px;color:#fff;">
       <span class="fi-text">Luotettavaa<br>autohuoltoa<br><span style="color:var(--brand);">Espoossa</span></span>
       <span class="en-text" style="display:none;">Reliable Car<br>Service in<br><span style="color:var(--brand);">Espoo</span></span>
     </h1>
     <p class="fade-up d3" style="font-size:clamp(16px,1.8vw,20px);line-height:1.65;color:rgba(255,255,255,0.85);max-width:600px;margin:0 auto 40px;font-weight:400;">
-      <span class="fi-text">Autosi takuu säilyy — EU-lain mukaan valtuutettu riippumaton korjaamo ei kosketa takuutasi.</span>
-      <span class="en-text" style="display:none;">Your warranty stays intact — under EU law, an authorized independent garage keeps your warranty.</span>
+      <span class="fi-text">Ammattitaitoinen huolto kaikille automerkeille – nopeasti, rehellisesti ja edullisesti.</span>
+      <span class="en-text" style="display:none;">Professional service for all car brands – fast, honest and affordable.</span>
     </p>
     <div class="fade-up d4" style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:40px;">
       <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary" style="padding:15px 32px;font-size:16px;">
@@ -202,12 +223,12 @@
       </a>
     </div>
     <div class="fade-up d4" style="display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;">
-      <div style="display:flex;align-items:center;gap:7px;font-size:14px;color:rgba(255,255,255,0.6);">
+      <div style="display:flex;align-items:center;gap:7px;font-size:18px;color:rgba(255,255,255,0.6);">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.76 12.09a1 1 0 0 0 1.48 0C13.95 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
         Sillankorva 8, 02300 Espoo
       </div>
       <span style="width:1px;height:14px;background:rgba(255,255,255,0.2);"></span>
-      <div style="display:flex;align-items:center;gap:7px;font-size:14px;color:rgba(255,255,255,0.6);">
+      <div style="display:flex;align-items:center;gap:7px;font-size:18px;color:rgba(255,255,255,0.6);">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         <span class="fi-text">Ma–Pe 8:00–17:00</span><span class="en-text" style="display:none;">Mon–Fri 8:00–17:00</span>
       </div>
@@ -216,11 +237,11 @@
 </section>
 
 <!-- SERVICES -->
-<section id="services-scroll-wrapper" style="background:var(--surface);padding:80px 24px;">
+<section id="services-scroll-wrapper" style="background:#fff;padding:80px 24px;">
   <div style="max-width:1100px;margin:0 auto;">
     <div class="reveal" style="text-align:center;margin-bottom:56px;">
       <p class="section-tag fi-text">Palvelumme</p><p class="section-tag en-text" style="display:none;">Our Services</p>
-      <h2 style="font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-0.03em;margin-top:12px;">
+      <h2 style="font-family:'Norwester',sans-serif;font-size:clamp(32px,5vw,52px);font-weight:normal;letter-spacing:0.01em;margin-top:12px;">
         <span class="fi-text">Ammattitaitoista huoltoa kaikille automerkeille</span>
         <span class="en-text" style="display:none;">Professional service for all car brands</span>
       </h2>
@@ -231,9 +252,9 @@
       <a href="/services/maaraikaishuolto.html" class="srv-card">
         <div class="srv-img-wrap"><img src="/photos/IMG_8828.jpg" alt="Määräaikaishuolto" class="srv-img"><div class="srv-overlay"></div><span class="srv-tag"><span class="fi-text">Suosittu</span><span class="en-text" style="display:none;">Popular</span></span></div>
         <div class="srv-card-body" style="padding:22px;flex:1;display:flex;flex-direction:column;">
-          <h3 style="font-size:20px;font-weight:700;margin-bottom:10px;"><span class="fi-text">Määräaikaishuolto</span><span class="en-text" style="display:none;">Scheduled Maintenance</span></h3>
-          <p style="font-size:15px;color:var(--ink-60);line-height:1.65;flex:1;margin-bottom:16px;"><span class="fi-text">Kattava huolto pitää autosi toimintakunnossa valmistajan suositusten mukaisena.</span><span class="en-text" style="display:none;">Comprehensive service keeps your car in top condition per manufacturer specs.</span></p>
-          <span style="display:flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
+          <h3 style="font-size:20px;font-weight:800;margin-bottom:10px;"><span class="fi-text">Määräaikaishuolto</span><span class="en-text" style="display:none;">Scheduled Maintenance</span></h3>
+          <p style="font-size:16px;color:var(--ink-60);line-height:1.7;flex:1;margin-bottom:16px;font-weight:400;"><span class="fi-text">Kattava huolto pitää autosi toimintakunnossa valmistajan suositusten mukaisena.</span><span class="en-text" style="display:none;">Comprehensive service keeps your car in top condition per manufacturer specs.</span></p>
+          <span style="display:flex;align-items:center;gap:4px;font-size:18px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
         </div>
       </a>
 
@@ -243,7 +264,7 @@
         <div class="srv-card-body" style="padding:22px;flex:1;display:flex;flex-direction:column;">
           <h3 style="font-size:20px;font-weight:700;margin-bottom:10px;"><span class="fi-text">Jakohihnan Vaihto</span><span class="en-text" style="display:none;">Timing Belt</span></h3>
           <p style="font-size:15px;color:var(--ink-60);line-height:1.65;flex:1;margin-bottom:16px;"><span class="fi-text">Moottorin turvallisuuden kannalta kriittinen huolto. Älä lykkää — seuraukset voivat olla vakavat.</span><span class="en-text" style="display:none;">Critical engine safety maintenance. Don't delay — consequences can be severe.</span></p>
-          <span style="display:flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:18px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
         </div>
       </a>
 
@@ -253,7 +274,7 @@
         <div class="srv-card-body" style="padding:22px;flex:1;display:flex;flex-direction:column;">
           <h3 style="font-size:20px;font-weight:700;margin-bottom:10px;"><span class="fi-text">Katsastushuolto</span><span class="en-text" style="display:none;">Inspection Service</span></h3>
           <p style="font-size:15px;color:var(--ink-60);line-height:1.65;flex:1;margin-bottom:16px;"><span class="fi-text">Valmistamme autosi viralliseen katsastukseen. Läpäisytakuu ensimmäisellä kerralla.</span><span class="en-text" style="display:none;">We prepare your car for official inspection. Pass on the first try.</span></p>
-          <span style="display:flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:18px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
         </div>
       </a>
 
@@ -263,7 +284,7 @@
         <div class="srv-card-body" style="padding:22px;flex:1;display:flex;flex-direction:column;">
           <h3 style="font-size:20px;font-weight:700;margin-bottom:10px;"><span class="fi-text">Sähkötyöt</span><span class="en-text" style="display:none;">Electrical Work</span></h3>
           <p style="font-size:15px;color:var(--ink-60);line-height:1.65;flex:1;margin-bottom:16px;"><span class="fi-text">Modernit diagnostiikkavälineet kaikkiin sähkövikoihin. Akku, valot, anturit ja enemmän.</span><span class="en-text" style="display:none;">Modern diagnostic tools for all electrical faults. Battery, lights, sensors and more.</span></p>
-          <span style="display:flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:18px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
         </div>
       </a>
 
@@ -273,7 +294,7 @@
         <div class="srv-card-body" style="padding:22px;flex:1;display:flex;flex-direction:column;">
           <h3 style="font-size:20px;font-weight:700;margin-bottom:10px;"><span class="fi-text">Vikadiagnostiikka</span><span class="en-text" style="display:none;">Car Diagnostics</span></h3>
           <p style="font-size:15px;color:var(--ink-60);line-height:1.65;flex:1;margin-bottom:16px;"><span class="fi-text">OBD2-vianhaku paikantaa ongelmat nopeasti. Moottorivaroitusvalo, epätavalliset äänet ja enemmän.</span><span class="en-text" style="display:none;">OBD2 diagnostics pinpoints problems fast. Engine warning light, unusual noises and more.</span></p>
-          <span style="display:flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:18px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
         </div>
       </a>
 
@@ -283,7 +304,7 @@
         <div class="srv-card-body" style="padding:22px;flex:1;display:flex;flex-direction:column;">
           <h3 style="font-size:20px;font-weight:700;margin-bottom:10px;"><span class="fi-text">Renkaiden Palvelut</span><span class="en-text" style="display:none;">Tire Services</span></h3>
           <p style="font-size:15px;color:var(--ink-60);line-height:1.65;flex:1;margin-bottom:16px;"><span class="fi-text">Vaihto, tasapainotus ja nelipyöräsuuntaus. Kaikki renkaiden palvelut yhdestä paikasta.</span><span class="en-text" style="display:none;">Tire change, balancing and wheel alignment. All tire services in one place.</span></p>
-          <span style="display:flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:18px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
         </div>
       </a>
 
@@ -293,7 +314,7 @@
         <div class="srv-card-body" style="padding:22px;flex:1;display:flex;flex-direction:column;">
           <h3 style="font-size:20px;font-weight:700;margin-bottom:10px;"><span class="fi-text">Öljynvaihto</span><span class="en-text" style="display:none;">Oil Change</span></h3>
           <p style="font-size:15px;color:var(--ink-60);line-height:1.65;flex:1;margin-bottom:16px;"><span class="fi-text">Moottoriöljyn ja suodattimen vaihto nopeasti — noin 30 minuutissa. Oikea öljylaatu jokaiselle automallille.</span><span class="en-text" style="display:none;">Engine oil and filter change fast — in about 30 minutes. Correct oil grade for every car model.</span></p>
-          <span style="display:flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:18px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
         </div>
       </a>
 
@@ -303,7 +324,7 @@
         <div class="srv-card-body" style="padding:22px;flex:1;display:flex;flex-direction:column;">
           <h3 style="font-size:20px;font-weight:700;margin-bottom:10px;"><span class="fi-text">Jarrujen Vaihto</span><span class="en-text" style="display:none;">Brake Service</span></h3>
           <p style="font-size:15px;color:var(--ink-60);line-height:1.65;flex:1;margin-bottom:16px;"><span class="fi-text">Jarrupalat, -levyt ja jarruneste — täydellinen jarrutarkistus. Turvallisuutesi tärkein huolto.</span><span class="en-text" style="display:none;">Brake pads, discs and brake fluid — complete brake inspection. Your most important safety service.</span></p>
-          <span style="display:flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:18px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
         </div>
       </a>
 
@@ -313,7 +334,7 @@
         <div class="srv-card-body" style="padding:22px;flex:1;display:flex;flex-direction:column;">
           <h3 style="font-size:20px;font-weight:700;margin-bottom:10px;"><span class="fi-text">Ilmastoinnin Huolto</span><span class="en-text" style="display:none;">AC Service</span></h3>
           <p style="font-size:15px;color:var(--ink-60);line-height:1.65;flex:1;margin-bottom:16px;"><span class="fi-text">Kylmäaineen täyttö, suodattimen vaihto ja antibakteerinen desinfiointi. Puhdas sisäilma.</span><span class="en-text" style="display:none;">Refrigerant recharge, filter replacement and antibacterial disinfection. Clean cabin air.</span></p>
-          <span style="display:flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:18px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
         </div>
       </a>
 
@@ -323,7 +344,7 @@
         <div class="srv-card-body" style="padding:22px;flex:1;display:flex;flex-direction:column;">
           <h3 style="font-size:20px;font-weight:700;margin-bottom:10px;"><span class="fi-text">Alusta & Jousitus</span><span class="en-text" style="display:none;">Suspension</span></h3>
           <p style="font-size:15px;color:var(--ink-60);line-height:1.65;flex:1;margin-bottom:16px;"><span class="fi-text">Iskunvaimentimet, tukivarret, pallonivelet ja nelipyöräsuuntaus. Vakaa ja turvallinen ajo.</span><span class="en-text" style="display:none;">Shock absorbers, control arms, ball joints and 4-wheel alignment. Stable and safe driving.</span></p>
-          <span style="display:flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:18px;font-weight:700;color:var(--brand);"><span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span> →</span>
         </div>
       </a>
 
@@ -333,55 +354,183 @@
 
 <!-- WHY US -->
 <section style="background:#fff;padding:80px 24px;">
-  <div style="max-width:1100px;margin:0 auto;">
-    <div class="reveal" style="text-align:center;margin-bottom:56px;">
-      <p class="section-tag fi-text">Miksi valita meidät?</p><p class="section-tag en-text" style="display:none;">Why Choose Us?</p>
-      <h2 style="font-size:clamp(28px,4vw,46px);font-weight:900;letter-spacing:-0.03em;margin-top:12px;">
-        <span class="fi-text">Sinun autosi, meidän asiantuntemuksemme</span>
-        <span class="en-text" style="display:none;">Your car, our expertise</span>
+  <div style="max-width:1280px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:64px;">
+      <h2 style="font-family:'Norwester',sans-serif;font-size:clamp(36px,6vw,56px);font-weight:normal;letter-spacing:0.02em;line-height:1.2;color:var(--ink);margin-bottom:16px;">
+        <span class="fi-text">Miksi valita 3A Service?</span><span class="en-text" style="display:none;">Why Choose 3A Service?</span>
       </h2>
+      <p class="section-tag en-text" style="display:none;">Why Choose Us?</p>
     </div>
-    <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;">
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div class="why-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <polyline points="9 12 11 14 15 10"/>
-          </svg>
+    <div class="reveal why-us-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+      <!-- Content left -->
+      <div style="display:flex;flex-direction:column;gap:32px;">
+        <div style="display:grid;grid-template-columns:1fr;gap:24px;">
+          <!-- Item 1 -->
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:700;font-size:18px;">✓</div>
+            <div style="flex:1;">
+              <h3 style="font-family:'Roboto',sans-serif;font-size:18px;font-weight:700;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Ammattimekanikot</h3>
+              <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Tarkka ja huolellinen työ joka kerta</p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:700;font-size:18px;">✓</div>
+            <div style="flex:1;">
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:4px;letter-spacing:0.01em;color:var(--ink);">12 kuukauden takuu</h3>
+              <p style="font-family:'Roboto',sans-serif;font-size:18px;color:var(--ink-60);line-height:1.6;font-weight:400;">Kaikille tehdyille töille</p>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:700;font-size:18px;">✓</div>
+            <div style="flex:1;">
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:4px;letter-spacing:0.01em;color:var(--ink);">Läpinäkyvä hinnoittelu</h3>
+              <p style="font-family:'Roboto',sans-serif;font-size:18px;color:var(--ink-60);line-height:1.6;font-weight:400;">Hinta sovitaan etukäteen – ei yllätyksiä</p>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:700;font-size:18px;">✓</div>
+            <div style="flex:1;">
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:4px;letter-spacing:0.01em;color:var(--ink);">Kaikki automerkit</h3>
+              <p style="font-family:'Roboto',sans-serif;font-size:18px;color:var(--ink-60);line-height:1.6;font-weight:400;">Myös harvinaisemmat merkit</p>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:700;font-size:18px;">✓</div>
+            <div style="flex:1;">
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:4px;letter-spacing:0.01em;color:var(--ink);">Nopea palvelu</h3>
+              <p style="font-family:'Roboto',sans-serif;font-size:18px;color:var(--ink-60);line-height:1.6;font-weight:400;">Useimmiten saman päivän aikana</p>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:700;font-size:18px;">✓</div>
+            <div style="flex:1;">
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:4px;letter-spacing:0.01em;color:var(--ink);">Espoo – keskeinen sijainti</h3>
+              <p style="font-family:'Roboto',sans-serif;font-size:18px;color:var(--ink-60);line-height:1.6;font-weight:400;">Helppo tulla, helppo löytää</p>
+            </div>
+          </div>
         </div>
-        <h3 style="font-size:20px;font-weight:700;"><span class="fi-text">Takuusi säilyy</span><span class="en-text" style="display:none;">Warranty Stays Intact</span></h3>
-        <p style="font-size:15px;color:var(--ink-60);line-height:1.8;"><span class="fi-text">EU-direktiivin mukaan sinulla on oikeus huollattaa autosi missä tahansa valtuutetussa riippumattomassa korjaamossa ilman takuun menettämistä. 3A Service on AD-valtuutettu.</span><span class="en-text" style="display:none;">EU regulations guarantee your right to service your car at any authorized independent garage without voiding your warranty. 3A Service is AD-authorized.</span></p>
       </div>
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div class="why-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <circle cx="12" cy="12" r="4"/>
-            <line x1="12" y1="2" x2="12" y2="8"/>
-            <line x1="5.27" y1="16.5" x2="10" y2="13.74"/>
-            <line x1="18.73" y1="16.5" x2="14" y2="13.74"/>
-          </svg>
-        </div>
-        <h3 style="font-size:20px;font-weight:700;"><span class="fi-text">Kaikki automerkit</span><span class="en-text" style="display:none;">All Car Brands</span></h3>
-        <p style="font-size:15px;color:var(--ink-60);line-height:1.8;"><span class="fi-text">Meillä on syvällinen asiantuntemus kaikista automerkeistä — BMW, Mercedes-Benz, Toyota, Škoda, Volvo, Audi ja monet muut. Yksi korjaamo, joka hoitaa kaikkien merkkien huollot ja korjaukset.</span><span class="en-text" style="display:none;">We have deep expertise across all car brands — BMW, Mercedes-Benz, Toyota, Škoda, Volvo, Audi and many more. One garage handling every brand's service and repairs.</span></p>
+      <!-- Image right -->
+      <div class="why-us-image" style="position:relative;overflow:hidden;border-radius:20px;height:500px;">
+        <img src="/pic copy/carg/shop1.jpeg" alt="3A Service Oy korjaamo" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div class="why-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <polyline points="9 13 11 15 15 11"/>
-          </svg>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS SECTION -->
+<section style="background:#fff;padding:80px 24px;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:56px;">
+      <h2 style="font-family:'Norwester',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:normal;letter-spacing:0.02em;line-height:1.2;color:var(--ink);margin-bottom:16px;">
+        <span class="fi-text">Huollamme kaikki automerkit</span><span class="en-text" style="display:none;">We service all car brands</span>
+      </h2>
+      <p style="font-size:16px;color:var(--ink-60);line-height:1.7;max-width:600px;margin:0 auto;font-weight:400;">
+        <span class="fi-text">Autoosi ei tarvitse viedä merkkihuoltoon</span><span class="en-text" style="display:none;">Your car doesn't need to go to the dealer</span>
+      </p>
+    </div>
+    <div class="reveal brands-carousel" style="border-radius:16px;overflow:hidden;">
+      <div class="brands-track">
+        <!-- First set -->
+        <div class="brand-item"><img src="/car brand svg /Audi.svg" alt="Audi" loading="lazy"></div>
+        <div class="brand-item"><img src="/car brand svg /Bens.svg" alt="Mercedes-Benz" loading="lazy"></div>
+        <div class="brand-item"><img src="/car brand svg /bmw.svg" alt="BMW" loading="lazy"></div>
+        <div class="brand-item"><img src="/car brand svg /Honda-1.svg" alt="Honda" loading="lazy"></div>
+        <div class="brand-item"><img src="/car brand svg /Skoda.svg" alt="Skoda" loading="lazy"></div>
+        <div class="brand-item"><img src="/car brand svg /Totota.svg" alt="Toyota" loading="lazy"></div>
+        <div class="brand-item"><img src="/car brand svg /Volvo.svg" alt="Volvo" loading="lazy"></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="brand-item"><img src="/car brand svg /Audi.svg" alt="Audi" loading="lazy"></div>
+        <div class="brand-item"><img src="/car brand svg /Bens.svg" alt="Mercedes-Benz" loading="lazy"></div>
+        <div class="brand-item"><img src="/car brand svg /bmw.svg" alt="BMW" loading="lazy"></div>
+        <div class="brand-item"><img src="/car brand svg /Honda-1.svg" alt="Honda" loading="lazy"></div>
+        <div class="brand-item"><img src="/car brand svg /Skoda.svg" alt="Skoda" loading="lazy"></div>
+        <div class="brand-item"><img src="/car brand svg /Totota.svg" alt="Toyota" loading="lazy"></div>
+        <div class="brand-item"><img src="/car brand svg /Volvo.svg" alt="Volvo" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section style="background:#fff;padding:80px 24px;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:64px;">
+      <h2 style="font-family:'Norwester',sans-serif;font-size:clamp(32px,5vw,52px);font-weight:normal;letter-spacing:0.01em;line-height:1.2;color:var(--ink);margin-bottom:16px;">
+        <span class="fi-text">Näin helposti huolto hoituu</span><span class="en-text" style="display:none;">How Easy Service Works</span>
+      </h2>
+      <p style="font-size:18px;color:var(--ink-60);line-height:1.7;max-width:700px;margin:0 auto;font-weight:400;">
+        <span class="fi-text">Neljä askelta toimivaan autoon</span><span class="en-text" style="display:none;">Four steps to a working car</span>
+      </p>
+    </div>
+    <div class="reveal how-steps" style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;max-width:1200px;margin:0 auto;align-items:start;">
+      <!-- Step 1 -->
+      <div style="display:flex;flex-direction:column;gap:20px;position:relative;">
+        <div style="display:flex;align-items:flex-start;gap:20px;">
+          <div style="flex-shrink:0;width:56px;height:56px;background:var(--brand);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Norwester',sans-serif;font-size:28px;font-weight:normal;color:#fff;">1</div>
+          <div style="flex:1;">
+            <h3 style="font-family:'Roboto',sans-serif;font-size:20px;font-weight:700;margin-bottom:10px;color:var(--ink);">
+              <span class="fi-text">Varaa aika</span><span class="en-text" style="display:none;">Book Time</span>
+            </h3>
+            <p style="font-family:'Roboto',sans-serif;font-size:15px;color:var(--ink-60);line-height:1.8;font-weight:400;">
+              <span class="fi-text">Varaa aika verkossa tai soittamalla – 044 9773677</span><span class="en-text" style="display:none;">Book online or call – 044 9773677</span>
+            </p>
+          </div>
         </div>
-        <h3 style="font-size:20px;font-weight:700;"><span class="fi-text">Läpinäkyvä hinnoittelu</span><span class="en-text" style="display:none;">Transparent Pricing</span></h3>
-        <p style="font-size:15px;color:var(--ink-60);line-height:1.8;"><span class="fi-text">Saat aina kirjallisen kustannusarvion ennen töiden aloittamista. Lopullinen lasku vastaa sovittua — ei piilomaksuja, ei yllätyksiä. Ilmainen tarjous ilman sitoumusta.</span><span class="en-text" style="display:none;">You always receive a written cost estimate before work begins. The final invoice matches what was agreed — no hidden fees, no surprises. Free quote, no commitment.</span></p>
+      </div>
+      <!-- Step 2 -->
+      <div style="display:flex;flex-direction:column;gap:20px;position:relative;">
+        <div style="display:flex;align-items:flex-start;gap:20px;">
+          <div style="flex-shrink:0;width:56px;height:56px;background:var(--brand);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Norwester',sans-serif;font-size:28px;font-weight:normal;color:#fff;">2</div>
+          <div style="flex:1;">
+            <h3 style="font-family:'Roboto',sans-serif;font-size:20px;font-weight:700;margin-bottom:10px;color:var(--ink);">
+              <span class="fi-text">Tuo auto</span><span class="en-text" style="display:none;">Bring Car</span>
+            </h3>
+            <p style="font-family:'Roboto',sans-serif;font-size:15px;color:var(--ink-60);line-height:1.8;font-weight:400;">
+              <span class="fi-text">Tuo autosi 3A Servicelle sovittuna aikana Espoossa</span><span class="en-text" style="display:none;">Bring your car at the scheduled time in Espoo</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Step 3 -->
+      <div style="display:flex;flex-direction:column;gap:20px;position:relative;">
+        <div style="display:flex;align-items:flex-start;gap:20px;">
+          <div style="flex-shrink:0;width:56px;height:56px;background:var(--brand);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Norwester',sans-serif;font-size:28px;font-weight:normal;color:#fff;">3</div>
+          <div style="flex:1;">
+            <h3 style="font-family:'Roboto',sans-serif;font-size:20px;font-weight:700;margin-bottom:10px;color:var(--ink);">
+              <span class="fi-text">Me hoidamme</span><span class="en-text" style="display:none;">We Handle It</span>
+            </h3>
+            <p style="font-family:'Roboto',sans-serif;font-size:15px;color:var(--ink-60);line-height:1.8;font-weight:400;">
+              <span class="fi-text">Ammattimekanikot tekevät työn huolellisesti oikeilla varaosilla</span><span class="en-text" style="display:none;">Professional mechanics do the work carefully with genuine parts</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Step 4 -->
+      <div style="display:flex;flex-direction:column;gap:20px;position:relative;">
+        <div style="display:flex;align-items:flex-start;gap:20px;">
+          <div style="flex-shrink:0;width:56px;height:56px;background:var(--brand);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Norwester',sans-serif;font-size:28px;font-weight:normal;color:#fff;">4</div>
+          <div style="flex:1;">
+            <h3 style="font-family:'Roboto',sans-serif;font-size:20px;font-weight:700;margin-bottom:10px;color:var(--ink);">
+              <span class="fi-text">Nouda valmis auto</span><span class="en-text" style="display:none;">Pick Up Car</span>
+            </h3>
+            <p style="font-family:'Roboto',sans-serif;font-size:15px;color:var(--ink-60);line-height:1.8;font-weight:400;">
+              <span class="fi-text">Saat ilmoituksen kun auto on valmis – 12 kk takuu kaikelle tehdylle työlle</span><span class="en-text" style="display:none;">Get notified when done – 12 month warranty on all work</span>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- REVIEWS -->
-<section style="background:var(--surface);padding:80px 24px;">
+<section style="background:#fff;padding:80px 24px;">
   <div style="max-width:1100px;margin:0 auto;">
     <div class="reveal" style="text-align:center;margin-bottom:48px;">
       <p class="section-tag">Google Reviews</p>
@@ -389,29 +538,43 @@
     </div>
     <div class="testimonials-grid reveal">
       <div class="t-col"><div class="t-col-inner">
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Erittäin ammattitaitoinen palvelu! Määräaikaishuolto tehtiin nopeasti ja rehellisesti. Hinta kilpailukykyinen eikä yllätyksiä tullut.</span><span class="en-text" style="display:none;">Extremely professional! Scheduled maintenance done quickly and honestly. Competitive price, no surprises.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">M</div><div><div style="font-size:13px;font-weight:700;">Mikael K.</div><div style="font-size:12px;color:var(--ink-60);">Määräaikaishuolto</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Jakohihnan vaihto tehtiin täsmällisesti ja ajallaan. Tiimi asiantunteva ja selitti selkeästi mitä tehtiin.</span><span class="en-text" style="display:none;">Timing belt done precisely on time. Knowledgeable team explained everything clearly.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">T</div><div><div style="font-size:13px;font-weight:700;">Tuomas H.</div><div style="font-size:12px;color:var(--ink-60);">Jakohihnan Vaihto</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Toin BMWn vikadiagnostiikkaan — löysivät ongelman nopeasti muiden korjaamojen etsittyä turhaan.</span><span class="en-text" style="display:none;">Brought my BMW for diagnostics — found the issue fast after other shops failed.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">J</div><div><div style="font-size:13px;font-weight:700;">Janne R.</div><div style="font-size:12px;color:var(--ink-60);">Vikadiagnostiikka</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Rengasvaihto ja tasapainotus hoidettiin nopeasti ilman ajanvarausta. Henkilökunta ystävällinen.</span><span class="en-text" style="display:none;">Tire change and balancing done quickly without appointment. Friendly staff.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">L</div><div><div style="font-size:13px;font-weight:700;">Laura M.</div><div style="font-size:12px;color:var(--ink-60);">Renkaiden Palvelut</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Erittäin ammattitaitoinen palvelu! Määräaikaishuolto tehtiin nopeasti ja rehellisesti. Hinta kilpailukykyinen eikä yllätyksiä tullut.</span><span class="en-text" style="display:none;">Extremely professional! Scheduled maintenance done quickly and honestly.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">M</div><div><div style="font-size:13px;font-weight:700;">Mikael K.</div><div style="font-size:12px;color:var(--ink-60);">Määräaikaishuolto</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Jakohihnan vaihto tehtiin täsmällisesti ja ajallaan. Tiimi asiantunteva ja selitti selkeästi mitä tehtiin.</span><span class="en-text" style="display:none;">Timing belt done precisely on time. Knowledgeable team explained clearly.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">T</div><div><div style="font-size:13px;font-weight:700;">Tuomas H.</div><div style="font-size:12px;color:var(--ink-60);">Jakohihnan Vaihto</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Erittäin ammattitaitoinen palvelu! Määräaikaishuolto tehtiin nopeasti ja rehellisesti. Hinta kilpailukykyinen eikä yllätyksiä tullut.</span><span class="en-text" style="display:none;">Extremely professional! Scheduled maintenance done quickly and honestly. Competitive price, no surprises.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">M</div><div><div style="font-size:17px;font-weight:700;">Mikael K.</div><div style="font-size:16px;color:var(--ink-60);">Määräaikaishuolto</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Jakohihnan vaihto tehtiin täsmällisesti ja ajallaan. Tiimi asiantunteva ja selitti selkeästi mitä tehtiin.</span><span class="en-text" style="display:none;">Timing belt done precisely on time. Knowledgeable team explained everything clearly.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">T</div><div><div style="font-size:17px;font-weight:700;">Tuomas H.</div><div style="font-size:16px;color:var(--ink-60);">Jakohihnan Vaihto</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Toin BMWn vikadiagnostiikkaan — löysivät ongelman nopeasti muiden korjaamojen etsittyä turhaan.</span><span class="en-text" style="display:none;">Brought my BMW for diagnostics — found the issue fast after other shops failed.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">J</div><div><div style="font-size:17px;font-weight:700;">Janne R.</div><div style="font-size:16px;color:var(--ink-60);">Vikadiagnostiikka</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Rengasvaihto ja tasapainotus hoidettiin nopeasti ilman ajanvarausta. Henkilökunta ystävällinen.</span><span class="en-text" style="display:none;">Tire change and balancing done quickly without appointment. Friendly staff.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">L</div><div><div style="font-size:17px;font-weight:700;">Laura M.</div><div style="font-size:16px;color:var(--ink-60);">Renkaiden Palvelut</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Erittäin ammattitaitoinen palvelu! Määräaikaishuolto tehtiin nopeasti ja rehellisesti. Hinta kilpailukykyinen eikä yllätyksiä tullut.</span><span class="en-text" style="display:none;">Extremely professional! Scheduled maintenance done quickly and honestly.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">M</div><div><div style="font-size:17px;font-weight:700;">Mikael K.</div><div style="font-size:16px;color:var(--ink-60);">Määräaikaishuolto</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Jakohihnan vaihto tehtiin täsmällisesti ja ajallaan. Tiimi asiantunteva ja selitti selkeästi mitä tehtiin.</span><span class="en-text" style="display:none;">Timing belt done precisely on time. Knowledgeable team explained clearly.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">T</div><div><div style="font-size:17px;font-weight:700;">Tuomas H.</div><div style="font-size:16px;color:var(--ink-60);">Jakohihnan Vaihto</div></div></div></div>
       </div></div>
       <div class="t-col"><div class="t-col-inner">
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Hyvä korjaamo, joka pitää lupauksensa. Katsastushuollossa auto meni läpi ensiyrittämällä!</span><span class="en-text" style="display:none;">Great garage that keeps promises. Car passed inspection on the first try!</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">A</div><div><div style="font-size:13px;font-weight:700;">Anna L.</div><div style="font-size:12px;color:var(--ink-60);">Katsastushuolto</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Sähköongelma Mersussa korjattiin nopeasti. Muilla korjaamoilla ei ollut välineitä — täällä löysivät vian heti.</span><span class="en-text" style="display:none;">Electrical problem in Mercedes fixed quickly. Other shops lacked tools — here they found it immediately.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">K</div><div><div style="font-size:13px;font-weight:700;">Kaisa N.</div><div style="font-size:12px;color:var(--ink-60);">Sähkötyöt</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">AD-valtuutettu korjaamo tarkoittaa, että takuu säilyy. Loistava vaihtoehto merkkikorjaamolle!</span><span class="en-text" style="display:none;">AD-authorized means warranty stays intact. Great alternative to the dealership!</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">E</div><div><div style="font-size:13px;font-weight:700;">Eero S.</div><div style="font-size:12px;color:var(--ink-60);">Määräaikaishuolto</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Hinnoittelu täysin läpinäkyvää. Sain tarjouksen etukäteen ja lopullinen lasku oli täsmälleen sama.</span><span class="en-text" style="display:none;">Fully transparent pricing. Got a quote upfront and the final bill was exactly the same.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">S</div><div><div style="font-size:13px;font-weight:700;">Sari P.</div><div style="font-size:12px;color:var(--ink-60);">Sähkötyöt</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Hyvä korjaamo, joka pitää lupauksensa. Katsastushuollossa auto meni läpi ensiyrittämällä!</span><span class="en-text" style="display:none;">Great garage that keeps promises. Car passed inspection on the first try!</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">A</div><div><div style="font-size:13px;font-weight:700;">Anna L.</div><div style="font-size:12px;color:var(--ink-60);">Katsastushuolto</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Sähköongelma Mersussa korjattiin nopeasti. Muilla korjaamoilla ei ollut välineitä — täällä löysivät vian heti.</span><span class="en-text" style="display:none;">Electrical problem in Mercedes fixed quickly. Others lacked tools — found it immediately.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">K</div><div><div style="font-size:13px;font-weight:700;">Kaisa N.</div><div style="font-size:12px;color:var(--ink-60);">Sähkötyöt</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Hyvä korjaamo, joka pitää lupauksensa. Katsastushuollossa auto meni läpi ensiyrittämällä!</span><span class="en-text" style="display:none;">Great garage that keeps promises. Car passed inspection on the first try!</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">A</div><div><div style="font-size:17px;font-weight:700;">Anna L.</div><div style="font-size:16px;color:var(--ink-60);">Katsastushuolto</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Sähköongelma Mersussa korjattiin nopeasti. Muilla korjaamoilla ei ollut välineitä — täällä löysivät vian heti.</span><span class="en-text" style="display:none;">Electrical problem in Mercedes fixed quickly. Other shops lacked tools — here they found it immediately.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">K</div><div><div style="font-size:17px;font-weight:700;">Kaisa N.</div><div style="font-size:16px;color:var(--ink-60);">Sähkötyöt</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">AD-valtuutettu korjaamo tarkoittaa, että takuu säilyy. Loistava vaihtoehto merkkikorjaamolle!</span><span class="en-text" style="display:none;">AD-authorized means warranty stays intact. Great alternative to the dealership!</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">E</div><div><div style="font-size:17px;font-weight:700;">Eero S.</div><div style="font-size:16px;color:var(--ink-60);">Määräaikaishuolto</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Hinnoittelu täysin läpinäkyvää. Sain tarjouksen etukäteen ja lopullinen lasku oli täsmälleen sama.</span><span class="en-text" style="display:none;">Fully transparent pricing. Got a quote upfront and the final bill was exactly the same.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">S</div><div><div style="font-size:17px;font-weight:700;">Sari P.</div><div style="font-size:16px;color:var(--ink-60);">Sähkötyöt</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Hyvä korjaamo, joka pitää lupauksensa. Katsastushuollossa auto meni läpi ensiyrittämällä!</span><span class="en-text" style="display:none;">Great garage that keeps promises. Car passed inspection on the first try!</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">A</div><div><div style="font-size:17px;font-weight:700;">Anna L.</div><div style="font-size:16px;color:var(--ink-60);">Katsastushuolto</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Sähköongelma Mersussa korjattiin nopeasti. Muilla korjaamoilla ei ollut välineitä — täällä löysivät vian heti.</span><span class="en-text" style="display:none;">Electrical problem in Mercedes fixed quickly. Others lacked tools — found it immediately.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">K</div><div><div style="font-size:17px;font-weight:700;">Kaisa N.</div><div style="font-size:16px;color:var(--ink-60);">Sähkötyöt</div></div></div></div>
       </div></div>
       <div class="t-col"><div class="t-col-inner">
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Erinomainen vikadiagnostiikka — löysivät ongelman välittömästi. Selittivät selkeästi mitä tehtiin.</span><span class="en-text" style="display:none;">Excellent diagnostics — found the problem immediately. Explained everything clearly.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">P</div><div><div style="font-size:13px;font-weight:700;">Pekka V.</div><div style="font-size:12px;color:var(--ink-60);">Vikadiagnostiikka</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Volvon huolto onnistui täydellisesti. Henkilökunta tiesi tarkalleen mitä tehdä. Nopea palvelu!</span><span class="en-text" style="display:none;">Volvo service was perfect. Staff knew exactly what to do. Fast service!</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">O</div><div><div style="font-size:13px;font-weight:700;">Olli T.</div><div style="font-size:12px;color:var(--ink-60);">Määräaikaishuolto</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Todella hyvä kokemus alusta loppuun. Ajanvaraus sujui helposti ja auto valmistui ajoissa. Suosittelen!</span><span class="en-text" style="display:none;">Great experience from start to finish. Easy booking and car ready on time. Recommend!</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">R</div><div><div style="font-size:13px;font-weight:700;">Riikka H.</div><div style="font-size:12px;color:var(--ink-60);">Katsastushuolto</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Akkuongelma Toyotassa diagnosoitiin ja korjattiin saman päivän aikana. Nopea ja edullinen palvelu!</span><span class="en-text" style="display:none;">Battery problem in Toyota diagnosed and fixed same day. Fast and affordable service!</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">V</div><div><div style="font-size:13px;font-weight:700;">Ville K.</div><div style="font-size:12px;color:var(--ink-60);">Sähkötyöt</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Erinomainen vikadiagnostiikka — löysivät ongelman välittömästi. Selittivät selkeästi mitä tehtiin.</span><span class="en-text" style="display:none;">Excellent diagnostics — found the problem immediately. Explained everything clearly.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">P</div><div><div style="font-size:13px;font-weight:700;">Pekka V.</div><div style="font-size:12px;color:var(--ink-60);">Vikadiagnostiikka</div></div></div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Volvon huolto onnistui täydellisesti. Henkilökunta tiesi tarkalleen mitä tehdä. Nopea palvelu!</span><span class="en-text" style="display:none;">Volvo service perfect. Staff knew exactly what to do. Fast service!</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">O</div><div><div style="font-size:13px;font-weight:700;">Olli T.</div><div style="font-size:12px;color:var(--ink-60);">Määräaikaishuolto</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Erinomainen vikadiagnostiikka — löysivät ongelman välittömästi. Selittivät selkeästi mitä tehtiin.</span><span class="en-text" style="display:none;">Excellent diagnostics — found the problem immediately. Explained everything clearly.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">P</div><div><div style="font-size:17px;font-weight:700;">Pekka V.</div><div style="font-size:16px;color:var(--ink-60);">Vikadiagnostiikka</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Volvon huolto onnistui täydellisesti. Henkilökunta tiesi tarkalleen mitä tehdä. Nopea palvelu!</span><span class="en-text" style="display:none;">Volvo service was perfect. Staff knew exactly what to do. Fast service!</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">O</div><div><div style="font-size:17px;font-weight:700;">Olli T.</div><div style="font-size:16px;color:var(--ink-60);">Määräaikaishuolto</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Todella hyvä kokemus alusta loppuun. Ajanvaraus sujui helposti ja auto valmistui ajoissa. Suosittelen!</span><span class="en-text" style="display:none;">Great experience from start to finish. Easy booking and car ready on time. Recommend!</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">R</div><div><div style="font-size:17px;font-weight:700;">Riikka H.</div><div style="font-size:16px;color:var(--ink-60);">Katsastushuolto</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Akkuongelma Toyotassa diagnosoitiin ja korjattiin saman päivän aikana. Nopea ja edullinen palvelu!</span><span class="en-text" style="display:none;">Battery problem in Toyota diagnosed and fixed same day. Fast and affordable service!</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">V</div><div><div style="font-size:17px;font-weight:700;">Ville K.</div><div style="font-size:16px;color:var(--ink-60);">Sähkötyöt</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Erinomainen vikadiagnostiikka — löysivät ongelman välittömästi. Selittivät selkeästi mitä tehtiin.</span><span class="en-text" style="display:none;">Excellent diagnostics — found the problem immediately. Explained everything clearly.</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">P</div><div><div style="font-size:17px;font-weight:700;">Pekka V.</div><div style="font-size:16px;color:var(--ink-60);">Vikadiagnostiikka</div></div></div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text"><span class="fi-text">Volvon huolto onnistui täydellisesti. Henkilökunta tiesi tarkalleen mitä tehdä. Nopea palvelu!</span><span class="en-text" style="display:none;">Volvo service perfect. Staff knew exactly what to do. Fast service!</span></p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">O</div><div><div style="font-size:17px;font-weight:700;">Olli T.</div><div style="font-size:16px;color:var(--ink-60);">Määräaikaishuolto</div></div></div></div>
       </div></div>
+    </div>
+    <div class="reveal" style="text-align:center;margin-top:80px;margin-bottom:0;max-width:1000px;margin-left:auto;margin-right:auto;">
+      <h3 style="font-family:'Norwester',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:normal;letter-spacing:0.02em;line-height:1.2;color:var(--ink);margin-bottom:32px;">
+        <span class="fi-text">3A Service – Luotettava kumppani Espoossa</span><span class="en-text" style="display:none;">3A Service – Your Trusted Partner in Espoo</span>
+      </h3>
+      <p style="font-family:'Roboto',sans-serif;font-size:18px;color:var(--ink-60);line-height:1.9;font-weight:400;margin-bottom:56px;">
+        <span class="fi-text">Olemme paikallinen autokorjaamo Espoossa, jossa asiakkaan auto hoidetaan aina kuin omamme. Uskomme rehellisyyteen, läpinäkyvyyteen ja ammattitaitoon – ilman turhia yllätyksiä laskussa. Kaikki automerkit, kaikki huolto yhdessä paikassa Espoossa.</span><span class="en-text" style="display:none;">We are a local car repair shop in Espoo, where your car is treated like our own. We believe in honesty, transparency and expertise – without unnecessary surprises in the bill. All car brands, all services in one place in Espoo.</span>
+      </p>
+      <div style="display:flex;justify-content:center;margin-bottom:48px;">
+        <img src="/pic copy/maaraikaishuolto/mechanic-workshop.jpg" alt="3A Service korjaamo" style="width:100%;max-width:510px;aspect-ratio:1/1;border-radius:20px;object-fit:cover;">
+      </div>
+      <a href="#services-scroll-wrapper" style="display:inline-block;background:var(--brand);color:#fff;font-family:'Roboto',sans-serif;font-weight:700;font-size:16px;padding:14px 36px;border-radius:8px;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:background .2s,transform .2s;" onmouseover="this.style.background='var(--brand-d)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='var(--brand)';this.style.transform='translateY(0)'">
+        <span class="fi-text">Tutustu palveluihimme</span><span class="en-text" style="display:none;">Explore Our Services</span>
+      </a>
     </div>
   </div>
 </section>
@@ -430,33 +593,33 @@
       <form id="contact-form" onsubmit="handleContactForm(event)" style="display:flex;flex-direction:column;gap:18px;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
           <div>
-            <label style="display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Nimi *</span><span class="en-text" style="display:none;">Name *</span></label>
-            <input type="text" id="cf-name" required style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:14px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
+            <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Nimi *</span><span class="en-text" style="display:none;">Name *</span></label>
+            <input type="text" id="cf-name" required style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
           </div>
           <div>
-            <label style="display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Puhelin</span><span class="en-text" style="display:none;">Phone</span></label>
-            <input type="tel" id="cf-phone" placeholder="+358..." style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:14px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
+            <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Puhelin</span><span class="en-text" style="display:none;">Phone</span></label>
+            <input type="tel" id="cf-phone" placeholder="+358..." style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
           </div>
         </div>
         <div>
-          <label style="display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Sähköposti *</span><span class="en-text" style="display:none;">Email *</span></label>
-          <input type="email" id="cf-email" required style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:14px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
+          <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Sähköposti *</span><span class="en-text" style="display:none;">Email *</span></label>
+          <input type="email" id="cf-email" required style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
         </div>
         <div>
-          <label style="display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Viesti *</span><span class="en-text" style="display:none;">Message *</span></label>
-          <textarea id="cf-msg" required rows="5" style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:14px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;resize:vertical;line-height:1.65;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+          <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Viesti *</span><span class="en-text" style="display:none;">Message *</span></label>
+          <textarea id="cf-msg" required rows="5" style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;resize:vertical;line-height:1.65;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'"></textarea>
         </div>
         <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
           <button type="submit" id="cf-btn" class="btn-primary" style="padding:14px 32px;font-size:15px;gap:10px;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             <span id="cf-btn-text"><span class="fi-text">Lähetä viesti</span><span class="en-text" style="display:none;">Send Message</span></span>
           </button>
-          <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-outline" style="padding:12px 24px;font-size:14px;gap:8px;">
+          <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-outline" style="padding:12px 24px;font-size:18px;gap:8px;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             <span class="fi-text">Varaa aika</span><span class="en-text" style="display:none;">Book Now</span>
           </a>
         </div>
-        <div id="cf-success" style="display:none;align-items:center;gap:10px;padding:14px 18px;background:#ECFDF5;border:1.5px solid #6EE7B7;border-radius:10px;font-size:14px;font-weight:500;color:#065F46;">
+        <div id="cf-success" style="display:none;align-items:center;gap:10px;padding:14px 18px;background:#ECFDF5;border:1.5px solid #6EE7B7;border-radius:10px;font-size:18px;font-weight:500;color:#065F46;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
           <span class="fi-text">Kiitos! Olemme sinuun yhteydessä pian.</span><span class="en-text" style="display:none;">Thank you! We'll be in touch soon.</span>
         </div>
@@ -469,19 +632,19 @@
             <div style="width:34px;height:34px;background:#fff;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid var(--border);">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.76 12.09a1 1 0 0 0 1.48 0C13.95 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
             </div>
-            <div><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink-60);margin-bottom:2px;"><span class="fi-text">Osoite</span><span class="en-text" style="display:none;">Address</span></div><div style="font-size:14px;color:var(--ink);font-weight:500;">Sillankorva 8, 02300 Espoo</div></div>
+            <div><div style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink-60);margin-bottom:2px;"><span class="fi-text">Osoite</span><span class="en-text" style="display:none;">Address</span></div><div style="font-size:18px;color:var(--ink);font-weight:500;">Sillankorva 8, 02300 Espoo</div></div>
           </div>
           <div style="display:flex;align-items:center;gap:12px;">
             <div style="width:34px;height:34px;background:#fff;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid var(--border);">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
-            <div><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink-60);margin-bottom:2px;"><span class="fi-text">Aukioloajat</span><span class="en-text" style="display:none;">Hours</span></div><div style="font-size:14px;color:var(--ink);font-weight:500;"><span class="fi-text">Ma–Pe 8:00–17:00</span><span class="en-text" style="display:none;">Mon–Fri 8:00–17:00</span></div></div>
+            <div><div style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink-60);margin-bottom:2px;"><span class="fi-text">Aukioloajat</span><span class="en-text" style="display:none;">Hours</span></div><div style="font-size:18px;color:var(--ink);font-weight:500;"><span class="fi-text">Ma–Pe 8:00–17:00</span><span class="en-text" style="display:none;">Mon–Fri 8:00–17:00</span></div></div>
           </div>
           <div style="display:flex;align-items:center;gap:12px;">
             <div style="width:34px;height:34px;background:#fff;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid var(--border);">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
-            <div><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink-60);margin-bottom:2px;">Email</div><a href="mailto:info@3aservice.fi" style="font-size:14px;color:var(--ink);font-weight:500;text-decoration:none;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--ink)'">info@3aservice.fi</a></div>
+            <div><div style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink-60);margin-bottom:2px;">Email</div><a href="mailto:info@3aservice.fi" style="font-size:18px;color:var(--ink);font-weight:500;text-decoration:none;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--ink)'">info@3aservice.fi</a></div>
           </div>
         </div>
       </div>
@@ -489,22 +652,12 @@
   </div>
 </section>
 
-<!-- CTA -->
-<section style="background:var(--ink);padding:64px 24px;position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(232,137,10,0.12) 0%,transparent 60%);pointer-events:none;"></div>
-  <div style="max-width:700px;margin:0 auto;text-align:center;position:relative;">
-    <h2 style="font-size:clamp(26px,4vw,40px);font-weight:900;color:#fff;letter-spacing:-0.03em;margin-bottom:14px;"><span class="fi-text">Varaa huoltoaika tänään</span><span class="en-text" style="display:none;">Book a service today</span></h2>
-    <p style="font-size:16px;color:rgba(255,255,255,0.7);margin-bottom:28px;font-weight:300;"><span class="fi-text">Luotettavaa autohuoltoa Espoossa — autosi takuu säilyy.</span><span class="en-text" style="display:none;">Reliable car service in Espoo — your warranty stays intact.</span></p>
-    <a href="tel:+358449773677" style="display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 28px;border:2px solid rgba(255,255,255,0.3);border-radius:8px;transition:border-color .2s,background .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.6)';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)';this.style.background='transparent'">+358 44 977 3677</a>
-  </div>
-</section>
-
 <!-- FOOTER -->
 
 <!-- AutoJerry Reviews -->
-<section style="padding:56px 24px;background:#F5F5F2;">
+<section style="padding:56px 24px;background:#fff;">
   <div style="max-width:960px;margin:0 auto;text-align:center;">
-    <div style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#E8890A;margin-bottom:10px;">ASIAKASARVOSTELUT</div>
+    <div style="font-size:16px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#E8890A;margin-bottom:10px;">ASIAKASARVOSTELUT</div>
     <h2 style="font-size:clamp(22px,4vw,34px);font-weight:900;color:#0F172A;margin-bottom:8px;">
       <span class="fi-text">Mitä asiakkaamme sanovat</span><span class="en-text" style="display:none;">What our customers say</span>
     </h2>
@@ -514,12 +667,84 @@
     <iframe src="https://autojerry.fi/arvostelut/upotus-2/8441/" style="width:100%;border:none;border-radius:16px;min-height:500px;display:block;" loading="lazy" title="AutoJerry Asiakasarvostelut"></iframe>
   </div>
 </section>
+
+<!-- FAQ Section -->
+<section style="padding:80px 24px;background:#fff;">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 style="font-family:'Norwester',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:normal;letter-spacing:0.01em;line-height:1.2;color:var(--ink);margin-bottom:56px;text-align:center;">
+      <span class="fi-text">Usein kysytyt kysymykset</span><span class="en-text" style="display:none;">Frequently Asked Questions</span>
+    </h2>
+    <div style="display:flex;flex-direction:column;gap:0;">
+      <!-- FAQ Item 1 -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="const ans=this.nextElementSibling;ans.style.display=ans.style.display==='none'?'block':'none';this.querySelector('.faq-icon').style.transform=ans.style.display==='none'?'rotate(0deg)':'rotate(180deg)';" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:24px 0;font-size:18px;font-weight:700;color:var(--ink);">
+          <span class="fi-text">Toimitteko kaikille automerkeille?</span><span class="en-text" style="display:none;">Do you service all car brands?</span>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" style="transition:transform 0.3s;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-a" style="display:none;padding:0 0 18px;font-size:17px;color:var(--ink-60);line-height:1.8;font-weight:400;">
+          <span class="fi-text">Kyllä! 3A Service huoltaa kaikki automerkit — BMW, Mercedes-Benz, Audi, Volkswagen, Toyota, Volvo, Škoda, Honda ja monet muut. Meillä on ammattimekanikot, joilla on syvällinen kokemus jokaisen merkin vaatimuksista ja huollon erityispiirteistä. Sinun autosi on turvallissa käsissä riippumatta merkistä.</span><span class="en-text" style="display:none;">Yes! 3A Service maintains all car brands — BMW, Mercedes-Benz, Audi, Volkswagen, Toyota, Volvo, Škoda, Honda and many more. Our professional mechanics have deep experience with each brand's requirements and specific maintenance needs. Your car is in safe hands regardless of brand.</span>
+        </div>
+      </div>
+      <!-- FAQ Item 2 -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="const ans=this.nextElementSibling;ans.style.display=ans.style.display==='none'?'block':'none';this.querySelector('.faq-icon').style.transform=ans.style.display==='none'?'rotate(0deg)':'rotate(180deg)';" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:24px 0;font-size:18px;font-weight:700;color:var(--ink);">
+          <span class="fi-text">Tarvitseeko aika varata etukäteen?</span><span class="en-text" style="display:none;">Do I need to book in advance?</span>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-a" style="display:none;padding:0 0 18px;font-size:17px;color:var(--ink-60);line-height:1.8;font-weight:400;">
+          <span class="fi-text">Ajanvaraus on suositeltavaa, jotta saat sopivaksi ajan. Voit varata helposti verkossa tai soittamalla meille numeroon 044 977 3677. Otamme myös walk-in-asiakkaita saatavuuden mukaan — jos sinulla on kiireistä ja haluat tulla ilman ajanvarausta, ota yhteyttä ensin, niin kerromme, voidaanko sinut hoitaa samassa istunnossa.</span><span class="en-text" style="display:none;">Booking is recommended to get a convenient time. You can easily book online or by calling us at 044 977 3677. We also accept walk-ins depending on availability — if you're in a hurry, contact us first so we can let you know if we can fit you in right away.</span>
+        </div>
+      </div>
+      <!-- FAQ Item 3 -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="const ans=this.nextElementSibling;ans.style.display=ans.style.display==='none'?'block':'none';this.querySelector('.faq-icon').style.transform=ans.style.display==='none'?'rotate(0deg)':'rotate(180deg)';" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:24px 0;font-size:18px;font-weight:700;color:var(--ink);">
+          <span class="fi-text">Kuinka kauan huolto kestää?</span><span class="en-text" style="display:none;">How long does service take?</span>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-a" style="display:none;padding:0 0 18px;font-size:17px;color:var(--ink-60);line-height:1.8;font-weight:400;">
+          <span class="fi-text">Huollon kesto riippuu palvelusta: Yksinkertainen öljynvaihto kestää noin 30 minuuttia. Määräaikaishuolto ottaa 1-3 tuntia. Jarrujen vaihto ja muut korjaukset voivat kestää 2-4 tuntia. Monimutkaisemmat työt saattavat vaatia pidemmän ajan. Annamme sinulle tarkan arvioin kun varaat ajan ja kerrot auton merkin sekä palvelun, jonka haluat.</span><span class="en-text" style="display:none;">Service duration depends on the work: Simple oil change takes about 30 minutes. Scheduled maintenance takes 1-3 hours. Brake replacement and other repairs may take 2-4 hours. More complex work may require longer. We'll give you an accurate estimate when you book and tell us your car brand and what service you need.</span>
+        </div>
+      </div>
+      <!-- FAQ Item 4 -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="const ans=this.nextElementSibling;ans.style.display=ans.style.display==='none'?'block':'none';this.querySelector('.faq-icon').style.transform=ans.style.display==='none'?'rotate(0deg)':'rotate(180deg)';" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:24px 0;font-size:18px;font-weight:700;color:var(--ink);">
+          <span class="fi-text">Mikä on takuukäytäntönne?</span><span class="en-text" style="display:none;">What is your warranty policy?</span>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-a" style="display:none;padding:0 0 18px;font-size:17px;color:var(--ink-60);line-height:1.8;font-weight:400;">
+          <span class="fi-text">Kaikille tehdyille töille annamme 12 kuukauden takuun. Takuu kattaa sekä materiaalit että työvoiman. Jos huollossa käytetyllä osalla tai tehdyllä työllä ilmenee ongelma takuuajalla, korjaamme sen ilmaiseksi. Takuu alkaa huollon valmistumispäivästä. Tämä on meidän tavamme osoittaa, että luotamme omaan työhömme.</span><span class="en-text" style="display:none;">We offer a 12-month warranty on all work performed. The warranty covers both parts and labor. If any part we used or work we did develops a problem during the warranty period, we'll fix it free of charge. The warranty begins from the date of service completion. This is our way of showing we stand behind our work.</span>
+        </div>
+      </div>
+      <!-- FAQ Item 5 -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="const ans=this.nextElementSibling;ans.style.display=ans.style.display==='none'?'block':'none';this.querySelector('.faq-icon').style.transform=ans.style.display==='none'?'rotate(0deg)':'rotate(180deg)';" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:24px 0;font-size:18px;font-weight:700;color:var(--ink);">
+          <span class="fi-text">Miten hinnoittelu toimii?</span><span class="en-text" style="display:none;">How does pricing work?</span>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-a" style="display:none;padding:0 0 18px;font-size:17px;color:var(--ink-60);line-height:1.8;font-weight:400;">
+          <span class="fi-text">Hinnoittelu on täysin läpinäkyvää — ei piilomaksuja, ei yllätyksiä. Kun varaat ajan, kerromme palvelun arvioinnin. Ennen töiden aloittamista saat kirjallisen kustannusarvion, jossa on eritelty kaikki osat ja työvaiheet. Lopullinen lasku vastaa antamaamme arviota. Jos työt lähtevät arviosta enemmän maksavaksi, tiedotamme siitä etukäteen ja kysymme luvaksesi.</span><span class="en-text" style="display:none;">Pricing is completely transparent — no hidden fees, no surprises. When you book, we'll estimate the service cost. Before work begins, you get a written quote with all parts and work steps detailed. The final invoice matches our estimate. If the work costs more than estimated, we'll inform you in advance and ask for approval.</span>
+        </div>
+      </div>
+      <!-- FAQ Item 6 -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="const ans=this.nextElementSibling;ans.style.display=ans.style.display==='none'?'block':'none';this.querySelector('.faq-icon').style.transform=ans.style.display==='none'?'rotate(0deg)':'rotate(180deg)';" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:24px 0;font-size:18px;font-weight:700;color:var(--ink);">
+          <span class="fi-text">Missä sijaitsette?</span><span class="en-text" style="display:none;">Where are you located?</span>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-a" style="display:none;padding:0 0 18px;font-size:17px;color:var(--ink-60);line-height:1.8;font-weight:400;">
+          <span class="fi-text">3A Service sijaitsee Espoossa osoitteessa Sillankorva 8, 02300 Espoo. Keskeinen sijainti tekee meistä helposti saavutettavissa sekä autoilijalle että joukkoliikenteen käyttäjälle. Aukioloajat: Maanantai-perjantai 8:00–17:00. Suljettu viikonloppuisin ja juhlapäivinä.</span><span class="en-text" style="display:none;">3A Service is located in Espoo at Sillankorva 8, 02300 Espoo. Our central location makes us easily accessible by car or public transport. Hours: Monday-Friday 8:00–17:00. Closed on weekends and holidays.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer style="padding:48px 24px 0;">
   <div style="max-width:1100px;margin:0 auto;">
     <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:40px;">
       <div>
         <img src="/logo/pomelli_bdna_image_0509.png" alt="3A Service Oy" style="height:48px;width:auto;margin-bottom:14px;display:block;">
-        <p style="font-size:14px;"><span class="fi-text">Luotettavaa autohuoltoa Espoossa.</span><span class="en-text" style="display:none;">Reliable car service in Espoo.</span></p>
+        <p style="font-size:18px;"><span class="fi-text">Luotettavaa autohuoltoa Espoossa.</span><span class="en-text" style="display:none;">Reliable car service in Espoo.</span></p>
         <div style="display:flex;gap:8px;margin-top:16px;">
           <a href="https://www.facebook.com/profile.php?id=61556218666083" target="_blank" style="width:34px;height:34px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);transition:background .15s;" onmouseover="this.style.background='var(--brand)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           <a href="https://www.instagram.com/3a_service_oy/" target="_blank" style="width:34px;height:34px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);transition:background .15s;" onmouseover="this.style.background='var(--brand)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a>
@@ -548,7 +773,7 @@
         <a href="#contact"><span class="fi-text">Ma–Pe 8:00–17:00</span><span class="en-text" style="display:none;">Mon–Fri 8:00–17:00</span></a>
       </div>
     </div>
-    <div style="border-top:1px solid rgba(255,255,255,0.08);padding:18px 0;"><p style="font-size:13px;color:rgba(255,255,255,0.35);">© 2026 3A Service Oy | Autohuolto</p></div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding:18px 0;"><p style="font-size:17px;color:rgba(255,255,255,0.35);">© 2026 3A Service Oy | Autohuolto</p></div>
   </div>
 </footer>
 
@@ -598,7 +823,7 @@
       <span class="fi-text">Varaa aika nyt</span><span class="en-text" style="display:none;">Book Now</span>
     </a>
     <div style="display:flex;align-items:center;justify-content:space-between;">
-      <a href="tel:+358449773677" style="display:flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:var(--ink-60);text-decoration:none;">
+      <a href="tel:+358449773677" style="display:flex;align-items:center;gap:7px;font-size:18px;font-weight:600;color:var(--ink-60);text-decoration:none;">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.34a16 16 0 0 0 5.75 5.75l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"/></svg>
         +358 44 977 3677
       </a>
