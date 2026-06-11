@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Öljynvaihto ja öljynsuodattimen vaihto Espoo | 3A Service – Säästä moottorisi kalliilta remonteilta</title>
+  <meta name="description" content="Öljynvaihto Espoossa asiantuntevasti. Kaikki automerkit. Käytämme vain autosi luokitukset täyttävää laatuöljyä. Alkaen 79€. Varaa aika → 044 9773677">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @font-face{font-family:'Norwester';src:url('/font/norwester.otf') format('opentype');font-weight:normal;font-style:normal;}
+    :root{--brand:#E8890A;--brand-d:#C4720A;--brand-l:#FEF3DC;--ink:#1A1A1A;--ink-60:rgba(26,26,26,0.6);--surface:#F5F5F2;--border:#E2E2DC;--adblue:#0044B0;--hero:#111;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Roboto',sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;}
+    .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:#fff;font-family:'Roboto',sans-serif;font-weight:700;border:none;cursor:pointer;border-radius:8px;padding:13px 24px;font-size:18px;transition:background .18s,transform .14s,box-shadow .18s;box-shadow:0 4px 16px rgba(232,137,10,0.3);text-decoration:none;white-space:nowrap;}
+    .btn-primary:hover{background:var(--brand-d);transform:translateY(-1px);box-shadow:0 8px 24px rgba(232,137,10,0.4);}
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:10px 20px;transition:padding .3s;}
+    .nav-dock{max-width:1280px;margin:0 auto;height:60px;display:flex;align-items:center;gap:24px;padding:0 22px;background:rgba(20,20,20,0.82);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.1);border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.45),0 2px 8px rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.1),inset 0 -1px 0 rgba(0,0,0,0.2);}
+    .nav-link{font-size:18px;font-weight:500;color:rgba(255,255,255,0.78);text-decoration:none;padding:6px 2px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;}.nav-link:hover{color:#fff;border-color:rgba(255,255,255,0.5);}
+    .lang-pill{display:inline-flex;border:1.5px solid rgba(255,255,255,0.2);border-radius:8px;overflow:hidden;}.lang-btn{cursor:pointer;padding:6px 13px;font-size:17px;font-weight:700;background:transparent;border:none;font-family:'Roboto',sans-serif;transition:background .15s,color .15s;color:rgba(255,255,255,0.7);}.lang-btn.active{background:var(--brand);color:#fff;}
+    .section-tag{font-size:17px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--brand);}
+    .faq-item{border-bottom:1.5px solid var(--border);}
+    .faq-q{display:flex;align-items:center;justify-content:space-between;padding:20px 0;cursor:pointer;font-size:18px;font-weight:700;transition:color .15s;gap:16px;}.faq-q:hover{color:var(--brand);}
+    .faq-a{display:none;padding:0 0 18px;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;}.faq-a.open{display:block;}
+    .faq-icon{flex-shrink:0;transition:transform .2s;}.faq-icon.open{transform:rotate(45deg);}
+    .trust-bar{background:#fff;padding:20px 24px;border-bottom:1.5px solid var(--border);display:flex;justify-content:center;gap:40px;flex-wrap:wrap;font-size:17px;font-weight:500;color:var(--ink);}
+    .trust-item{display:flex;align-items:center;gap:8px;}
+    .step-circle{width:48px;height:48px;background:var(--brand);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;flex-shrink:0;}
+    .step-item{display:flex;gap:16px;margin-bottom:24px;}
+    .step-content{flex:1;}
+    .step-content h4{font-size:18px;font-weight:700;margin-bottom:8px;color:var(--ink);}
+    .step-content p{font-size:16px;color:var(--ink-60);line-height:1.7;}
+    .brands-carousel{overflow:hidden;position:relative;background:#fff;}
+    .brands-wrapper{max-width:1280px;margin:0 auto;padding:60px 24px;}
+    .brand-item{flex-shrink:0;display:flex;align-items:center;justify-content:center;height:100px;width:140px;background:#fff;border-radius:12px;border:1.5px solid var(--border);}
+    .brand-marquee{display:flex;gap:16px;overflow:hidden;}
+    .brand-marquee-inner{display:flex;gap:16px;animation:scrollHorizontal 40s linear infinite;}
+    @keyframes scrollHorizontal{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+    .why-card{padding:24px;background:#fff;border-radius:16px;border:1.5px solid var(--border);text-align:center;}
+    .why-card h4{font-size:18px;font-weight:700;margin-bottom:12px;color:var(--ink);}
+    .why-card p{font-size:16px;color:var(--ink-60);line-height:1.7;}
+    footer{background:var(--ink);color:rgba(255,255,255,.7);}
+    footer h4{color:#fff;font-size:17px;font-weight:700;margin-bottom:14px;letter-spacing:0.06em;text-transform:uppercase;}
+    footer a{color:rgba(255,255,255,.7);text-decoration:none;font-size:18px;transition:color .15s;display:block;margin-bottom:8px;}
+    footer a:hover{color:var(--brand);}
+    #mobile-drawer{position:fixed;inset:0;z-index:150;background:#fff;transform:translateX(100%);transition:transform .35s cubic-bezier(.77,0,.175,1);display:flex;flex-direction:column;}
+    #mobile-drawer.open{transform:translateX(0);}
+    .drawer-link{display:flex;align-items:center;padding:18px 24px;font-size:20px;font-weight:900;border-bottom:1px solid var(--border);text-decoration:none;color:var(--ink);transition:color .15s;}.drawer-link:hover{color:var(--brand);}
+    @media(max-width:640px){.hide-mobile{display:none!important;}.trust-bar{gap:16px;font-size:14px;}.step-item{margin-bottom:16px;}.brand-item{height:80px;width:110px;}}
+    @media(min-width:641px){.hide-desktop{display:none!important;}}
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="navbar">
+  <div class="nav-dock" style="max-width:1280px;margin:0 auto;">
+    <a href="/index.html" style="color:#fff;text-decoration:none;font-weight:700;font-size:18px;">3A Service</a>
+    <div style="flex:1;"></div>
+    <a href="/index.html" class="nav-link hide-mobile">← Takaisin pääsivulle</a>
+    <button class="hide-desktop" onclick="openDrawer()" style="background:none;border:none;cursor:pointer;padding:4px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<div id="mobile-drawer">
+  <div style="padding:20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
+    <span style="font-size:18px;font-weight:700;">Valikko</span>
+    <button onclick="closeDrawer()" style="background:none;border:none;cursor:pointer;padding:4px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <a href="/index.html" class="drawer-link" onclick="closeDrawer()">← Takaisin pääsivulle</a>
+  <div class="drawer-section-label">Palvelut</div>
+  <a href="/maaraikaishuolto.html" class="drawer-link drawer-sub" onclick="closeDrawer()">Määräaikaishuolto</a>
+  <a href="/oljynvaihto.html" class="drawer-link drawer-sub" onclick="closeDrawer()">Öljynvaihto</a>
+</div>
+
+<!-- HERO SECTION -->
+<section style="position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding-top:100px;">
+  <img src="/pic copy/oil/oilfilter.jpeg" alt="Öljynvaihto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,5,5,0.60) 0%,rgba(5,5,5,0.75) 100%);z-index:1;"></div>
+  <div style="position:relative;z-index:2;text-align:center;color:#fff;max-width:900px;padding:24px;">
+    <h1 style="font-family:'Norwester',sans-serif;font-size:clamp(40px,8vw,64px);font-weight:normal;letter-spacing:0.02em;line-height:1.1;margin-bottom:24px;">Öljynvaihto ja öljynsuodattimen vaihto Espoossa</h1>
+    <p style="font-size:clamp(18px,3vw,24px);color:rgba(255,255,255,0.92);margin-bottom:40px;line-height:1.6;">Varmista moottorisi pitkä ikä ja optimaalinen teho oikealla laatuöljyllä – nopeasti ja ammattitaidolla.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:40px;">
+      <div style="background:rgba(232,137,10,0.2);border:1px solid rgba(232,137,10,0.4);border-radius:8px;padding:12px 20px;backdrop-filter:blur(10px);">
+        <div style="font-size:20px;font-weight:700;margin-bottom:4px;">⭐⭐⭐⭐⭐</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.8);">50+ arvostelua</div>
+      </div>
+      <div style="background:rgba(232,137,10,0.2);border:1px solid rgba(232,137,10,0.4);border-radius:8px;padding:12px 20px;backdrop-filter:blur(10px);">
+        <div style="font-size:20px;font-weight:700;margin-bottom:4px;">Alkaen 79€</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.8);">Nopea ja ammattilainen palvelu</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;">
+      <button class="btn-primary" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'});">Varaa aika</button>
+      <a href="tel:+358449773677" class="btn-primary" style="background:transparent;border:2px solid #fff;color:#fff;">📞 044 9773677</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">✅ Kaikki automerkit</div>
+  <div class="trust-item">⏱ Ma–Pe 08–17</div>
+  <div class="trust-item">🔧 12 kk takuu</div>
+  <div class="trust-item">📍 Espoo</div>
+</div>
+
+<!-- PALVELUUN KUULUU -->
+<section style="padding:80px 24px;background:#fff;">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 style="font-family:'Norwester',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:normal;letter-spacing:0.01em;line-height:1.2;color:var(--ink);margin-bottom:56px;text-align:center;">Mitä öljynvaihtohuolto sisältää?</h2>
+    <div style="display:grid;grid-template-columns:1fr;gap:24px;">
+      <div style="padding:24px;background:var(--brand-l);border-radius:12px;border-left:4px solid var(--brand);">
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--ink);">Vanhan moottoriöljyn turvallinen poisto ja kierrätys</h3>
+      </div>
+      <div style="padding:24px;background:var(--brand-l);border-radius:12px;border-left:4px solid var(--brand);">
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--ink);">Uuden, autosi valmistajan luokitukset täyttävän laatuöljyn lisäys</h3>
+      </div>
+      <div style="padding:24px;background:var(--brand-l);border-radius:12px;border-left:4px solid var(--brand);">
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--ink);">Öljynsuodattimen ja tiivisteen vaihto (aina vakiovarusteena)</h3>
+      </div>
+      <div style="padding:24px;background:var(--brand-l);border-radius:12px;border-left:4px solid var(--brand);">
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--ink);">Öljyjen tason ja mahdollisten vuotojen tarkistus</h3>
+      </div>
+      <div style="padding:24px;background:var(--brand-l);border-radius:12px;border-left:4px solid var(--brand);">
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--ink);">Huoltovälin nollaus ja virallinen merkintä huoltokirjaan</h3>
+      </div>
+      <div style="padding:24px;background:#fff;border-radius:12px;border:1.5px solid var(--border);">
+        <h3 style="font-size:18px;font-weight:700;color:var(--brand);margin-bottom:8px;">⏱ Kesto: noin 30–60 minuuttia</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MIKSI TÄRKEÄÄ -->
+<section style="padding:80px 24px;background:#fff;">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 style="font-family:'Norwester',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:normal;letter-spacing:0.01em;line-height:1.2;color:var(--ink);margin-bottom:40px;text-align:center;">Miksi säännöllinen öljynvaihto on elintärkeää?</h2>
+    <div style="background:var(--brand-l);padding:40px;border-radius:16px;border-left:6px solid var(--brand);">
+      <p style="font-size:18px;color:var(--ink);line-height:2;margin-bottom:0;">Moottoriöljy on autosi sydämen verenkierto. Laiminlyönti tai väärän öljyn käyttö johtaa lian kertymiseen, osien kulumiseen ja pahimmillaan tuhansien eurojen moottorivaurioon. Myös hiukkassuodatin voi tukkeutua väärillä öljyvalinnoilla. Laatuöljyn säännöllinen vaihtaminen on halvin vakuutus moottorillesi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- NÄIN PALVELU TOIMII -->
+<section style="padding:80px 24px;background:#fff;">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 style="font-family:'Norwester',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:normal;letter-spacing:0.01em;line-height:1.2;color:var(--ink);margin-bottom:56px;text-align:center;">Näin palvelu toimii</h2>
+    <div style="display:grid;grid-template-columns:1fr;gap:0;">
+      <div class="step-item">
+        <div class="step-circle">1️⃣</div>
+        <div class="step-content">
+          <h4>Varaa aika verkossa tai soittamalla</h4>
+          <p>Valitse sopiva aika ja kerro autosi merkki. Voit varata netissä tai soittaa 044 9773677.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-circle">2️⃣</div>
+        <div class="step-content">
+          <h4>Tuo auto 3A Servicelle Espoossa</h4>
+          <p>Sijaitsemme keskustassa, helpossa paikassa pysäköinnillä.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-circle">3️⃣</div>
+        <div class="step-content">
+          <h4>Asiantuntijamme valitsevat autoosi täsmälleen oikean, luokitukset täyttävän öljyn</h4>
+          <p>Meillä on laaja valikoimaa öljyjä kaikille auto-merkeille ja malleille.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-circle">4️⃣</div>
+        <div class="step-content">
+          <h4>Vaihdamme öljyt ja suodattimen nopeasti odottaessasi</h4>
+          <p>Nopea ja ammattilainen palvelu – valmiina jo 30–60 minuutissa.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-circle">5️⃣</div>
+        <div class="step-content">
+          <h4>Nouda auto – valmis ja turvallinen ajaa!</h4>
+          <p>Saat huoltokirjan merkinnän ja 12 kuukauden takuun työlle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MIKSI VALITA 3A SERVICE -->
+<section style="padding:80px 24px;background:#fff;">
+  <div style="max-width:1000px;margin:0 auto;">
+    <h2 style="font-family:'Norwester',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:normal;letter-spacing:0.01em;line-height:1.2;color:var(--ink);margin-bottom:56px;text-align:center;">Miksi valita 3A Service?</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;">
+      <div class="why-card">
+        <h4>✅ Ammattimekanikot</h4>
+        <p>Pitkä kokemus ja sertifikaatit.</p>
+      </div>
+      <div class="why-card">
+        <h4>✅ 12 kk takuu</h4>
+        <p>Kaikille töille vakio-takuu.</p>
+      </div>
+      <div class="why-card">
+        <h4>✅ Läpinäkyvä hinnoittelu</h4>
+        <p>Ei piilotettuja maksuja.</p>
+      </div>
+      <div class="why-card">
+        <h4>✅ Kaikki automerkit</h4>
+        <p>Audi, BMW, Mercedes, Toyota, Volvo ja paljon muita.</p>
+      </div>
+      <div class="why-card">
+        <h4>✅ Espoo – helppo sijainti</h4>
+        <p>Keskusta-alueella, helppo pysäköinti.</p>
+      </div>
+      <div class="why-card">
+        <h4>✅ Nopea palvelu</h4>
+        <p>30–60 minuuttia ja valmis!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KAIKKI AUTOMERKIT -->
+<section class="brands-carousel">
+  <div class="brands-wrapper">
+    <h2 style="font-family:'Norwester',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:normal;letter-spacing:0.01em;line-height:1.2;color:var(--ink);margin-bottom:48px;text-align:center;">Huollamme kaikki automerkit</h2>
+    <div class="brand-marquee">
+      <div class="brand-marquee-inner">
+        <div class="brand-item"><img src="/car brand svg /Audi.svg" alt="Audi" loading="lazy" style="max-width:100%;max-height:60px;"></div>
+        <div class="brand-item"><img src="/car brand svg /Bens.svg" alt="Mercedes-Benz" loading="lazy" style="max-width:100%;max-height:60px;"></div>
+        <div class="brand-item"><img src="/car brand svg /bmw.svg" alt="BMW" loading="lazy" style="max-width:100%;max-height:60px;"></div>
+        <div class="brand-item"><img src="/car brand svg /Honda-1.svg" alt="Honda" loading="lazy" style="max-width:100%;max-height:60px;"></div>
+        <div class="brand-item"><img src="/car brand svg /Skoda.svg" alt="Skoda" loading="lazy" style="max-width:100%;max-height:60px;"></div>
+        <div class="brand-item"><img src="/car brand svg /Totota.svg" alt="Toyota" loading="lazy" style="max-width:100%;max-height:60px;"></div>
+        <div class="brand-item"><img src="/car brand svg /Volvo.svg" alt="Volvo" loading="lazy" style="max-width:100%;max-height:60px;"></div>
+        <!-- Repeat for infinite scroll -->
+        <div class="brand-item"><img src="/car brand svg /Audi.svg" alt="Audi" loading="lazy" style="max-width:100%;max-height:60px;"></div>
+        <div class="brand-item"><img src="/car brand svg /Bens.svg" alt="Mercedes-Benz" loading="lazy" style="max-width:100%;max-height:60px;"></div>
+        <div class="brand-item"><img src="/car brand svg /bmw.svg" alt="BMW" loading="lazy" style="max-width:100%;max-height:60px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE REVIEWS -->
+<section style="padding:80px 24px;background:#fff;">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 style="font-family:'Norwester',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:normal;letter-spacing:0.01em;line-height:1.2;color:var(--ink);margin-bottom:56px;text-align:center;">Mitä asiakkaamme sanovat</h2>
+    <div style="background:var(--border);border-radius:16px;padding:40px;text-align:center;">
+      <p style="font-size:18px;color:var(--ink);margin-bottom:16px;">⭐⭐⭐⭐⭐ 4.9/5 Google Reviewissa</p>
+      <p style="font-size:16px;color:var(--ink-60);margin-bottom:32px;">Lue kaikki arvostelut Google Reviewissa</p>
+      <a href="https://g.co/kgs/3A-Service-Reviews" target="_blank" class="btn-primary">Katso arvostelut</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:80px 24px;background:#fff;">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 style="font-family:'Norwester',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:normal;letter-spacing:0.01em;line-height:1.2;color:var(--ink);margin-bottom:56px;text-align:center;">Usein kysytyt kysymykset</h2>
+    <div style="border-top:1.5px solid var(--border);">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>❓ Kuinka usein moottoriöljy pitää vaihtaa?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Yleensä 10 000 – 30 000 km välein tai kerran vuodessa, auton valmistajan suosituksista riippuen. Säännöllisyys on tärkeintä.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>❓ Mitä öljyä autooni laitetaan?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Käytämme vain autosi valmistajan tarkan luokituksen täyttävää laatuöljyä. Väärä öljy voi rikkoa moottorin, joten me hoidamme oikean öljyn valinnan puolestasi.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>❓ Pitääkö öljynsuodatin vaihtaa jokaisen öljynvaihdon yhteydessä?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Kyllä ehdottomasti. Uusi öljy likaantuu välittömästi, jos se kulkee vanhan, likaisen suodattimen läpi.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>❓ Miksi en käyttäisi vain halvinta öljyä?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Halvat öljyt menettävät ominaisuutensa nopeammin ja keräävät lietettä. Laadukkaampi öljy pitää moottorin puhtaana, säästää polttoainetta ja suojaa osia kulumiselta.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>❓ Kauanko öljynvaihto kestää 3A Servicellä?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Huolto on nopea ja kestää yleensä noin 30–60 minuuttia. Voit odottaa mukavasti asiakastiloissamme huollon ajan.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="booking" style="padding:80px 24px;background:var(--brand);color:#fff;">
+  <div style="max-width:900px;margin:0 auto;text-align:center;">
+    <h2 style="font-family:'Norwester',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:normal;letter-spacing:0.02em;line-height:1.2;margin-bottom:40px;">Valmis varaamaan ajan?</h2>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:40px;">
+      <button class="btn-primary" style="background:#fff;color:var(--brand);">Varaa aika nyt</button>
+      <a href="tel:+358449773677" class="btn-primary" style="background:transparent;border:2px solid #fff;color:#fff;">📞 044 9773677</a>
+    </div>
+    <p style="font-size:18px;margin-bottom:20px;opacity:0.95;">📍 3A Service, Espoo | ⏱ Ma–Pe 08–17</p>
+    <p style="font-size:16px;opacity:0.9;">Nopea palvelu • Ammattimekanikot • 12 kk takuu</p>
+  </div>
+</section>
+
+<!-- MUUT PALVELUT -->
+<section style="padding:80px 24px;background:#fff;">
+  <div style="max-width:1000px;margin:0 auto;">
+    <h2 style="font-family:'Norwester',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:normal;letter-spacing:0.01em;line-height:1.2;color:var(--ink);margin-bottom:56px;text-align:center;">Tutustu kaikkiin palveluihimme</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;">
+      <a href="/maaraikaishuolto.html" style="padding:16px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--ink);text-align:center;font-weight:600;transition:background .2s;border:1.5px solid var(--border);" onmouseover="this.style.background='var(--brand)';this.style.color='#fff'" onmouseout="this.style.background='var(--surface)';this.style.color='var(--ink)'">Määräaikaishuolto</a>
+      <a href="/jakohihna.html" style="padding:16px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--ink);text-align:center;font-weight:600;transition:background .2s;border:1.5px solid var(--border);" onmouseover="this.style.background='var(--brand)';this.style.color='#fff'" onmouseout="this.style.background='var(--surface)';this.style.color='var(--ink)'">Jakohihnan Vaihto</a>
+      <a href="/katsastus.html" style="padding:16px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--ink);text-align:center;font-weight:600;transition:background .2s;border:1.5px solid var(--border);" onmouseover="this.style.background='var(--brand)';this.style.color='#fff'" onmouseout="this.style.background='var(--surface)';this.style.color='var(--ink)'">Katsastushuolto</a>
+      <a href="/jarruhuolto.html" style="padding:16px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--ink);text-align:center;font-weight:600;transition:background .2s;border:1.5px solid var(--border);" onmouseover="this.style.background='var(--brand)';this.style.color='#fff'" onmouseout="this.style.background='var(--surface)';this.style.color='var(--ink)'">Jarruhuolto</a>
+      <a href="/oljynvaihto.html" style="padding:16px;background:var(--brand);border-radius:12px;text-decoration:none;color:#fff;text-align:center;font-weight:600;border:1.5px solid var(--brand);">Öljynvaihto</a>
+      <a href="/renkaat.html" style="padding:16px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--ink);text-align:center;font-weight:600;transition:background .2s;border:1.5px solid var(--border);" onmouseover="this.style.background='var(--brand)';this.style.color='#fff'" onmouseout="this.style.background='var(--surface)';this.style.color='var(--ink)'">Renkaat</a>
+      <a href="/ilmastointi.html" style="padding:16px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--ink);text-align:center;font-weight:600;transition:background .2s;border:1.5px solid var(--border);" onmouseover="this.style.background='var(--brand)';this.style.color='#fff'" onmouseout="this.style.background='var(--surface)';this.style.color='var(--ink)'">Ilmastointihuolto</a>
+      <a href="/sahkotyot.html" style="padding:16px;background:var(--surface);border-radius:12px;text-decoration:none;color:var(--ink);text-align:center;font-weight:600;transition:background .2s;border:1.5px solid var(--border);" onmouseover="this.style.background='var(--brand)';this.style.color='#fff'" onmouseout="this.style.background='var(--surface)';this.style.color='var(--ink)'">Sähkötyöt</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="padding:60px 24px;margin-top:80px;">
+  <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-bottom:40px;">
+    <div>
+      <h4>3A Service Oy</h4>
+      <a href="tel:+358449773677">044 9773677</a>
+      <a href="mailto:info@3aservice.fi">info@3aservice.fi</a>
+      <a href="https://maps.google.com" target="_blank">Espoo, Suomi</a>
+    </div>
+    <div>
+      <h4>Palvelut</h4>
+      <a href="/maaraikaishuolto.html">Määräaikaishuolto</a>
+      <a href="/oljynvaihto.html">Öljynvaihto</a>
+      <a href="/jarruhuolto.html">Jarruhuolto</a>
+    </div>
+    <div>
+      <h4>Tiedot</h4>
+      <a href="/index.html">Takaisin pääsivulle</a>
+      <a href="https://g.co/kgs/3A-Service-Reviews" target="_blank">Google Reviews</a>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;text-align:center;font-size:14px;">
+    <p>&copy; 2026 3A Service Oy. Kaikki oikeudet pidätetään.</p>
+  </div>
+</footer>
+
+<!-- JSON-LD Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Öljynvaihto ja öljynsuodattimen vaihto",
+  "description": "Öljynvaihto ja öljynsuodattimen vaihtapalvelu Espoossa",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "3A Service Oy",
+    "image": "https://thereala3.vercel.app/logo/pomelli_bdna_image_0509.png",
+    "telephone": "+358449773677",
+    "email": "info@3aservice.fi",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Espoo",
+      "addressLocality": "Espoo",
+      "addressCountry": "FI"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "50"
+    }
+  },
+  "priceRange": "$79",
+  "areaServed": {
+    "@type": "City",
+    "name": "Espoo"
+  }
+}
+</script>
+
+<script>
+function toggleFaq(element) {
+  const answer = element.nextElementSibling;
+  const icon = element.querySelector('.faq-icon');
+  answer.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+function openDrawer() {
+  document.getElementById('mobile-drawer').classList.add('open');
+}
+
+function closeDrawer() {
+  document.getElementById('mobile-drawer').classList.remove('open');
+}
+</script>
+
+</body>
+</html>
