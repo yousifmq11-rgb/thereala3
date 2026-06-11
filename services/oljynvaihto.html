@@ -480,6 +480,35 @@
           <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Sähköposti *</span><span class="en-text" style="display:none;">Email *</span></label>
           <input type="email" id="cf-email" required style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
         </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div>
+            <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Auton rekisterinumero</span><span class="en-text" style="display:none;">License Plate</span></label>
+            <input type="text" id="cf-plate" placeholder="ABC-123" style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+          <div>
+            <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Auton mittariasteikko (km)</span><span class="en-text" style="display:none;">Current Mileage (km)</span></label>
+            <input type="number" id="cf-mileage" placeholder="45000" style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+        </div>
+        <div>
+          <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Aihe *</span><span class="en-text" style="display:none;">Subject *</span></label>
+          <select id="cf-subject" required style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
+            <option value="" style="color:var(--ink-60);" disabled selected><span class="fi-text">-- Valitse aihe --</span></option>
+            <option value="Määräaikaishuolto"><span class="fi-text">Määräaikaishuolto</span></option>
+            <option value="Jakohihnan Vaihto"><span class="fi-text">Jakohihnan Vaihto</span></option>
+            <option value="Öljynvaihto"><span class="fi-text">Öljynvaihto</span></option>
+            <option value="Jarrujen Vaihto"><span class="fi-text">Jarrujen Vaihto</span></option>
+            <option value="Ilmastointi"><span class="fi-text">Ilmastointi</span></option>
+            <option value="Vaihteisto & Kytkin"><span class="fi-text">Vaihteisto & Kytkin</span></option>
+            <option value="Alusta & Jousitus"><span class="fi-text">Alusta & Jousitus</span></option>
+            <option value="Katsastushuolto"><span class="fi-text">Katsastushuolto</span></option>
+            <option value="Sähkötyöt"><span class="fi-text">Sähkötyöt</span></option>
+            <option value="Vikadiagnostiikka"><span class="fi-text">Vikadiagnostiikka</span></option>
+            <option value="Renkaiden Palvelut"><span class="fi-text">Renkaiden Palvelut</span></option>
+            <option value="Autopesula"><span class="fi-text">Autopesula</span></option>
+            <option value="Muu"><span class="fi-text">Muu</span></option>
+          </select>
+        </div>
         <div>
           <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Viesti *</span><span class="en-text" style="display:none;">Message *</span></label>
           <textarea id="cf-msg" required rows="5" style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;resize:vertical;line-height:1.65;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'"></textarea>
