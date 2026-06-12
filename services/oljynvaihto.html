@@ -85,10 +85,12 @@
       .testimonials-grid{grid-template-columns:1fr!important;}
       .t-col:nth-child(2),.t-col:nth-child(3){display:none!important;}
       .contact-outer-grid{grid-template-columns:1fr!important;}
-      .why-us-grid{grid-template-columns:1fr!important;gap:40px!important;}
-      .why-us-grid > div:last-child{height:300px!important;}
       .faq-q{font-size:16px!important;padding:16px 0!important;}
       .faq-a{font-size:15px!important;}
+    }
+    @media(max-width:500px){
+      .why-us-grid{grid-template-columns:1fr!important;gap:40px!important;}
+      .why-us-grid > div:last-child{height:300px!important;}
     }
     .new-hero-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;}
     @media(max-width:900px){.new-hero-grid{grid-template-columns:1fr;}}
