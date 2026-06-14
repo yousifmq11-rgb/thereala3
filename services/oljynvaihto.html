@@ -27,14 +27,8 @@
     .nav-link{font-size:18px;font-weight:500;color:rgba(255,255,255,0.78);text-decoration:none;padding:6px 2px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;}.nav-link:hover{color:#fff;border-color:rgba(255,255,255,0.5);}
     .lang-pill{display:inline-flex;border:1.5px solid rgba(255,255,255,0.2);border-radius:8px;}.lang-btn{cursor:pointer;padding:6px 13px;font-size:17px;font-weight:700;background:transparent;border:none;font-family:'Roboto',sans-serif;transition:background .15s,color .15s,border .15s;color:rgba(255,255,255,0.7);}.lang-btn.active{background:var(--brand);color:#fff;}
     @media(max-width:640px){.lang-pill{display:inline-flex!important;flex-direction:row;border:none;padding:4px;background:transparent;gap:6px;}.lang-btn{padding:12px 20px;font-size:16px;font-weight:800;border:2px solid rgba(0,0,0,0.25);border-radius:8px;white-space:nowrap;background:transparent;color:rgba(0,0,0,0.5);}.lang-btn.active{background:var(--brand);color:#fff;border:2px solid var(--brand);}}
-    .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;overflow:hidden;max-height:480px;position:relative;}
-    .testimonials-grid::before,.testimonials-grid::after{content:'';position:absolute;left:0;right:0;height:60px;z-index:2;pointer-events:none;}
-    .testimonials-grid::before{top:0;background:linear-gradient(to bottom,var(--surface),transparent);}
-    .testimonials-grid::after{bottom:0;background:linear-gradient(to top,var(--surface),transparent);}
-    .t-col{overflow:hidden;}.t-col-inner{display:flex;flex-direction:column;gap:16px;animation:scrollUp 20s linear infinite;}
-    .t-col:nth-child(2) .t-col-inner{animation-duration:26s;animation-delay:-8s;}
-    .t-col:nth-child(3) .t-col-inner{animation-duration:23s;animation-delay:-14s;}
-    @keyframes scrollUp{0%{transform:translateY(0);}100%{transform:translateY(-50%);}}
+    .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .t-col-inner{display:flex;flex-direction:column;gap:16px;}
     .t-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:20px;}
     .t-stars{color:#F5A623;font-size:13px;letter-spacing:1px;margin-bottom:10px;}
     .t-text{font-size:16px;color:var(--ink-60);line-height:1.7;font-weight:400;margin-bottom:14px;}
