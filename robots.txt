@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thereala3.vercel.app/sitemap.xml
