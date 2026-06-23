@@ -757,7 +757,20 @@
         <a href="#contact"><span class="fi-text">Ma–Pe 8:00–17:00</span><span class="en-text" style="display:none;">Mon–Fri 8:00–17:00</span></a>
       </div>
     </div>
-    <div style="border-top:1px solid rgba(255,255,255,0.08);padding:18px 0;"><p style="font-size:17px;color:rgba(255,255,255,0.35);">© 2026 3A Service Oy | Autohuolto</p></div>
+    <div style="border-top:1px solid rgba(255,255,255,0.15);padding:28px 0;display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+      <div>
+        <p style="font-size:16px;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:16px;"><span class="fi-text">© 2026 3A Service Oy. Kaikki oikeudet pidätetään. AD-valtuutettu autokorjaamo Espoossa.</span><span class="en-text" style="display:none;">© 2026 3A Service Oy. All rights reserved. AD-authorized repair shop in Espoo.</span></p>
+      </div>
+      <div style="display:flex;gap:24px;flex-wrap:wrap;justify-content:flex-end;">
+        <a href="#" style="font-size:15px;color:rgba(255,255,255,0.65);text-decoration:none;transition:color .2s;border-bottom:1px solid transparent;padding-bottom:2px;" onmouseover="this.style.color='var(--brand)';this.style.borderBottomColor='var(--brand)'" onmouseout="this.style.color='rgba(255,255,255,0.65)';this.style.borderBottomColor='transparent'"><span class="fi-text">Tietosuojakäytäntö</span><span class="en-text" style="display:none;">Privacy Policy</span></a>
+        <a href="#" style="font-size:15px;color:rgba(255,255,255,0.65);text-decoration:none;transition:color .2s;border-bottom:1px solid transparent;padding-bottom:2px;" onmouseover="this.style.color='var(--brand)';this.style.borderBottomColor='var(--brand)'" onmouseout="this.style.color='rgba(255,255,255,0.65)';this.style.borderBottomColor='transparent'"><span class="fi-text">Käyttöehdot</span><span class="en-text" style="display:none;">Terms of Service</span></a>
+        <a href="#" style="font-size:15px;color:rgba(255,255,255,0.65);text-decoration:none;transition:color .2s;border-bottom:1px solid transparent;padding-bottom:2px;" onmouseover="this.style.color='var(--brand)';this.style.borderBottomColor='var(--brand)'" onmouseout="this.style.color='rgba(255,255,255,0.65)';this.style.borderBottomColor='transparent'"><span class="fi-text">Evästeet</span><span class="en-text" style="display:none;">Cookies</span></a>
+      </div>
+    </div>
+    @media(max-width:768px){
+      footer > div > div:last-child{grid-template-columns:1fr!important;gap:12px!important;}
+      footer > div > div:last-child{flex-direction:column!important;justify-content:flex-start!important;}
+    }
   </div>
 </footer>
 
@@ -782,6 +795,7 @@
   h1 span{text-shadow:0 2px 4px rgba(0,0,0,0.5)!important;}
   .fade-up.d3{text-shadow:0 1px 2px rgba(0,0,0,0.3)!important;}
   .fade-up.d4 > div{text-shadow:0 1px 2px rgba(0,0,0,0.3)!important;}
+  footer > div > div:last-child{grid-template-columns:1fr!important;gap:12px!important;flex-direction:column!important;justify-content:flex-start!important;}
 }</style>
 
 <!-- MOBILE DRAWER -->
