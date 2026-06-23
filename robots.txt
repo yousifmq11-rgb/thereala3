@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Allow: /images/
+Allow: /services/
+Allow: /privacy.html
+Allow: /terms.html
+Disallow: /pic%20copy/
+Disallow: /*.json
+Sitemap: https://3aservice.fi/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
