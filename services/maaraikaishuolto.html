@@ -517,30 +517,30 @@
       <form id="contact-form" onsubmit="handleContactForm(event)" style="display:flex;flex-direction:column;gap:16px;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
           <div>
-            <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Nimi *</span><span class="en-text" style="display:none;">Name *</span></label>
+            <label style="display:block;font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Nimi *</span><span class="en-text" style="display:none;">Name *</span></label>
             <input type="text" id="cf-name" required style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
           </div>
           <div>
-            <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Puhelin</span><span class="en-text" style="display:none;">Phone</span></label>
+            <label style="display:block;font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Puhelin</span><span class="en-text" style="display:none;">Phone</span></label>
             <input type="tel" id="cf-phone" placeholder="+358..." style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
           </div>
         </div>
         <div>
-          <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Sähköposti *</span><span class="en-text" style="display:none;">Email *</span></label>
+          <label style="display:block;font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Sähköposti *</span><span class="en-text" style="display:none;">Email *</span></label>
           <input type="email" id="cf-email" required style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
           <div>
-            <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Auton rekisterinumero *</span><span class="en-text" style="display:none;">License Plate *</span></label>
+            <label style="display:block;font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Auton rekisterinumero *</span><span class="en-text" style="display:none;">License Plate *</span></label>
             <input type="text" id="cf-plate" placeholder="ABC-123" required style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:16px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
           </div>
           <div>
-            <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Mittariasteikko (km) *</span><span class="en-text" style="display:none;">Mileage (km) *</span></label>
+            <label style="display:block;font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Mittariasteikko (km) *</span><span class="en-text" style="display:none;">Mileage (km) *</span></label>
             <input type="number" id="cf-mileage" placeholder="45000" required style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:16px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
           </div>
         </div>
         <div>
-          <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Aihe *</span><span class="en-text" style="display:none;">Subject *</span></label>
+          <label style="display:block;font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Aihe *</span><span class="en-text" style="display:none;">Subject *</span></label>
           <select id="cf-subject" required style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:16px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;cursor:pointer;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
             <option value="" style="color:var(--ink-60);" disabled selected>-- Valitse aihe --</option>
             <option value="Määräaikaishuolto"><span class="fi-text">Määräaikaishuolto</span></option>
@@ -559,7 +559,7 @@
           </select>
         </div>
         <div>
-          <label style="display:block;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Viesti *</span><span class="en-text" style="display:none;">Message *</span></label>
+          <label style="display:block;font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Viesti *</span><span class="en-text" style="display:none;">Message *</span></label>
           <textarea id="cf-msg" required rows="5" style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;resize:vertical;line-height:1.65;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'"></textarea>
         </div>
         <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
@@ -585,19 +585,19 @@
             <div style="width:34px;height:34px;background:#fff;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid var(--border);">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.76 12.09a1 1 0 0 0 1.48 0C13.95 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
             </div>
-            <div><div style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink-60);margin-bottom:2px;"><span class="fi-text">Osoite</span><span class="en-text" style="display:none;">Address</span></div><div style="font-size:18px;color:var(--ink);font-weight:500;">Sillankorva 8, 02300 Espoo</div></div>
+            <div><div style="font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:2px;"><span class="fi-text">Osoite</span><span class="en-text" style="display:none;">Address</span></div><div style="font-size:18px;color:var(--ink);font-weight:500;">Sillankorva 8, 02300 Espoo</div></div>
           </div>
           <div style="display:flex;align-items:center;gap:12px;">
             <div style="width:34px;height:34px;background:#fff;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid var(--border);">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
-            <div><div style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink-60);margin-bottom:2px;"><span class="fi-text">Aukioloajat</span><span class="en-text" style="display:none;">Hours</span></div><div style="font-size:18px;color:var(--ink);font-weight:500;"><span class="fi-text">Ma–Pe 8:00–17:00</span><span class="en-text" style="display:none;">Mon–Fri 8:00–17:00</span></div></div>
+            <div><div style="font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:2px;"><span class="fi-text">Aukioloajat</span><span class="en-text" style="display:none;">Hours</span></div><div style="font-size:18px;color:var(--ink);font-weight:500;"><span class="fi-text">Ma–Pe 8:00–17:00</span><span class="en-text" style="display:none;">Mon–Fri 8:00–17:00</span></div></div>
           </div>
           <div style="display:flex;align-items:center;gap:12px;">
             <div style="width:34px;height:34px;background:#fff;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid var(--border);">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
-            <div><div style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink-60);margin-bottom:2px;">Email</div><a href="mailto:info@3aservice.fi" style="font-size:18px;color:var(--ink);font-weight:500;text-decoration:none;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--ink)'">info@3aservice.fi</a></div>
+            <div><div style="font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:2px;">Email</div><a href="mailto:info@3aservice.fi" style="font-size:18px;color:var(--ink);font-weight:500;text-decoration:none;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--ink)'">info@3aservice.fi</a></div>
           </div>
         </div>
       </div>
