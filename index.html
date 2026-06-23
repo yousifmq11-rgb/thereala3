@@ -762,15 +762,11 @@
         <p style="font-size:16px;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:16px;"><span class="fi-text">© 2026 3A Service Oy. Kaikki oikeudet pidätetään. AD-valtuutettu autokorjaamo Espoossa.</span><span class="en-text" style="display:none;">© 2026 3A Service Oy. All rights reserved. AD-authorized repair shop in Espoo.</span></p>
       </div>
       <div style="display:flex;gap:24px;flex-wrap:wrap;justify-content:flex-end;">
-        <a href="#" style="font-size:15px;color:rgba(255,255,255,0.65);text-decoration:none;transition:color .2s;border-bottom:1px solid transparent;padding-bottom:2px;" onmouseover="this.style.color='var(--brand)';this.style.borderBottomColor='var(--brand)'" onmouseout="this.style.color='rgba(255,255,255,0.65)';this.style.borderBottomColor='transparent'"><span class="fi-text">Tietosuojakäytäntö</span><span class="en-text" style="display:none;">Privacy Policy</span></a>
-        <a href="#" style="font-size:15px;color:rgba(255,255,255,0.65);text-decoration:none;transition:color .2s;border-bottom:1px solid transparent;padding-bottom:2px;" onmouseover="this.style.color='var(--brand)';this.style.borderBottomColor='var(--brand)'" onmouseout="this.style.color='rgba(255,255,255,0.65)';this.style.borderBottomColor='transparent'"><span class="fi-text">Käyttöehdot</span><span class="en-text" style="display:none;">Terms of Service</span></a>
-        <a href="#" style="font-size:15px;color:rgba(255,255,255,0.65);text-decoration:none;transition:color .2s;border-bottom:1px solid transparent;padding-bottom:2px;" onmouseover="this.style.color='var(--brand)';this.style.borderBottomColor='var(--brand)'" onmouseout="this.style.color='rgba(255,255,255,0.65)';this.style.borderBottomColor='transparent'"><span class="fi-text">Evästeet</span><span class="en-text" style="display:none;">Cookies</span></a>
+        <a href="/privacy.html" style="font-size:15px;color:rgba(255,255,255,0.65);text-decoration:none;transition:color .2s;border-bottom:1px solid transparent;padding-bottom:2px;" onmouseover="this.style.color='var(--brand)';this.style.borderBottomColor='var(--brand)'" onmouseout="this.style.color='rgba(255,255,255,0.65)';this.style.borderBottomColor='transparent'"><span class="fi-text">Tietosuojakäytäntö</span><span class="en-text" style="display:none;">Privacy Policy</span></a>
+        <a href="/terms.html" style="font-size:15px;color:rgba(255,255,255,0.65);text-decoration:none;transition:color .2s;border-bottom:1px solid transparent;padding-bottom:2px;" onmouseover="this.style.color='var(--brand)';this.style.borderBottomColor='var(--brand)'" onmouseout="this.style.color='rgba(255,255,255,0.65)';this.style.borderBottomColor='transparent'"><span class="fi-text">Käyttöehdot</span><span class="en-text" style="display:none;">Terms of Service</span></a>
+        <button onclick="showCookieConsent()" style="font-size:15px;color:rgba(255,255,255,0.65);text-decoration:none;transition:color .2s;border:none;background:none;cursor:pointer;border-bottom:1px solid transparent;padding-bottom:2px;" onmouseover="this.style.color='var(--brand)';this.style.borderBottomColor='var(--brand)'" onmouseout="this.style.color='rgba(255,255,255,0.65)';this.style.borderBottomColor='transparent'"><span class="fi-text">Evästeet</span><span class="en-text" style="display:none;">Cookies</span></button>
       </div>
     </div>
-    @media(max-width:768px){
-      footer > div > div:last-child{grid-template-columns:1fr!important;gap:12px!important;}
-      footer > div > div:last-child{flex-direction:column!important;justify-content:flex-start!important;}
-    }
   </div>
 </footer>
 
@@ -909,6 +905,26 @@
       },{threshold:0});
       heroObs.observe(heroSection);
     }
+  }
+  // Cookie Consent
+  function showCookieConsent(){
+    var msg=currentLang==='fi'?'Hallitse evästeiden asetuksia':'Manage cookie settings';
+    var accepted=localStorage.getItem('cookies-accepted');
+    if(!accepted){
+      var consent=confirm(currentLang==='fi'?'Sivusto käyttää evästeitä parantaakseen käyttäjäkokemusta. Hyväksytkö evästeet?':'This site uses cookies to enhance your experience. Do you accept cookies?');
+      if(consent){
+        localStorage.setItem('cookies-accepted','true');
+        alert(currentLang==='fi'?'Evästeiden asetukset tallennettu.':'Cookie settings saved.');
+      }
+    }else{
+      alert(msg);
+    }
+  }
+  if(!localStorage.getItem('cookies-accepted')){
+    var banner=document.createElement('div');
+    banner.style.cssText='position:fixed;bottom:0;left:0;right:0;z-index:95;background:#1A1A1A;border-top:2px solid var(--brand);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:14px;color:rgba(255,255,255,0.8);';
+    banner.innerHTML='<span class="fi-text">Sivusto käyttää evästeitä parantaakseen kokemusta</span><span class="en-text" style="display:none;">This site uses cookies to enhance experience</span><button onclick="this.parentElement.style.display=\'none\';localStorage.setItem(\'cookies-accepted\',\'true\');" style="background:var(--brand);color:#fff;border:none;padding:8px 20px;border-radius:6px;cursor:pointer;font-weight:700;white-space:nowrap;">OK</button>';
+    document.body.appendChild(banner);
   }
 </script>
 <script src="/js/particles.js"></script>
