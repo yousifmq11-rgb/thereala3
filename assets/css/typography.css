@@ -1,0 +1,235 @@
+/* =====================================================
+   TYPOGRAPHY & FONT SIZES
+   Project: 3A Service Oy
+   ===================================================== */
+
+/* =====================================================
+   BASE TYPOGRAPHY
+   ===================================================== */
+
+h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
+h4 { font-size: clamp(1rem, 2vw, 1.25rem); }
+
+body {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+p {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  line-height: 1.75;
+  max-width: 68ch;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.7;
+}
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.navbar-links a {
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+
+.navbar-logo-placeholder {
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.btn {
+  font-size: 1rem;
+  padding: 0.85rem 2rem;
+  letter-spacing: 0.05em;
+}
+
+/* =====================================================
+   HERO SECTION
+   ===================================================== */
+
+.hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.7;
+}
+
+.hero-stars {
+  font-size: 1rem;
+}
+
+.price-badge {
+  font-size: 1.1rem;
+}
+
+/* =====================================================
+   SERVICE CARDS
+   ===================================================== */
+
+.service-card h3 {
+  font-size: 1.05rem;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.service-card a {
+  font-size: 0.9rem;
+}
+
+/* =====================================================
+   TRUST BAR
+   ===================================================== */
+
+.trust-item strong {
+  font-size: 0.95rem;
+}
+
+.trust-item span {
+  font-size: 0.8rem;
+}
+
+/* =====================================================
+   WHY US SECTION
+   ===================================================== */
+
+.why-text strong {
+  font-size: 1rem;
+}
+
+.why-text span {
+  font-size: 0.9rem;
+}
+
+/* =====================================================
+   STEPS SECTION
+   ===================================================== */
+
+.step-number {
+  font-size: 1.4rem;
+}
+
+.step h3 {
+  font-size: 1rem;
+}
+
+.step p {
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+/* =====================================================
+   REVIEWS SECTION
+   ===================================================== */
+
+.review-stars {
+  font-size: 1rem;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.review-author {
+  font-size: 0.82rem;
+}
+
+/* =====================================================
+   FAQ SECTION
+   ===================================================== */
+
+.faq-question {
+  font-size: 1rem;
+}
+
+.faq-answer {
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.faq-group-title {
+  font-size: 1rem;
+}
+
+/* =====================================================
+   CONTACT SECTION
+   ===================================================== */
+
+.contact-info-item {
+  font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-size: 1rem;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.footer-brand p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.footer-col h4 {
+  font-size: 0.95rem;
+}
+
+.footer-links a {
+  font-size: 0.875rem;
+}
+
+.footer-contact-list li {
+  font-size: 0.875rem;
+}
+
+.footer-bottom {
+  font-size: 0.78rem;
+}
+
+/* =====================================================
+   TABLET — max-width: 768px
+   ===================================================== */
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.15rem; }
+  body { font-size: 15px; }
+  p { font-size: 0.95rem; }
+  .btn { font-size: 0.95rem; padding: 0.8rem 1.5rem; }
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content p { font-size: 0.95rem; }
+  .faq-question { font-size: 0.95rem; }
+  .step h3 { font-size: 0.95rem; }
+  .step p { font-size: 0.85rem; }
+}
+
+/* =====================================================
+   MOBILE — max-width: 480px
+   ===================================================== */
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.05rem; }
+  .hero-content h1 { font-size: 1.75rem; }
+  .btn { font-size: 0.9rem; padding: 0.75rem 1.25rem; }
+}
