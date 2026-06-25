@@ -540,6 +540,7 @@
   function toggleFaq(el){const a=el.nextElementSibling;const icon=el.querySelector('.faq-icon');const isOpen=a.classList.contains('open');document.querySelectorAll('.faq-a').forEach(x=>x.classList.remove('open'));document.querySelectorAll('.faq-icon').forEach(x=>x.classList.remove('open'));if(!isOpen){a.classList.add('open');icon.classList.add('open');}}
   const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:0.1});
   document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+  function replaceSpecialChars(){document.querySelectorAll('h1, h2, h3, .section-tag, .faq-q, .drawer-link').forEach(el=>{el.innerHTML=el.innerHTML.replace(/ä/g,'<span style="font-family:\'Roboto\',sans-serif;">ä</span>').replace(/ö/g,'<span style="font-family:\'Roboto\',sans-serif;">ö</span>').replace(/Ä/g,'<span style="font-family:\'Roboto\',sans-serif;">Ä</span>').replace(/Ö/g,'<span style="font-family:\'Roboto\',sans-serif;">Ö</span>');});} replaceSpecialChars();
 </script>
 </body>
 </html>
