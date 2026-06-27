@@ -4,18 +4,31 @@
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>3A Service Oy | Autohuolto — Luotettavaa autohuoltoa Espoossa</title>
   <meta name="description" content="AD-valtuutettu autokorjaamo Espoossa. Luotettavaa autohuoltoa — autosi takuu säilyy. ★ 4.9 Google.">
-  <meta name="keywords" content="autohuolto Espoo, autohallinto, autokorjaamo, huolto, rengaat, jarrujen vaihto, öljynvaihto">
+  <meta name="keywords" content="autohuolto Espoo, autokorjaamo Espoo, autohuolto Leppävaara, autokorjaamo Leppävaara, huolto Espoo, öljynvaihto Espoo, jarrujen vaihto Espoo, renkaat Espoo, katsastushuolto Espoo, ilmastointi huolto Espoo, jakohihna vaihto Espoo, vikadiagnostiikka Espoo, AD autokorjaamo Espoo, halpa autohuolto Espoo, autohuolto Helsinki lähellä, autokorjaamo 02300">
   <meta name="author" content="3A Service Oy">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <!-- Geo meta tags for local search -->
+  <meta name="geo.region" content="FI-ES">
+  <meta name="geo.placename" content="Espoo, Finland">
+  <meta name="geo.position" content="60.2183;24.8031">
+  <meta name="ICBM" content="60.2183, 24.8031">
+  <!-- hreflang for bilingual content -->
+  <link rel="alternate" hreflang="fi" href="https://3aservice.fi/">
+  <link rel="alternate" hreflang="en" href="https://3aservice.fi/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://3aservice.fi/">
   <link rel="canonical" href="https://3aservice.fi/">
   <link rel="stylesheet" href="/assets/css/typography.css">
   <meta property="og:title" content="3A Service Oy — AD-valtuutettu autokorjaamo Espoossa">
-  <meta property="og:description" content="Luotettavaa autohuoltoa Espoossa. Määräaikaishuolto, jarrujen vaihto, rengaat, ilmastointi ja paljon muuta.">
+  <meta property="og:description" content="Luotettavaa autohuoltoa Espoossa. Määräaikaishuolto, jarrujen vaihto, renkaat, ilmastointi ja paljon muuta. ★ 4.9 Google.">
   <meta property="og:image" content="https://3aservice.fi/images/hero-bg.webp">
   <meta property="og:url" content="https://3aservice.fi/">
   <meta property="og:type" content="business.business">
+  <meta property="og:locale" content="fi_FI">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:site_name" content="3A Service Oy">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="3A Service Oy — Autohuolto Espoossa">
-  <meta name="twitter:description" content="AD-valtuutettu autokorjaamo. Luotettavaa autohuoltoa.">
+  <meta name="twitter:description" content="AD-valtuutettu autokorjaamo Espoossa. Luotettavaa autohuoltoa kaikille automerkeille.">
   <meta name="twitter:image" content="https://3aservice.fi/images/hero-bg.webp">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//maps.googleapis.com">
@@ -133,20 +146,28 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["AutoRepair", "LocalBusiness"],
     "name": "3A Service Oy",
-    "image": "https://3aservice.fi/images/hero-bg.webp",
-    "description": "AD-valtuutettu autokorjaamo Espoossa. Luotettavaa autohuoltoa.",
+    "alternateName": "3A Autohuolto Espoo",
+    "image": ["https://3aservice.fi/images/hero-bg.webp","https://3aservice.fi/images/carg/car-wash.webp"],
+    "description": "AD-valtuutettu autokorjaamo Espoossa, Leppävaarassa. Ammattitaitoista autohuoltoa kaikille automerkeille — määräaikaishuolto, jarrujen vaihto, öljynvaihto, renkaat, jakohihna, vikadiagnostiikka ja ilmastointi.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Sillankorva 8",
       "addressLocality": "Espoo",
+      "addressRegion": "Uusimaa",
       "postalCode": "02300",
       "addressCountry": "FI"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 60.2183,
+      "longitude": 24.8031
     },
     "telephone": "+358449773677",
     "email": "info@3aservice.fi",
     "url": "https://3aservice.fi",
+    "hasMap": "https://www.google.com/maps/search/3A+Service+Oy+Espoo",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -155,13 +176,57 @@
         "closes": "17:00"
       }
     ],
-    "areaServed": "Espoo, Finland",
-    "priceRange": "€",
+    "areaServed": [
+      {"@type": "City", "name": "Espoo"},
+      {"@type": "City", "name": "Helsinki"},
+      {"@type": "City", "name": "Kauniainen"},
+      {"@type": "City", "name": "Kirkkonummi"},
+      {"@type": "City", "name": "Vantaa"}
+    ],
+    "serviceType": ["Autohuolto", "Öljynvaihto", "Jarrujen vaihto", "Jakohihnan vaihto", "Vikadiagnostiikka", "Ilmastoinnin huolto", "Renkaat", "Katsastushuolto"],
+    "priceRange": "€€",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Cash, Credit Card",
+    "sameAs": [
+      "https://www.google.com/maps/search/3A+Service+Oy+Espoo"
+    ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": "128"
-    }
+      "reviewCount": "128",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Jaakko Anttonen"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "reviewBody": "Nopea ja ystävällinen palvelu. Mitään ei jäänyt epäselväksi. Vien auton tänne huoltoon ensi kerralla."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Lauri Kauppila"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "reviewBody": "Erinomainen paikka! Ammattitaitoinen huolto ja todella hyvä hinta. Vahva suositus."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Jan Ojala"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "reviewBody": "Olen huollattanut autoni täällä muutaman kerran ja aina kaikki toimii yhtä hyvin. Voin vain suositella."
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Etusivu", "item": "https://3aservice.fi/"},
+      {"@type": "ListItem", "position": 2, "name": "Palvelut", "item": "https://3aservice.fi/#services-scroll-wrapper"}
+    ]
   }
   </script>
 </head>
