@@ -9,14 +9,17 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Milloin jakohihna pitää vaihtaa?","acceptedAnswer":{"@type":"Answer","text":"Jakohihnan vaihtoväli riippuu automallista — yleensä 60 000–120 000 km tai 5–8 vuoden välein, kumpi tulee ensin. Tarkista aina käyttöoppaasta tai soita meille automallin ja vuosimallin kanssa."}},{"@type":"Question","name":"Paljonko jakohihnan vaihto maksaa Espoossa?","acceptedAnswer":{"@type":"Answer","text":"Jakohihnan vaihdon hinta vaihtelee 300–900 € välillä automerkistä ja -mallista riippuen. Hintaan sisältyy aina uusi jakohihna, hihnapyörät ja kiristinrullat. Vesipumpun lisävaihto (suositeltavaa) lisää noin 80–150 €. Pyydä meiltä tarjous automallin perusteella."}},{"@type":"Question","name":"Mitä tapahtuu jos jakohihna katkeaa?","acceptedAnswer":{"@type":"Answer","text":"Jos jakohihna katkeaa ajon aikana, moottori pysähtyy välittömästi. Interference-moottoreissa venttiilit törmäävät mäntiin ja moottori tuhoutuu — korjauskustannukset voivat olla 3 000–8 000 €. Tämä on täysin ehkäistävissä ajoissa vaihtamalla."}},{"@type":"Question","name":"Miten tiedän onko autossani jakohihna vai jakoketju?","acceptedAnswer":{"@type":"Answer","text":"Jakohihna on kuminen ja hiljaisempi. Useimmissa 1990-luvun ja 2000-luvun alun autoissa on jakohihna (VW, Audi, Ford, Toyota, Honda). Uudemmissa on useammin metallinenjakoketju, joka on pitkäikäisempi mutta kalliimpi korjata. Tarkista käyttöoppaasta tai kysy meiltä."}},{"@type":"Question","name":"Pitääkö vesipumppu vaihtaa samalla?","acceptedAnswer":{"@type":"Answer","text":"Suosittelemme ehdottomasti. Vesipumppu sijaitsee jakohihnan yhteydessä ja työkustannukset sisältyvät jo jakohihnan vaihtoon. Jos vesipumppu hajoaa myöhemmin, maksat saman työn uudelleen. Vaihda molemmat kerralla — säästät rahaa."}},{"@type":"Question","name":"Mitä muuta suositellaan vaihdettavaksi samalla?","acceptedAnswer":{"@type":"Answer","text":"Suosittelemme: vesipumppu, hihnapyörät ja kiristinrullat (kaikki altistuvat samalle rasitukselle). Joissakin autoissa myös termostaatti. Kokonaisvaltainen lähestymistapa säästää rahaa pitkällä tähtäimellä, koska työ tehdään vain kerran."}},{"@type":"Question","name":"Kauanko jakohihnan vaihto kestää?","acceptedAnswer":{"@type":"Answer","text":"Tyypillisesti 3–6 tuntia automallista ja osapaketeista riippuen. Useimmissa tapauksissa auto on valmis saman päivän aikana. Kerromme arvioidun ajan tarjouksen yhteydessä."}}]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{--brand:#E8890A;--brand-d:#C4720A;--brand-l:#FEF3DC;--ink:#1A1A1A;--ink-60:rgba(26,26,26,0.6);--surface:#F5F5F2;--border:#E2E2DC;--adblue:#0044B0;--hero:#111;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    html{scroll-behavior:smooth;}
+    html{scroll-behavior:smooth;overflow-x:hidden;}
     body{font-family:'Roboto',sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;padding-top:80px;touch-action:manipulation;overscroll-behavior-y:contain;}
-    h1,h2,h3{font-family:'Bebas Neue',sans-serif;}
+    h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;line-height:1.15;}
+    h1{line-height:1.08;font-weight:700;}
+    h2{line-height:1.15;font-weight:600;}
+    h3{line-height:1.2;font-weight:600;}
     .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:#fff;font-family:'Roboto',sans-serif;font-weight:500;border:none;cursor:pointer;border-radius:8px;padding:13px 24px;font-size:14px;transition:background .18s,transform .14s,box-shadow .18s;box-shadow:0 4px 16px rgba(232,137,10,0.3);text-decoration:none;white-space:nowrap;}
     .btn-primary:hover{background:var(--brand-d);transform:translateY(-1px);box-shadow:0 8px 24px rgba(232,137,10,0.4);}
     .btn-outline{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:var(--ink);font-family:'Roboto',sans-serif;font-weight:500;border:2px solid var(--ink);cursor:pointer;border-radius:8px;padding:11px 24px;font-size:14px;transition:background .18s,color .18s,transform .14s;text-decoration:none;}
@@ -66,6 +69,10 @@
     .drawer-section-label{padding:14px 24px 6px;font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-60);border-bottom:1px solid var(--border);}
     *:focus-visible{outline:2px solid var(--brand);outline-offset:2px;}
     ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-thumb{background:var(--brand);border-radius:3px;}
+    .content-item{padding:32px 0;border-bottom:1px solid var(--border);}
+    .content-h3{font-family:'Oswald',sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink);margin-bottom:12px;line-height:1.2;}
+    .content-h3::before{content:'';display:inline-block;width:3px;height:18px;background:var(--brand);border-radius:2px;margin-right:10px;vertical-align:middle;position:relative;top:-1px;}
+    .content-p{font-size:16px;line-height:1.8;color:var(--ink-60);font-weight:400;max-width:100%;margin:0;}
     .alert-banner{background:rgba(232,137,10,0.08);border:1.5px solid rgba(232,137,10,0.3);border-radius:12px;padding:16px 20px;display:flex;align-items:flex-start;gap:12px;margin-bottom:20px;}
     .hero-layout{position:relative;z-index:2;display:grid;grid-template-columns:1fr 360px;gap:48px;align-items:center;padding:0 max(24px,calc((100vw - 1100px)/2 + 24px));width:100%;}
     @media(max-width:900px){.hero-layout{grid-template-columns:1fr;padding:60px 24px;}.hero-right-panel{display:none!important;}}
@@ -81,6 +88,8 @@
       .testimonials-grid{grid-template-columns:1fr!important;}
       .t-col:nth-child(2),.t-col:nth-child(3){display:none!important;}
     }
+    .hero-section{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding-top:100px;margin-top:-80px;background:#0a0a0a;}
+    .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;}
     /* New hero design */
     .new-hero-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;}
     @media(max-width:900px){.new-hero-grid{grid-template-columns:1fr;}}
@@ -145,48 +154,42 @@
 </div>
 
 <!-- HERO -->
-<section style="background:#fff;padding:80px 24px 64px;border-bottom:1.5px solid #E2E8F0;">
-  <div style="max-width:1100px;margin:0 auto;">
-    <div class="new-hero-grid">
-      <div>
-        <div style="display:inline-flex;align-items:center;gap:8px;background:#EFF6FF;border:1.5px solid #BFDBFE;border-radius:100px;padding:6px 16px;margin-bottom:28px;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F4C81" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <span style="font-size:12px;font-weight:500;color:#0F4C81;letter-spacing:0.08em;text-transform:uppercase;">AD-Valtuutettu · Espoo</span>
-        </div>
-        <h1 style="font-size:clamp(36px,5.5vw,68px);font-weight:700;line-height:1.08;letter-spacing:-0.03em;color:#0F172A;margin-bottom:12px;">
-          <span class="fi-text">Jakohihnan Vaihto Espoo — <span style="color:#0F4C81;">ammattitaitoinen ja edullinen.</span></span>
-          <span class="en-text" style="display:none;">Timing Belt Espoo — <span style="color:#0F4C81;">professional and affordable.</span></span>
-        </h1>
-        <div class="hero-accent-line"></div>
-        <p style="font-size:16px;color:#64748B;line-height:1.7;margin-bottom:32px;max-width:540px;font-weight:400;">
-          <span class="fi-text">Vaihdetaan ajoissa — ennen kuin katkennut hihna aiheuttaa moottorivaurion.</span>
-          <span class="en-text" style="display:none;">Replaced on time — before a snapped belt causes serious engine damage.</span>
-        </p>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;">
-            <div style="display:flex;align-items:center;gap:7px;background:#F8FAFC;border:1.5px solid #E2E8F0;border-radius:10px;padding:8px 14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0F4C81" stroke-width="2.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="font-size:12px;font-weight:600;color:#0F172A;" class="fi-text">Takuu säilyy</span><span style="font-size:12px;font-weight:600;color:#0F172A;display:none;" class="en-text">Warranty intact</span></div>
-            <div style="display:flex;align-items:center;gap:7px;background:#F8FAFC;border:1.5px solid #E2E8F0;border-radius:10px;padding:8px 14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0F4C81" stroke-width="2.5" stroke-linecap="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span style="font-size:12px;font-weight:600;color:#0F172A;" class="fi-text">Kaikki automerkit</span><span style="font-size:12px;font-weight:600;color:#0F172A;display:none;" class="en-text">All car brands</span></div>
-            <div style="display:flex;align-items:center;gap:7px;background:#F8FAFC;border:1.5px solid #E2E8F0;border-radius:10px;padding:8px 14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0F4C81" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span style="font-size:12px;font-weight:600;color:#0F172A;" class="fi-text">Läpinäkyvä hinnoittelu</span><span style="font-size:12px;font-weight:600;color:#0F172A;display:none;" class="en-text">Transparent pricing</span></div>
-            <div style="display:flex;align-items:center;gap:7px;background:#F8FAFC;border:1.5px solid #E2E8F0;border-radius:10px;padding:8px 14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0F4C81" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:12px;font-weight:600;color:#0F172A;" class="fi-text">12 kk takuu töille</span><span style="font-size:12px;font-weight:600;color:#0F172A;display:none;" class="en-text">12 month guarantee</span></div>
-          </div>
-        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
-          <a href="https://bucolic-bavarois-096a81.netlify.app" style="display:inline-flex;align-items:center;gap:8px;background:#0F4C81;color:#fff;font-weight:500;font-size:16px;padding:14px 32px;border-radius:100px;text-decoration:none;transition:background .18s,transform .14s;box-shadow:0 4px 20px rgba(15,76,129,0.3);" onmouseover="this.style.background='#0a3d6b';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='#0F4C81';this.style.transform='none'">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <span class="fi-text">Varaa aika</span><span class="en-text" style="display:none;">Book Now</span>
-          </a>
-          <a href="tel:+358449773677" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0F4C81;font-weight:500;font-size:16px;padding:13px 24px;border-radius:100px;text-decoration:none;border:2px solid #0F4C81;transition:background .18s,color .18s;" onmouseover="this.style.background='#0F4C81';this.style.color='#fff'" onmouseout="this.style.background='#fff';this.style.color='#0F4C81'">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.34a16 16 0 0 0 5.75 5.75l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"/></svg>
-            +358 44 977 3677
-          </a>
-        </div>
+<section class="hero-section">
+  <img src="/images/jako/jako2.webp" alt="Jakohihnan vaihto Espoo — ammattitaitoinen timing belt vaihto" class="hero-image">
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,5,5,0.52) 0%,rgba(5,5,5,0.74) 100%);z-index:1;"></div>
+  <div style="position:relative;z-index:2;text-align:center;max-width:900px;padding:40px 24px;">
+    <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(232,137,10,0.18);border:1px solid rgba(232,137,10,0.4);border-radius:99px;padding:8px 18px;margin-bottom:32px;">
+      <span style="font-size:16px;font-weight:500;color:#FFD97A;">★ 4.9 · 100+ Google</span>
+      <span style="width:1px;height:14px;background:rgba(255,255,255,0.25);"></span>
+      <span style="font-size:16px;font-weight:500;color:rgba(255,255,255,0.85);">AD-Valtuutettu</span>
+    </div>
+    <h1 class="hero-h1" style="font-size:clamp(48px,8vw,96px);font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;line-height:1.08;letter-spacing:0.01em;margin-bottom:24px;color:#fff;">
+      <span class="fi-text">Jakohihnan Vaihto<br>ammattitaidolla<br><span style="color:var(--brand);">Espoossa</span></span>
+      <span class="en-text" style="display:none;">Timing Belt<br>Replacement<br><span style="color:var(--brand);">in Espoo</span></span>
+    </h1>
+    <p style="font-size:clamp(16px,1.8vw,20px);line-height:1.65;color:rgba(255,255,255,0.85);max-width:600px;margin:0 auto 40px;font-weight:400;">
+      <span class="fi-text">Vaihdetaan ajoissa — ennen kuin katkennut hihna aiheuttaa moottorivaurion. Alkaen 300 €.</span>
+      <span class="en-text" style="display:none;">Replaced on time — before a snapped belt causes serious engine damage. From €300.</span>
+    </p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:40px;">
+      <a href="#contact" class="btn-primary" style="padding:15px 32px;font-size:16px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span class="fi-text">Varaa aika</span><span class="en-text" style="display:none;">Book Now</span>
+      </a>
+      <a href="tel:+358449773677" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 32px;font-size:16px;font-weight:500;border-radius:8px;border:2px solid rgba(255,255,255,0.4);color:#fff;text-decoration:none;transition:border-color .18s,background .18s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.8)';this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.4)';this.style.background='transparent'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.34a16 16 0 0 0 5.75 5.75l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"/></svg>
+        <span class="fi-text">044 9773677</span><span class="en-text" style="display:none;">044 9773677</span>
+      </a>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:7px;font-size:16px;color:rgba(255,255,255,0.6);">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.76 12.09a1 1 0 0 0 1.48 0C13.95 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+        Sillankorva 8, 02300 Espoo
       </div>
-      <div class="hide-mobile" style="background:#0F172A;border-radius:24px;padding:36px;min-width:260px;flex-shrink:0;">
-        <div style="font-size:52px;font-weight:700;color:#fff;line-height:1;letter-spacing:-0.04em;margin-bottom:4px;">4.9<span style="font-size:24px;color:#F59E0B;margin-left:2px;">★</span></div>
-        <div style="font-size:14px;color:rgba(255,255,255,0.45);margin-bottom:28px;font-weight:500;">/ 5.0 · Google-arvio</div>
-        <div style="display:flex;flex-direction:column;gap:14px;">
-          <div style="display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;background:rgba(255,255,255,0.07);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><span style="font-size:14px;font-weight:600;color:rgba(255,255,255,0.9);">100+ Google-arvostelua</span></div>
-          <div style="display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;background:rgba(255,255,255,0.07);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span style="font-size:14px;font-weight:600;color:rgba(255,255,255,0.9);">AD-Valtuutettu</span></div>
-          <div style="display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;background:rgba(255,255,255,0.07);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><span style="font-size:14px;font-weight:600;color:rgba(255,255,255,0.9);">Ma–Pe 8:00–17:00</span></div>
-        </div>
+      <span class="hero-sep" style="width:1px;height:14px;background:rgba(255,255,255,0.2);"></span>
+      <div style="display:flex;align-items:center;gap:7px;font-size:16px;color:rgba(255,255,255,0.6);">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span class="fi-text">Ma–Pe 8:00–17:00</span><span class="en-text" style="display:none;">Mon–Fri 8:00–17:00</span>
       </div>
     </div>
   </div>
@@ -209,7 +212,7 @@
 <section style="padding:64px 24px;background:var(--surface);border-bottom:1.5px solid var(--border);">
   <div style="max-width:820px;margin:0 auto;">
 
-    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,3.5vw,38px);font-weight:700;letter-spacing:-0.025em;margin-bottom:20px;color:var(--ink);line-height:1.15;">
+    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(26px,3.5vw,38px);font-weight:700;letter-spacing:-0.025em;margin-bottom:20px;color:var(--ink);line-height:1.15;">
       <span class="fi-text">Jakohihnan Vaihto Espoo — miksi se on niin tärkeää?</span>
       <span class="en-text" style="display:none;">Timing Belt Replacement Espoo — why is it so important?</span>
     </h3>
@@ -226,7 +229,7 @@
     <div style="display:grid;gap:40px;">
 
       <div>
-        <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;margin-bottom:12px;color:var(--ink);letter-spacing:-0.01em;">
+        <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;margin-bottom:12px;color:var(--ink);letter-spacing:-0.01em;">
           <span class="fi-text">Mitä tapahtuu jos jakohihna katkeaa?</span>
           <span class="en-text" style="display:none;">What happens if the timing belt breaks?</span>
         </h3>
@@ -241,7 +244,7 @@
       </div>
 
       <div>
-        <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;margin-bottom:12px;color:var(--ink);letter-spacing:-0.01em;">
+        <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;margin-bottom:12px;color:var(--ink);letter-spacing:-0.01em;">
           <span class="fi-text">Milloin jakohihna tulisi vaihtaa?</span>
           <span class="en-text" style="display:none;">When should the timing belt be replaced?</span>
         </h3>
@@ -256,7 +259,7 @@
       </div>
 
       <div>
-        <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;margin-bottom:12px;color:var(--ink);letter-spacing:-0.01em;">
+        <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;margin-bottom:12px;color:var(--ink);letter-spacing:-0.01em;">
           <span class="fi-text">Pitääkö vesipumppu vaihtaa samalla?</span>
           <span class="en-text" style="display:none;">Should the water pump be replaced at the same time?</span>
         </h3>
@@ -267,7 +270,7 @@
       </div>
 
       <div>
-        <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;margin-bottom:12px;color:var(--ink);letter-spacing:-0.01em;">
+        <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;margin-bottom:12px;color:var(--ink);letter-spacing:-0.01em;">
           <span class="fi-text">Varaa jakohihnan vaihto Espoossa — palvelemme lähialueet</span>
           <span class="en-text" style="display:none;">Book timing belt replacement in Espoo — serving surrounding areas</span>
         </h3>
@@ -286,7 +289,7 @@
   <div class="srv-main-grid">
     <div class="reveal">
       <p class="section-tag fi-text">Mitä sisältyy</p><p class="section-tag en-text" style="display:none;">What's included</p>
-      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;letter-spacing:-0.03em;margin:12px 0 32px;line-height:1.1;">
+      <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;letter-spacing:-0.03em;margin:12px 0 32px;line-height:1.1;">
         <span class="fi-text">Kattava jakohihna&shy;paketti</span><span class="en-text" style="display:none;">Complete timing belt package</span>
       </h3>
       <div>
@@ -326,22 +329,22 @@
   <div style="max-width:1100px;margin:0 auto;">
     <div class="reveal" style="text-align:center;margin-bottom:48px;">
       <p class="section-tag fi-text">Miksi 3A Service</p><p class="section-tag en-text" style="display:none;">Why 3A Service</p>
-      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;letter-spacing:-0.02em;margin-top:10px;"><span class="fi-text">Ammattitaitoinen jakohihnan vaihto</span><span class="en-text" style="display:none;">Professional timing belt replacement</span></h3>
+      <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;letter-spacing:-0.02em;margin-top:10px;"><span class="fi-text">Ammattitaitoinen jakohihnan vaihto</span><span class="en-text" style="display:none;">Professional timing belt replacement</span></h3>
     </div>
     <div class="reveal grid-services">
       <div class="benefit-card">
         <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <h2 style="font-family:'Bebas Neue',sans-serif;font-family:'Bebas Neue',sans-serif;font-size:20px;font-weight:500;margin-bottom:10px;text-transform:uppercase;"><span class="fi-text">Alkuperäislaadun osat</span><span class="en-text" style="display:none;">OEM-quality parts</span></h3>
+        <h2 style="font-family:'Oswald',sans-serif;font-size:20px;font-weight:500;margin-bottom:10px;text-transform:uppercase;"><span class="fi-text">Alkuperäislaadun osat</span><span class="en-text" style="display:none;">OEM-quality parts</span></h3>
         <p style="font-size:16px;color:var(--ink-60);line-height:1.7;font-weight:400;"><span class="fi-text">Käytämme valmistajan hyväksymiä jakohihnapaketteja — samaa laatua kuin merkkikorjaamolla, mutta edullisempaan hintaan.</span><span class="en-text" style="display:none;">We use manufacturer-approved timing belt kits — same quality as a dealership, at a better price.</span></p>
       </div>
       <div class="benefit-card">
         <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <h2 style="font-family:'Bebas Neue',sans-serif;font-family:'Bebas Neue',sans-serif;font-size:20px;font-weight:500;margin-bottom:10px;text-transform:uppercase;"><span class="fi-text">Nopea palvelu</span><span class="en-text" style="display:none;">Fast turnaround</span></h3>
+        <h2 style="font-family:'Oswald',sans-serif;font-size:20px;font-weight:500;margin-bottom:10px;text-transform:uppercase;"><span class="fi-text">Nopea palvelu</span><span class="en-text" style="display:none;">Fast turnaround</span></h3>
         <p style="font-size:16px;color:var(--ink-60);line-height:1.7;font-weight:400;"><span class="fi-text">Jakohihnan vaihto hoidetaan yleensä yhden päivän aikana. Voit jättää auton aamulla ja noutaa saman päivän iltana.</span><span class="en-text" style="display:none;">Timing belt replacement is usually done within one day. Drop off in the morning, pick up the same evening.</span></p>
       </div>
       <div class="benefit-card">
         <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <h2 style="font-family:'Bebas Neue',sans-serif;font-family:'Bebas Neue',sans-serif;font-size:20px;font-weight:500;margin-bottom:10px;text-transform:uppercase;"><span class="fi-text">Läpinäkyvä hinta</span><span class="en-text" style="display:none;">Transparent pricing</span></h3>
+        <h2 style="font-family:'Oswald',sans-serif;font-size:20px;font-weight:500;margin-bottom:10px;text-transform:uppercase;"><span class="fi-text">Läpinäkyvä hinta</span><span class="en-text" style="display:none;">Transparent pricing</span></h3>
         <p style="font-size:16px;color:var(--ink-60);line-height:1.7;font-weight:400;"><span class="fi-text">Hyväksyt aina tarjouksen ennen töiden aloittamista. Ei piilomaksuja, ei yllätyksiä laskussa.</span><span class="en-text" style="display:none;">You always approve the quote before work starts. No hidden fees, no surprise bills.</span></p>
       </div>
     </div>
@@ -353,7 +356,7 @@
   <div style="max-width:720px;margin:0 auto;">
     <div class="reveal" style="text-align:center;margin-bottom:48px;">
       <p class="section-tag">FAQ</p>
-      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;letter-spacing:-0.02em;margin-top:10px;"><span class="fi-text">Usein kysyttyä</span><span class="en-text" style="display:none;">Frequently asked</span></h3>
+      <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;letter-spacing:-0.02em;margin-top:10px;"><span class="fi-text">Usein kysyttyä</span><span class="en-text" style="display:none;">Frequently asked</span></h3>
     </div>
     <div class="reveal">
       <div class="faq-item">
