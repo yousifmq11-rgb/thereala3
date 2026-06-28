@@ -115,6 +115,12 @@
       body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))!important;}
       .btn-primary,.btn-outline{min-height:48px!important;}
     }
+    .brands-carousel{overflow:hidden;position:relative;background:#f8f8f8;}
+    .brands-track{display:flex;gap:40px;animation:scrollBrands 6s linear infinite;width:max-content;}
+    .brands-track:hover{animation-play-state:paused;}
+    @keyframes scrollBrands{0%{transform:translateX(0);}100%{transform:translateX(calc(-50% - 20px));}}
+    .brand-item{flex-shrink:0;display:flex;align-items:center;justify-content:center;height:120px;width:160px;background:#fff;border-radius:12px;border:1.5px solid var(--border);}
+    .brand-item img{max-width:90%;max-height:90%;object-fit:contain;}
     @media(prefers-reduced-motion:reduce){
       .t-col-inner,.brands-track{animation:none!important;}
       .reveal{opacity:1!important;transform:none!important;transition:none!important;}
@@ -343,6 +349,38 @@
         <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
         <h2 style="font-family:'Oswald',sans-serif;font-size:20px;font-weight:500;margin-bottom:10px;text-transform:uppercase;"><span class="fi-text">Läpinäkyvä hinta</span><span class="en-text" style="display:none;">Transparent pricing</span></h3>
         <p style="font-size:16px;color:var(--ink-60);line-height:1.7;font-weight:400;"><span class="fi-text">Hyväksyt aina tarjouksen ennen töiden aloittamista. Ei piilomaksuja, ei yllätyksiä laskussa.</span><span class="en-text" style="display:none;">You always approve the quote before work starts. No hidden fees, no surprise bills.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS SECTION -->
+<section style="background:#f8f8f8;padding:80px 24px;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:56px;">
+      <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:600;letter-spacing:0.01em;text-transform:uppercase;line-height:1.15;color:var(--ink);margin-bottom:16px;">
+        <span class="fi-text">Huollamme kaikki automerkit</span><span class="en-text" style="display:none;">We service all car brands</span>
+      </h2>
+      <p style="font-size:16px;color:var(--ink-60);line-height:1.7;max-width:600px;margin:0 auto;font-weight:400;">
+        <span class="fi-text">Autoosi ei tarvitse viedä merkkihuoltoon</span><span class="en-text" style="display:none;">Your car doesn't need to go to the dealer</span>
+      </p>
+    </div>
+    <div class="reveal brands-carousel" style="border-radius:16px;overflow:hidden;">
+      <div class="brands-track">
+        <div class="brand-item"><img src="/images/brands/Audi.svg" alt="Audi" loading="lazy"></div>
+        <div class="brand-item"><img src="/images/brands/Bens.svg" alt="Mercedes-Benz" loading="lazy"></div>
+        <div class="brand-item"><img src="/images/brands/bmw.svg" alt="BMW" loading="lazy"></div>
+        <div class="brand-item"><img src="/images/brands/Honda-1.svg" alt="Honda" loading="lazy"></div>
+        <div class="brand-item"><img src="/images/brands/Skoda.svg" alt="Skoda" loading="lazy"></div>
+        <div class="brand-item"><img src="/images/brands/Totota.svg" alt="Toyota" loading="lazy"></div>
+        <div class="brand-item"><img src="/images/brands/Volvo.svg" alt="Volvo" loading="lazy"></div>
+        <div class="brand-item"><img src="/images/brands/Audi.svg" alt="Audi" loading="lazy"></div>
+        <div class="brand-item"><img src="/images/brands/Bens.svg" alt="Mercedes-Benz" loading="lazy"></div>
+        <div class="brand-item"><img src="/images/brands/bmw.svg" alt="BMW" loading="lazy"></div>
+        <div class="brand-item"><img src="/images/brands/Honda-1.svg" alt="Honda" loading="lazy"></div>
+        <div class="brand-item"><img src="/images/brands/Skoda.svg" alt="Skoda" loading="lazy"></div>
+        <div class="brand-item"><img src="/images/brands/Totota.svg" alt="Toyota" loading="lazy"></div>
+        <div class="brand-item"><img src="/images/brands/Volvo.svg" alt="Volvo" loading="lazy"></div>
       </div>
     </div>
   </div>
