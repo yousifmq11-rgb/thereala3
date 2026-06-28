@@ -52,6 +52,14 @@
     "isPartOf": {"@id": "https://3aservice.fi/#website"},
     "about": {"@id": "https://3aservice.fi/#localbusiness"},
     "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".hero-h1", ".hero-desc"]},
+    "relatedLink": [
+      "https://3aservice.fi/services/jakohihna.html",
+      "https://3aservice.fi/services/oljynvaihto.html",
+      "https://3aservice.fi/services/jarrut.html",
+      "https://3aservice.fi/services/vikadiagnostiikka.html",
+      "https://3aservice.fi/services/katsastus.html",
+      "https://3aservice.fi/services/renkaat.html"
+    ],
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -172,10 +180,38 @@
       {"@type": "Question","name": "Säilyykö takuu käytettäessä 3A Servicea?","acceptedAnswer": {"@type": "Answer","text": "Kyllä. EU:n ryhmäpoikkeusasetus takaa oikeuden huollattaa auto missä tahansa AD-valtuutetussa korjaamossa ilman takuun menettämistä. 3A Service on AD-valtuutettu — takuusi säilyy voimassa."}},
       {"@type": "Question","name": "Kauanko määräaikaishuolto kestää?","acceptedAnswer": {"@type": "Answer","text": "Määräaikaishuolto kestää yleensä 45–90 minuuttia, riippuen huollon sisällöstä ja auton mallista. Voit odottaa paikan päällä tai käydä lähellä olevassa kahvilassa."}},
       {"@type": "Question","name": "Onko määräaikaishuolto pakollinen?","acceptedAnswer": {"@type": "Answer","text": "Määräaikaishuolto ei ole lain mukaan pakollinen, mutta se on erittäin suositeltavaa. Säännöllinen huolto pitää auton käyttöoikeuden voimassa, parantaa turvallisuutta, säilyttää arvoa ja välttää kalliit korjaukset. Ilman huoltoa moottorin takuu voidaan mitätöidä."}},
-      {"@type": "Question","name": "Missä 3A Service sijaitsee?","acceptedAnswer": {"@type": "Answer","text": "3A Service Oy sijaitsee osoitteessa Sillankorva 8, 02300 Espoo. Aukioloajat: maanantai–perjantai 8:00–17:00. Puhelin: 044 977 3677. Sähköposti: info@3aservice.fi."}}
+      {"@type": "Question","name": "Missä 3A Service sijaitsee?","acceptedAnswer": {"@type": "Answer","text": "3A Service Oy sijaitsee osoitteessa Sillankorva 8, 02300 Espoo — lähellä Kehä III:a. Aukioloajat: maanantai–perjantai 8:00–17:00. Puhelin: 044 977 3677. Sähköposti: info@3aservice.fi."}},
+      {"@type": "Question","name": "Onko jakohihnan vaihto osa määräaikaishuoltoa?","acceptedAnswer": {"@type": "Answer","text": "Jakohihnan vaihto ei sisälly tavalliseen määräaikaishuoltoon, mutta tarkistamme hihnan kunnon huollon yhteydessä. Jakohihna vaihdetaan erikseen 80 000–150 000 km välein. 3A Service tekee jakohihnan vaihdon alkaen 300 €."}},
+      {"@type": "Question","name": "Voiko määräaikaishuollon yhteydessä vaihtaa myös renkaat tai jarrut?","acceptedAnswer": {"@type": "Answer","text": "Kyllä. Voimme tehdä renkaiden vaihdon, jarrupalvelun tai muut huollot samalla käynnillä. Yhdistämällä palvelut säästät aikaa ja vaivaa. Kysy lisää ajanvarauksen yhteydessä."}},
+      {"@type": "Question","name": "Mikä on halvin autohuolto Espoossa?","acceptedAnswer": {"@type": "Answer","text": "3A Service Oy Espoossa tarjoaa määräaikaishuollon alkaen 120 € ja öljynvaihdon alkaen 69 €. Olemme AD-valtuutettu korjaamo, joten takuu säilyy — ja hinta on selvästi alempi kuin merkkikorjaamoilla (150–250 €)."}}
     ]
   }
   </script>
+  <!-- Schema: ItemList for related services (GEO / AI search) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "3A Service Oy — Autohuoltopalvelut Espoossa",
+    "description": "Kaikki autohuoltopalvelut Espoossa — AD-valtuutettu korjaamo, kaikki automerkit",
+    "url": "https://3aservice.fi/services/maaraikaishuolto.html",
+    "itemListElement": [
+      {"@type": "ListItem","position": 1,"name": "Määräaikaishuolto","url": "https://3aservice.fi/services/maaraikaishuolto.html","description": "Kattava määräaikaishuolto alkaen 120 €"},
+      {"@type": "ListItem","position": 2,"name": "Jakohihnan Vaihto","url": "https://3aservice.fi/services/jakohihna.html","description": "Jakohihnan vaihto alkaen 300 €"},
+      {"@type": "ListItem","position": 3,"name": "Öljynvaihto","url": "https://3aservice.fi/services/oljynvaihto.html","description": "Öljynvaihto alkaen 69 €"},
+      {"@type": "ListItem","position": 4,"name": "Jarrupalvelu","url": "https://3aservice.fi/services/jarrut.html","description": "Jarrupalat, -levyt ja jarruneste"},
+      {"@type": "ListItem","position": 5,"name": "Vikadiagnostiikka","url": "https://3aservice.fi/services/vikadiagnostiikka.html","description": "Vikakoodien luku ja diagnostiikka"},
+      {"@type": "ListItem","position": 6,"name": "Katsastushuolto","url": "https://3aservice.fi/services/katsastus.html","description": "Huolto ennen katsastusta"},
+      {"@type": "ListItem","position": 7,"name": "Renkaiden Palvelut","url": "https://3aservice.fi/services/renkaat.html","description": "Renkaan vaihto, tasapainotus ja säilytys"},
+      {"@type": "ListItem","position": 8,"name": "Ilmastointi","url": "https://3aservice.fi/services/ilmastointi.html","description": "Ilmastointihuolto ja -lataus"},
+      {"@type": "ListItem","position": 9,"name": "Sähkötyöt","url": "https://3aservice.fi/services/sahkotyot.html","description": "Autoelektroniikka ja sähkövikojen korjaus"},
+      {"@type": "ListItem","position": 10,"name": "Vaihteisto & Kytkin","url": "https://3aservice.fi/services/vaihteisto-kytkin.html","description": "Vaihteisto- ja kytkinhuolto"},
+      {"@type": "ListItem","position": 11,"name": "Alusta & Jousitus","url": "https://3aservice.fi/services/alusta.html","description": "Alustahuolto ja jousituksen korjaus"},
+      {"@type": "ListItem","position": 12,"name": "Autopesula","url": "https://3aservice.fi/services/pesula.html","description": "Ammattitaitoinen autopesula"}
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -428,7 +464,7 @@
 
       <div class="content-item">
         <h3 class="content-h3"><span class="fi-text">Miksi määräaikaishuolto on tärkeä?</span><span class="en-text" style="display:none;">Why is regular maintenance important?</span></h3>
-        <p class="content-p"><span class="fi-text">Määräaikaishuolto on säännöllinen huolto, joka varmistaa, että autosi säilyy turvallisena ja luotettavana käytössä. Säännöllisen huollon avulla voit välttää kalliita korjauksia, pidentää auton käyttöikää ja ylläpitää sen arvoa. Määräaikaishuolto sisältää kriittisten nesteiden vaihdot, suodattimien tarkistukset ja järjestelmien tarkastukset. Näiden huoltojen laiminlyönti voi johtaa moottorivahinkoihin, turvallisuusongelmiin ja auton takuun menetykseen.</span><span class="en-text" style="display:none;">Regular maintenance ensures your car stays safe and reliable, prevents costly repairs, extends its lifespan, and maintains its value.</span></p>
+        <p class="content-p"><span class="fi-text">Määräaikaishuolto on säännöllinen huolto, joka varmistaa, että autosi säilyy turvallisena ja luotettavana käytössä. Säännöllisen huollon avulla voit välttää kalliita korjauksia, pidentää auton käyttöikää ja ylläpitää sen arvoa. Määräaikaishuolto sisältää kriittisten nesteiden vaihdot, suodattimien tarkistukset ja järjestelmien tarkastukset — mukaan lukien <a href="/services/oljynvaihto.html" style="color:var(--brand);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(232,137,10,0.4);">moottoriöljyn vaihdon</a> ja jarrunesteen tarkistuksen. Näiden huoltojen laiminlyönti voi johtaa moottorivahinkoihin, turvallisuusongelmiin ja auton takuun menetykseen.</span><span class="en-text" style="display:none;">Regular maintenance ensures your car stays safe and reliable, prevents costly repairs, extends its lifespan, and maintains its value.</span></p>
       </div>
 
       <div class="content-item">
@@ -443,12 +479,12 @@
 
       <div class="content-item">
         <h3 class="content-h3"><span class="fi-text">Huollon merkit ja varoitukset</span><span class="en-text" style="display:none;">Maintenance signs and warnings</span></h3>
-        <p class="content-p"><span class="fi-text">Merkkejä siitä, että autollasi on huollon tarve: öljyvalo kojelaudassa, savua moottorista, epätavallisia ääniä, huoltomuistutin, polttoaineen kulutuksen kasvu tai heikentynyt moottorivoima. Nämä signaalit osoittavat, että jokin järjestelmä vaatii huomiota. Säännöllinen huolto auttaa välttämään nämä ongelmat ennalta.</span><span class="en-text" style="display:none;">Signs your car needs service: oil warning light, smoke, unusual noises, service reminder, or increased fuel consumption.</span></p>
+        <p class="content-p"><span class="fi-text">Merkkejä siitä, että autollasi on huollon tarve: öljyvalo kojelaudassa, savua moottorista, epätavallisia ääniä, huoltomuistutin, polttoaineen kulutuksen kasvu tai heikentynyt moottorivoima. Jos jarrupoljin tuntuu pehmeältä tai kuulet narinaa jarruttaessa, lue lisää <a href="/services/jarrut.html" style="color:var(--brand);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(232,137,10,0.4);">jarrupalvelustamme</a>. Vikavalon syyn voit selvittää nopeasti <a href="/services/vikadiagnostiikka.html" style="color:var(--brand);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(232,137,10,0.4);">vikadiagnostiikalla</a>. Säännöllinen huolto auttaa välttämään nämä ongelmat ennalta.</span><span class="en-text" style="display:none;">Signs your car needs service: oil warning light, smoke, unusual noises, service reminder, or increased fuel consumption.</span></p>
       </div>
 
       <div class="content-item">
         <h3 class="content-h3"><span class="fi-text">3A Servicen huoltoprosessi Espoossa</span><span class="en-text" style="display:none;">Our maintenance process in Espoo</span></h3>
-        <p class="content-p"><span class="fi-text">Kun tuo autosi 3A Servicelle määräaikaishuoltoon, tarkistamme ensin huoltokirjasta edellisen huollon ajankohdan ja valmistajan huoltosuositukset. Tarkistamme öljytason, suodattimen kunnon, ilmansuodattimen, nesteiden tasot, rengaspaineet ja muut kriittiset komponentit. Vaihdetaan öljy ja suodatin, täytetään nesteet tarvittaessa, ja merkitään huolto huoltokirjaan. Prosessi kestää tyypillisesti 45–90 minuuttia — takuu säilyy EU-lain mukaisesti.</span><span class="en-text" style="display:none;">We check the service book, oil, filters, fluids, and tire pressure. Oil and filter changed, fluids topped, service recorded. Done in 45–90 minutes.</span></p>
+        <p class="content-p"><span class="fi-text">Kun tuo autosi 3A Servicelle määräaikaishuoltoon, tarkistamme ensin huoltokirjasta edellisen huollon ajankohdan ja valmistajan huoltosuositukset. Tarkistamme öljytason, suodattimen kunnon, ilmansuodattimen, nesteiden tasot, rengaspaineet ja muut kriittiset komponentit — myös <a href="/services/jakohihna.html" style="color:var(--brand);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(232,137,10,0.4);">jakohihnan</a> kunnon, jos vaihtoväli lähestyy. Vaihdetaan öljy ja suodatin, täytetään nesteet tarvittaessa, ja merkitään huolto huoltokirjaan. Prosessi kestää tyypillisesti 45–90 minuuttia — takuu säilyy EU-lain mukaisesti.</span><span class="en-text" style="display:none;">We check the service book, oil, filters, fluids, and tire pressure. Oil and filter changed, fluids topped, service recorded. Done in 45–90 minutes.</span></p>
       </div>
 
       <div class="content-item" style="border-bottom:none;">
@@ -685,6 +721,113 @@
         </div>
         <div class="faq-a"><span class="fi-text">Määräaikaishuolto ei ole lain mukaan pakollinen, mutta se on erittäin suositeltavaa. Säännöllinen huolto pitää auton käyttöoikeuden voimassa, parantaa turvallisuutta, säilyttää arvoa ja välttää kalliita korjauksia. Ilman huoltoa moottorin takuu voidaan mitätöidä.</span></div>
       </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="fi-text">Onko jakohihnan vaihto osa määräaikaishuoltoa?</span>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="faq-a"><span class="fi-text">Jakohihnan vaihto ei kuulu normaaliin määräaikaishuoltoon, mutta tarkistamme hihnan kunnon huollon yhteydessä. Jakohihna vaihdetaan erikseen yleensä 80 000–150 000 km välein valmistajan suositusten mukaan — lue lisää <a href="/services/jakohihna.html" style="color:var(--brand);font-weight:500;">jakohihnan vaihdosta</a>.</span></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="fi-text">Missä 3A Service sijaitsee ja miten varaan ajan?</span>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="faq-a"><span class="fi-text">3A Service Oy sijaitsee osoitteessa Sillankorva 8, 02300 Espoo — helppo saavutettavuus Kehä III:n läheisyydessä. Aukioloajat: maanantai–perjantai 8:00–17:00. Varaa aika verkossa tai soita 044 977 3677. Sähköposti: info@3aservice.fi.</span></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="fi-text">Voiko määräaikaishuollon yhteydessä vaihtaa myös renkaat?</span>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="faq-a"><span class="fi-text">Kyllä. Määräaikaishuollon yhteydessä voidaan tehdä myös renkaiden vaihto, jarrupalvelu tai muut tarvittavat huollot yhdellä käynnillä. Tämä säästää aikaa ja vaivaa. Katso kaikki palvelumme: <a href="/services/renkaat.html" style="color:var(--brand);font-weight:500;">renkaiden palvelut</a>, <a href="/services/jarrut.html" style="color:var(--brand);font-weight:500;">jarrupalvelu</a>.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED SERVICES — internal linking for SEO/AEO/GEO -->
+<section style="background:var(--surface);padding:80px 24px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:48px;">
+      <p class="section-tag fi-text" style="margin-bottom:12px;">KATSO MYÖS</p>
+      <h2 style="font-size:clamp(26px,3.5vw,40px);"><span class="fi-text">Muut autohuoltopalvelumme Espoossa</span><span class="en-text" style="display:none;">Our other car services in Espoo</span></h2>
+      <p style="font-size:16px;color:var(--ink-60);max-width:560px;margin:16px auto 0;line-height:1.7;"><span class="fi-text">Määräaikaishuollon yhteydessä tarkistamme tarvittaessa myös muut kriittiset järjestelmät.</span><span class="en-text" style="display:none;">During maintenance we can also check other critical systems.</span></p>
+    </div>
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;">
+
+      <!-- Jakohihnan vaihto -->
+      <a href="/services/jakohihna.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s,box-shadow .2s;" onmouseover="this.style.borderColor='rgba(232,137,10,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="width:44px;height:44px;background:var(--brand-l);border-radius:12px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93L16.24 7.76M4.93 4.93l2.83 2.83M12 2v3M12 19v3M4.93 19.07l2.83-2.83M16.24 16.24l2.83 2.83M2 12h3M19 12h3"/></svg>
+        </div>
+        <div>
+          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;text-transform:none;letter-spacing:0;color:var(--ink);">Jakohihnan Vaihto</h3>
+          <p style="font-size:14px;color:var(--ink-60);line-height:1.6;font-weight:400;">Alkaen 300 € — vaihdetaan ennen katkeamista</p>
+        </div>
+        <span style="font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">Lue lisää →</span>
+      </a>
+
+      <!-- Öljynvaihto -->
+      <a href="/services/oljynvaihto.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s,box-shadow .2s;" onmouseover="this.style.borderColor='rgba(232,137,10,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="width:44px;height:44px;background:var(--brand-l);border-radius:12px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><path d="M12 2L8 7H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><line x1="12" y1="12" x2="12" y2="17"/></svg>
+        </div>
+        <div>
+          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;text-transform:none;letter-spacing:0;color:var(--ink);">Öljynvaihto</h3>
+          <p style="font-size:14px;color:var(--ink-60);line-height:1.6;font-weight:400;">Alkaen 69 € — nopea käynti ilman ajanvarausta</p>
+        </div>
+        <span style="font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">Lue lisää →</span>
+      </a>
+
+      <!-- Jarrupalvelu -->
+      <a href="/services/jarrut.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s,box-shadow .2s;" onmouseover="this.style.borderColor='rgba(232,137,10,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="width:44px;height:44px;background:var(--brand-l);border-radius:12px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div>
+          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;text-transform:none;letter-spacing:0;color:var(--ink);">Jarrupalvelu</h3>
+          <p style="font-size:14px;color:var(--ink-60);line-height:1.6;font-weight:400;">Jarrupalat, -levyt ja jarrunesteen vaihto</p>
+        </div>
+        <span style="font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">Lue lisää →</span>
+      </a>
+
+      <!-- Vikadiagnostiikka -->
+      <a href="/services/vikadiagnostiikka.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s,box-shadow .2s;" onmouseover="this.style.borderColor='rgba(232,137,10,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="width:44px;height:44px;background:var(--brand-l);border-radius:12px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div>
+          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;text-transform:none;letter-spacing:0;color:var(--ink);">Vikadiagnostiikka</h3>
+          <p style="font-size:14px;color:var(--ink-60);line-height:1.6;font-weight:400;">Vikakoodien luku — selvitämme mikä vikana</p>
+        </div>
+        <span style="font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">Lue lisää →</span>
+      </a>
+
+      <!-- Katsastushuolto -->
+      <a href="/services/katsastus.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s,box-shadow .2s;" onmouseover="this.style.borderColor='rgba(232,137,10,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="width:44px;height:44px;background:var(--brand-l);border-radius:12px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div>
+          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;text-transform:none;letter-spacing:0;color:var(--ink);">Katsastushuolto</h3>
+          <p style="font-size:14px;color:var(--ink-60);line-height:1.6;font-weight:400;">Huolto ennen katsastusta — läpäise varmasti</p>
+        </div>
+        <span style="font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">Lue lisää →</span>
+      </a>
+
+      <!-- Renkaat -->
+      <a href="/services/renkaat.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s,box-shadow .2s;" onmouseover="this.style.borderColor='rgba(232,137,10,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="width:44px;height:44px;background:var(--brand-l);border-radius:12px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="22"/><line x1="2" y1="12" x2="8" y2="12"/><line x1="16" y1="12" x2="22" y2="12"/></svg>
+        </div>
+        <div>
+          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;text-transform:none;letter-spacing:0;color:var(--ink);">Renkaiden Palvelut</h3>
+          <p style="font-size:14px;color:var(--ink-60);line-height:1.6;font-weight:400;">Renkaan vaihto, tasapainotus ja säilytys</p>
+        </div>
+        <span style="font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">Lue lisää →</span>
+      </a>
+
     </div>
   </div>
 </section>
