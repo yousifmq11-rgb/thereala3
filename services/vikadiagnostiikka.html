@@ -12,7 +12,7 @@
     :root{--brand:#E8890A;--brand-d:#C4720A;--brand-l:#FEF3DC;--ink:#1A1A1A;--ink-60:rgba(26,26,26,0.6);--surface:#F5F5F2;--border:#E2E2DC;--adblue:#0044B0;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
-    body{font-family:'Roboto',sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;padding-top:80px;}
+    body{font-family:'Roboto',sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;padding-top:80px;touch-action:manipulation;overscroll-behavior-y:contain;}
     h1,h2,h3{font-family:'Bebas Neue',sans-serif;}
     .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:#fff;font-family:'Roboto',sans-serif;font-weight:500;border:none;cursor:pointer;border-radius:8px;padding:13px 24px;font-size:14px;transition:background .18s,transform .14s,box-shadow .18s;box-shadow:0 4px 16px rgba(232,137,10,0.3);text-decoration:none;white-space:nowrap;}
     .btn-primary:hover{background:var(--brand-d);transform:translateY(-1px);box-shadow:0 8px 24px rgba(232,137,10,0.4);}
@@ -57,7 +57,7 @@
     footer h4{color:#fff;font-size:14px;font-weight:500;margin-bottom:14px;letter-spacing:0.06em;text-transform:uppercase;}
     footer a{color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;transition:color .15s;display:block;margin-bottom:8px;}
     footer a:hover{color:var(--brand);}
-    #mobile-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:90;background:#fff;padding:12px 20px;border-top:1.5px solid var(--border);box-shadow:0 -4px 20px rgba(0,0,0,0.1);}
+    #mobile-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:90;background:#fff;padding:12px 20px;padding-bottom:max(12px,env(safe-area-inset-bottom));border-top:1.5px solid var(--border);box-shadow:0 -4px 20px rgba(0,0,0,0.1);}
     @media(max-width:768px){#mobile-sticky{display:flex;gap:10px;}}
     .grid-services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
     @media(max-width:640px){.hide-mobile{display:none!important;}}
@@ -88,6 +88,31 @@
     @media(max-width:900px){.new-hero-grid{grid-template-columns:1fr;}}
     .hero-accent-line{width:80px;height:3px;background:linear-gradient(90deg,#0F4C81,transparent);border-radius:2px;margin-bottom:24px;animation:accentSlide .7s ease .2s both;}
     @keyframes accentSlide{from{width:0;opacity:0}to{width:80px;opacity:1}}
+    @media(max-width:768px){
+      section{padding-top:60px!important;padding-bottom:60px!important;}
+      .hero-section{min-height:100svh!important;padding-top:80px!important;padding-bottom:48px!important;margin-top:-80px!important;}
+      .hero-h1{font-size:clamp(32px,9vw,44px)!important;line-height:1.1!important;}
+      .hero-sep{display:none!important;}
+      .srv-main-grid{grid-template-columns:1fr!important;gap:32px!important;}
+      .footer-grid{grid-template-columns:1fr!important;gap:24px!important;}
+      .new-hero-grid{grid-template-columns:1fr!important;}
+      .testimonials-grid{grid-template-columns:1fr!important;}
+      .t-col:nth-child(2),.t-col:nth-child(3){display:none!important;}
+      .contact-outer-grid{grid-template-columns:1fr!important;}
+      .form-grid-2{grid-template-columns:1fr!important;}
+      .footer-bottom-bar{grid-template-columns:1fr!important;gap:12px!important;}
+      .footer-bottom-bar>div:last-child{align-items:flex-start!important;}
+      .faq-q{font-size:16px;padding:18px 0!important;min-height:44px;}
+      .faq-a{font-size:16px;}
+      .brand-item{width:120px!important;height:88px!important;}
+      body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))!important;}
+      .btn-primary,.btn-outline{min-height:48px!important;}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .t-col-inner,.brands-track{animation:none!important;}
+      .reveal{opacity:1!important;transform:none!important;transition:none!important;}
+      .hero-accent-line{animation:none!important;}
+    }
   </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"AutoRepair","@id":"https://3aservice.fi/#business","name":"3A Service Oy | Autohuolto","telephone":"+358449773677","email":"info@3aservice.fi","url":"https://3aservice.fi","address":{"@type":"PostalAddress","streetAddress":"Sillankorva 8","addressLocality":"Espoo","postalCode":"02300","addressCountry":"FI"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","bestRating":"5","reviewCount":"47"},"areaServed":["Espoo","Uusimaa"]},{"@type":"Service","name":"Vikadiagnostiikka","alternateName":"Car Fault Diagnostics","description":"Ammattitason vikadiagnostiikka OBD2-laitteistolla kaikille automerkeille Espoossa. Löydämme vian nopeasti ja tarkasti.","provider":{"@id":"https://3aservice.fi/#business"},"areaServed":"Espoo, Uusimaa","url":"https://3aservice.fi/services/vikadiagnostiikka.html","serviceType":"Vehicle Diagnostics"}]}
@@ -108,9 +133,9 @@
     <div style="flex:1;"></div>
     <div class="lang-pill hide-mobile"><button class="lang-btn active" data-lang="fi" onclick="setLang('fi')">FI</button><button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button></div>
     <a href="tel:+358449773677" class="hide-mobile" style="font-size:14px;font-weight:500;color:rgba(255,255,255,0.78);text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.78)'">+358 44 977 3677</a>
-    <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary hide-mobile fi-text" style="padding:9px 20px;font-size:14px;">📅 Varaa aika</a>
-    <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary hide-mobile en-text" style="padding:9px 20px;font-size:14px;display:none;">📅 Book Now</a>
-    <button class="hide-desktop" onclick="openDrawer()" style="background:none;border:none;cursor:pointer;padding:4px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary hide-mobile fi-text" style="padding:9px 20px;font-size:14px;display:inline-flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Varaa aika</a>
+    <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary hide-mobile en-text" style="padding:9px 20px;font-size:14px;display:none;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Book Now</a>
+    <button class="hide-desktop" onclick="openDrawer()" aria-label="Avaa valikko" style="background:none;border:none;cursor:pointer;padding:8px;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
 </header>
 
@@ -349,82 +374,226 @@
   </div>
 </section>
 
-<!-- REVIEWS -->
-<section style="background:var(--surface);padding:80px 24px;">
-<div style="max-width:1100px;margin:0 auto;">
-<div class="reveal" style="text-align:center;margin-bottom:48px;"><p class="section-tag">Google Reviews</p><h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:normal;letter-spacing:-0.02em;margin-top:10px;"><span class="fi-text">Mitä asiakkaamme sanovat</span><span class="en-text" style="display:none;">What our customers say</span></h3></div>
-<div class="testimonials-grid reveal">
-<div class="t-col"><div class="t-col-inner">
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Diagnoosi paljasti DPF-tukkeutuman jota pelkäsin. Selkeä OBD2-raportti ja suositeltu korjaussuunnitelma. Rehellisyyttä ja osaamista — juuri mitä tarvitsin.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">HV</div><div><div class="t-name">Heikki V.</div><div class="t-role">BMW 520d · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Varoitusvalo palanut viikkoja eikä kukaan löytänyt vikaa. 3A Service löysi sen live-datalla tunnissa. Kiitos ammattitaidosta ja huolellisesta työstä!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">TM</div><div><div class="t-name">Tuula M.</div><div class="t-role">Ford Galaxy · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Monimutkaisempi vika vaihteistossa. Tunnin diagnoosi ja selkeä kirjallinen raportti. Voin vertailla korjaushinnat muualta. Loistava konsepti!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">TK</div><div><div class="t-name">Tero K.</div><div class="t-role">Audi A6 · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">EGR-järjestelmässä ongelma. 3A Service diagnosoi tarkasti ilman arvailua. Kirjallinen raportti jäi käteen — hyödyllinen jatkossakin. Kiitos!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">SR</div><div><div class="t-name">Suvi R.</div><div class="t-role">Peugeot 3008 · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Diagnoosi paljasti DPF-tukkeutuman jota pelkäsin. Selkeä OBD2-raportti ja suositeltu korjaussuunnitelma. Rehellisyyttä ja osaamista — juuri mitä tarvitsin.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">HV</div><div><div class="t-name">Heikki V.</div><div class="t-role">BMW 520d · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Varoitusvalo palanut viikkoja eikä kukaan löytänyt vikaa. 3A Service löysi sen live-datalla tunnissa. Kiitos ammattitaidosta ja huolellisesta työstä!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">TM</div><div><div class="t-name">Tuula M.</div><div class="t-role">Ford Galaxy · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Monimutkaisempi vika vaihteistossa. Tunnin diagnoosi ja selkeä kirjallinen raportti. Voin vertailla korjaushinnat muualta. Loistava konsepti!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">TK</div><div><div class="t-name">Tero K.</div><div class="t-role">Audi A6 · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">EGR-järjestelmässä ongelma. 3A Service diagnosoi tarkasti ilman arvailua. Kirjallinen raportti jäi käteen — hyödyllinen jatkossakin. Kiitos!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">SR</div><div><div class="t-name">Suvi R.</div><div class="t-role">Peugeot 3008 · Vikadiagnostiikka</div></div></div></div>
-</div></div>
-<div class="t-col"><div class="t-col-inner">
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Pakokaasumittaukset katsastusta varten — lambda-arvo oli pieleen. Diagnosoitu ja korjattu ennen katsastusta. Ammattimaisesti ja nopeasti hoidettu!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">JH</div><div><div class="t-name">Jarmo H.</div><div class="t-role">VW Caddy · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Vaikea vika jota ei näkynyt silmälle. Live-data-analyysi paljasti viallisen lambda-anturin heti. Nopeaa ja tarkkaa työtä — täsmälleen mitä hakein.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">NL</div><div><div class="t-name">Noora L.</div><div class="t-role">Hyundai Kona · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Tutkin vian useammassa paikassa ilman löydöstä. 3A Service löysi ABS-anturivian 30 minuutissa diagnostiikalla. Rahani hyvin käytetty!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">IP</div><div><div class="t-name">Ilkka P.</div><div class="t-role">Volvo S60 · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Polttoainepumpun osittainen toimintahäiriö diagnosoitu täsmällisesti. Kirjallinen raportti auttoi vakuutusneuvotteluissa. Erittäin hyödyllinen palvelu!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">MS</div><div><div class="t-name">Mikael S.</div><div class="t-role">Mazda 6 · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Pakokaasumittaukset katsastusta varten — lambda-arvo oli pieleen. Diagnosoitu ja korjattu ennen katsastusta. Ammattimaisesti ja nopeasti hoidettu!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">JH</div><div><div class="t-name">Jarmo H.</div><div class="t-role">VW Caddy · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Vaikea vika jota ei näkynyt silmälle. Live-data-analyysi paljasti viallisen lambda-anturin heti. Nopeaa ja tarkkaa työtä — täsmälleen mitä hakein.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">NL</div><div><div class="t-name">Noora L.</div><div class="t-role">Hyundai Kona · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Tutkin vian useammassa paikassa ilman löydöstä. 3A Service löysi ABS-anturivian 30 minuutissa diagnostiikalla. Rahani hyvin käytetty!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">IP</div><div><div class="t-name">Ilkka P.</div><div class="t-role">Volvo S60 · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Polttoainepumpun osittainen toimintahäiriö diagnosoitu täsmällisesti. Kirjallinen raportti auttoi vakuutusneuvotteluissa. Erittäin hyödyllinen palvelu!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">MS</div><div><div class="t-name">Mikael S.</div><div class="t-role">Mazda 6 · Vikadiagnostiikka</div></div></div></div>
-</div></div>
-<div class="t-col"><div class="t-col-inner">
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Diagnoosiraportti oli täysin ymmärrettävä ilman teknistä taustaa. He selittivät kaiken selkeästi. Erinomainen asiakaspalvelu ja ammattimainen osaaminen!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">RT</div><div><div class="t-name">Riitta T.</div><div class="t-role">Mercedes C220 · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Sytytysanturiongelma ei näkynyt missään muualla. OBD2 + live-data paljastivat sen 45 minuutissa. Ei enää epäsäännöllinen käynti — täydellinen tulos!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">VJ</div><div><div class="t-name">Vesa J.</div><div class="t-role">Jeep Compass · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Diagnoosia ei tarvinnut ostaa korjauksena samasta paikasta. Sain raportin, vertasin hinnat, palasin korjauttamaan. Rehellinen ja asiakasystävällinen tapa toimia.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">TA</div><div><div class="t-name">Tuomas A.</div><div class="t-role">Nissan Juke · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Pieni moottorivalo ahdisti kuukausia. Makroanturi oli vikaantunut — diagnosoitu ja vaihdettu. Valo sammunut ja mielenrauha palasi. Suosittelen!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">OV</div><div><div class="t-name">Outi V.</div><div class="t-role">Opel Corsa · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Diagnoosiraportti oli täysin ymmärrettävä ilman teknistä taustaa. He selittivät kaiken selkeästi. Erinomainen asiakaspalvelu ja ammattimainen osaaminen!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">RT</div><div><div class="t-name">Riitta T.</div><div class="t-role">Mercedes C220 · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Sytytysanturiongelma ei näkynyt missään muualla. OBD2 + live-data paljastivat sen 45 minuutissa. Ei enää epäsäännöllinen käynti — täydellinen tulos!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">VJ</div><div><div class="t-name">Vesa J.</div><div class="t-role">Jeep Compass · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Diagnoosia ei tarvinnut ostaa korjauksena samasta paikasta. Sain raportin, vertasin hinnat, palasin korjauttamaan. Rehellinen ja asiakasystävällinen tapa toimia.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">TA</div><div><div class="t-name">Tuomas A.</div><div class="t-role">Nissan Juke · Vikadiagnostiikka</div></div></div></div>
-<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Pieni moottorivalo ahdisti kuukausia. Makroanturi oli vikaantunut — diagnosoitu ja vaihdettu. Valo sammunut ja mielenrauha palasi. Suosittelen!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">OV</div><div><div class="t-name">Outi V.</div><div class="t-role">Opel Corsa · Vikadiagnostiikka</div></div></div></div>
-</div></div>
-</div>
-</div>
-</section>
-
-<!-- CTA STRIP -->
-<section style="background:var(--ink);padding:64px 24px;position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(232,137,10,0.12) 0%,transparent 60%);pointer-events:none;"></div>
-  <div style="max-width:700px;margin:0 auto;text-align:center;position:relative;">
-    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,4vw,40px);font-weight:700;color:#fff;letter-spacing:-0.03em;margin-bottom:14px;"><span class="fi-text">Selvitä vika tänään</span><span class="en-text" style="display:none;">Find the fault today</span></h3>
-    <p style="font-size:16px;color:rgba(255,255,255,0.7);margin-bottom:28px;font-weight:300;"><span class="fi-text">Varaa diagnostiikkakäynti — kerromme mitä on vialla ja mitä se maksaa korjata.</span><span class="en-text" style="display:none;">Book a diagnostics visit — we'll tell you what's wrong and what it costs to fix.</span></p>
-    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-      <a href="tel:+358449773677" style="display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:500;font-size:16px;padding:13px 28px;border:2px solid rgba(255,255,255,0.3);border-radius:8px;transition:border-color .2s,background .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.6)';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)';this.style.background='transparent'">+358 44 977 3677</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 
 <!-- AutoJerry Reviews -->
-<section style="padding:56px 24px;background:#F5F5F2;">
+<section style="padding:56px 24px;background:#fff;">
   <div style="max-width:960px;margin:0 auto;text-align:center;">
-    <div style="font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#E8890A;margin-bottom:10px;">ASIAKASARVOSTELUT</div>
-    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:16px;font-weight:700;color:#0F172A;margin-bottom:8px;">
-      <span class="fi-text">Mitä asiakkaamme sanovat</span><span class="en-text" style="display:none;">What our customers say</span>
-    </h3>
-    <p style="font-size:16px;color:#64748B;margin-bottom:32px;">
+    <p class="section-tag" style="text-align:center;margin-bottom:10px;"><span class="fi-text">ASIAKASARVOSTELUT</span><span class="en-text" style="display:none;">CUSTOMER REVIEWS</span></p>
+    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,40px);font-weight:600;text-transform:uppercase;color:var(--ink);margin-bottom:8px;">
+      <span class="fi-text">Todentuneet arvostelut AutoJerryltä</span><span class="en-text" style="display:none;">Verified Reviews via AutoJerry</span>
+    </h2>
+    <p style="font-size:16px;color:var(--ink-60);margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;">
       <span class="fi-text">Oikeat arvostelut — AutoJerry-palvelun kautta</span><span class="en-text" style="display:none;">Real reviews — via AutoJerry</span>
     </p>
     <iframe src="https://autojerry.fi/arvostelut/upotus-2/8441/" style="width:100%;border:none;border-radius:16px;min-height:500px;display:block;" loading="lazy" title="AutoJerry Asiakasarvostelut"></iframe>
   </div>
 </section>
+
+<!-- REVIEWS -->
+<section style="background:#fff;padding:100px 24px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:48px;">
+      <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(32px,5vw,52px);font-weight:normal;letter-spacing:0.01em;margin-top:0;"><span class="fi-text">Google arvostelut</span><span class="en-text" style="display:none;">Google Reviews</span></h2>
+    </div>
+    <div class="testimonials-grid reveal">
+      <!-- Col 1: Jaakko · Lauri · Jan + duplicates for seamless scroll -->
+      <div class="t-col"><div class="t-col-inner">
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Nopea ja ystävällinen palvelu. Mitään ei jäänyt epäselväksi. Vien auton tänne huoltoon ensi kerralla.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">J</div><div><div class="t-name">Jaakko Anttonen</div><div class="t-role">Local Guide · 48 arvostelua</div></div></div></div>
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Erinomainen paikka! Ammattitaitoinen huolto ja todella hyvä hinta. Olen käyttänyt ainoastaan tätä korjaamoa jo useita vuosia. Vahva suositus.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">L</div><div><div class="t-name">Lauri Kauppila</div><div class="t-role">8 arvostelua</div></div></div></div>
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Olen huollattanut autoni täällä muutaman kerran ja aina kaikki toimii yhtä hyvin. Hinta ja aikataulu ovat kohdallaan ja työn jälki erinomaista. Voin vain suositella.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">J</div><div><div class="t-name">Jan Ojala</div><div class="t-role">Local Guide · 41 arvostelua</div></div></div></div>
+        <!-- duplicates for seamless scroll -->
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Nopea ja ystävällinen palvelu. Mitään ei jäänyt epäselväksi. Vien auton tänne huoltoon ensi kerralla.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">J</div><div><div class="t-name">Jaakko Anttonen</div><div class="t-role">Local Guide · 48 arvostelua</div></div></div></div>
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Erinomainen paikka! Ammattitaitoinen huolto ja todella hyvä hinta. Olen käyttänyt ainoastaan tätä korjaamoa jo useita vuosia. Vahva suositus.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">L</div><div><div class="t-name">Lauri Kauppila</div><div class="t-role">8 arvostelua</div></div></div></div>
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Olen huollattanut autoni täällä muutaman kerran ja aina kaikki toimii yhtä hyvin. Hinta ja aikataulu ovat kohdallaan ja työn jälki erinomaista. Voin vain suositella.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">J</div><div><div class="t-name">Jan Ojala</div><div class="t-role">Local Guide · 41 arvostelua</div></div></div></div>
+      </div></div>
+      <!-- Col 2: Dominik · Valtteri · Thuy-Linh + duplicates -->
+      <div class="t-col"><div class="t-col-inner">
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Very professional approach, repair cost was as estimated and on time and they even consulted me with detail. If you are looking for good quality car repair for very reasonable price, dont look any further!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">D</div><div><div class="t-name">Dominik Drgoň</div><div class="t-role">Local Guide · 27 reviews</div></div></div></div>
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Asiakaskokemus oli erittäin miellyttävä. Annettu hinta piti myös maksuvaiheessa. Huollon ja töiden dokumentointi oli erittäin laadukasta, aina komponenttitasolle asti — erittäin vakuuttavaa.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">V</div><div><div class="t-name">Valtteri Ollila</div><div class="t-role">1 arvostelu</div></div></div></div>
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Good service, I really like the kassa guy. They also have cheapest price in town for yearly car maintenance.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">T</div><div><div class="t-name">Thuy-Linh Phi</div><div class="t-role">Local Guide · 10 reviews</div></div></div></div>
+        <!-- duplicates -->
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Very professional approach, repair cost was as estimated and on time and they even consulted me with detail. If you are looking for good quality car repair for very reasonable price, dont look any further!</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">D</div><div><div class="t-name">Dominik Drgoň</div><div class="t-role">Local Guide · 27 reviews</div></div></div></div>
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Asiakaskokemus oli erittäin miellyttävä. Annettu hinta piti myös maksuvaiheessa. Huollon ja töiden dokumentointi oli erittäin laadukasta, aina komponenttitasolle asti — erittäin vakuuttavaa.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">V</div><div><div class="t-name">Valtteri Ollila</div><div class="t-role">1 arvostelu</div></div></div></div>
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Good service, I really like the kassa guy. They also have cheapest price in town for yearly car maintenance.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">T</div><div><div class="t-name">Thuy-Linh Phi</div><div class="t-role">Local Guide · 10 reviews</div></div></div></div>
+      </div></div>
+      <!-- Col 3: Mikael J. · Fanny · Dina + duplicates -->
+      <div class="t-col"><div class="t-col-inner">
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Erittäin kätevää ja hyvää palvelua. VAG-auton vaihteenvalitsimen korjaus, takavalon vaihto ja auton huolto samaan aikaan.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">M</div><div><div class="t-name">Mikael Junikka</div><div class="t-role">Local Guide · 6 arvostelua</div></div></div></div>
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Superbra service! Professionell och serviceinriktad personal.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">F</div><div><div class="t-name">Fanny von Schantz</div><div class="t-role">3 recensioner</div></div></div></div>
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Really helpful, reliable and affordable. I have used them with my car before and will continue to do so.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">D</div><div><div class="t-name">Dina Nyström</div><div class="t-role">1 review</div></div></div></div>
+        <!-- duplicates -->
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Erittäin kätevää ja hyvää palvelua. VAG-auton vaihteenvalitsimen korjaus, takavalon vaihto ja auton huolto samaan aikaan.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">M</div><div><div class="t-name">Mikael Junikka</div><div class="t-role">Local Guide · 6 arvostelua</div></div></div></div>
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Superbra service! Professionell och serviceinriktad personal.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">F</div><div><div class="t-name">Fanny von Schantz</div><div class="t-role">3 recensioner</div></div></div></div>
+        <div class="t-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div class="t-stars">★★★★★</div><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><p class="t-text">Really helpful, reliable and affordable. I have used them with my car before and will continue to do so.</p><div style="display:flex;align-items:center;gap:10px;"><div class="t-avatar">D</div><div><div class="t-name">Dina Nyström</div><div class="t-role">1 review</div></div></div></div>
+      </div></div>
+    </div>
+    <!-- View all on Google button -->
+    <div style="text-align:center;margin-top:36px;">
+      <a href="https://www.google.com/maps/search/3A+Service+Oy+Espoo" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:12px 24px;text-decoration:none;font-family:'Roboto',sans-serif;font-size:14px;font-weight:500;color:var(--ink);transition:box-shadow .2s,border-color .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.1)';this.style.borderColor='#4285F4'" onmouseout="this.style.boxShadow='none';this.style.borderColor='var(--border)'">
+        <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        Lue kaikki arvostelut Googlessa
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CONTACT SECTION -->
+<section id="contact" style="background:#fff;padding:100px 24px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:56px;">
+      <p class="section-tag fi-text" style="text-align:center;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:20px;max-width:100%;margin-left:auto;margin-right:auto;">Yhteystiedot</p><p class="section-tag en-text" style="display:none;text-align:center;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:20px;max-width:100%;margin-left:auto;margin-right:auto;">Contact</p>
+      <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(32px,5vw,52px);font-weight:normal;letter-spacing:0.01em;margin-top:0;">
+        <span class="fi-text">Ota yhteyttä</span><span class="en-text" style="display:none;">Get in touch</span>
+      </h2>
+    </div>
+    <div class="reveal contact-outer-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+      <!-- Contact form -->
+      <form id="contact-form" onsubmit="handleContactForm(event)" style="display:flex;flex-direction:column;gap:20px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div>
+            <label style="display:block;font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Nimi *</span><span class="en-text" style="display:none;">Name *</span></label>
+            <input type="text" id="cf-name" required style="width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+          <div>
+            <label style="display:block;font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Puhelin</span><span class="en-text" style="display:none;">Phone</span></label>
+            <input type="tel" id="cf-phone" placeholder="+358..." style="width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+        </div>
+        <div>
+          <label style="display:block;font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Sähköposti *</span><span class="en-text" style="display:none;">Email *</span></label>
+          <input type="email" id="cf-email" required style="width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
+        </div>
+        <div class="form-grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div>
+            <label style="display:block;font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Auton rekisterinumero *</span><span class="en-text" style="display:none;">License Plate *</span></label>
+            <input type="text" id="cf-plate" placeholder="ABC-123" required style="width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:16px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+          <div>
+            <label style="display:block;font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Mittariasteikko (km) *</span><span class="en-text" style="display:none;">Mileage (km) *</span></label>
+            <input type="number" id="cf-mileage" placeholder="45000" required style="width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:16px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+        </div>
+        <div>
+          <label style="display:block;font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Aihe *</span><span class="en-text" style="display:none;">Subject *</span></label>
+          <select id="cf-subject" required style="width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:16px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;cursor:pointer;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'">
+            <option value="" style="color:var(--ink-60);" disabled selected>-- Valitse aihe --</option>
+            <option value="Määräaikaishuolto"><span class="fi-text">Määräaikaishuolto</span></option>
+            <option value="Jakohihnan Vaihto"><span class="fi-text">Jakohihnan Vaihto</span></option>
+            <option value="Öljynvaihto"><span class="fi-text">Öljynvaihto</span></option>
+            <option value="Jarrujen Vaihto"><span class="fi-text">Jarrujen Vaihto</span></option>
+            <option value="Ilmastointi"><span class="fi-text">Ilmastointi</span></option>
+            <option value="Vaihteisto & Kytkin"><span class="fi-text">Vaihteisto & Kytkin</span></option>
+            <option value="Alusta & Jousitus"><span class="fi-text">Alusta & Jousitus</span></option>
+            <option value="Katsastushuolto"><span class="fi-text">Katsastushuolto</span></option>
+            <option value="Sähkötyöt"><span class="fi-text">Sähkötyöt</span></option>
+            <option value="Vikadiagnostiikka"><span class="fi-text">Vikadiagnostiikka</span></option>
+            <option value="Renkaiden Palvelut"><span class="fi-text">Renkaiden Palvelut</span></option>
+            <option value="Autopesula"><span class="fi-text">Autopesula</span></option>
+            <option value="Muu"><span class="fi-text">Muu</span></option>
+          </select>
+        </div>
+        <div>
+          <label style="display:block;font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:7px;"><span class="fi-text">Viesti *</span><span class="en-text" style="display:none;">Message *</span></label>
+          <textarea id="cf-msg" required rows="5" style="width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:10px;font-family:'Roboto',sans-serif;font-size:18px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s;resize:vertical;line-height:1.65;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+          <button type="submit" id="cf-btn" class="btn-primary" style="padding:16px 40px;font-size:15px;gap:10px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span id="cf-btn-text"><span class="fi-text">Lähetä viesti</span><span class="en-text" style="display:none;">Send Message</span></span>
+          </button>
+          <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-outline" style="padding:12px 24px;font-size:18px;gap:8px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span class="fi-text">Varaa aika</span><span class="en-text" style="display:none;">Book Now</span>
+          </a>
+        </div>
+        <div id="cf-success" style="display:none;align-items:center;gap:10px;padding:14px 18px;background:#ECFDF5;border:1.5px solid #6EE7B7;border-radius:10px;font-size:18px;font-weight:500;color:#065F46;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span class="fi-text">Kiitos! Olemme sinuun yhteydessä pian.</span><span class="en-text" style="display:none;">Thank you! We'll be in touch soon.</span>
+        </div>
+      </form>
+      <!-- Map + info panel -->
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.9!2d24.7560!3d60.2160!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468df5b60ca5b52f%3A0x7b2a6e5fa8d3a8c1!2sSillankorva%208%2C%2002300%20Espoo!5e0!3m2!1sfi!2sfi!4v1715000000000!5m2!1sfi!2sfi" width="100%" height="320" style="border:none;border-radius:16px;border:1.5px solid var(--border);display:block;" loading="lazy"></iframe>
+        <div style="margin-top:16px;display:flex;flex-direction:column;gap:12px;padding:20px;background:var(--surface);border-radius:14px;border:1.5px solid var(--border);">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:34px;height:34px;background:#fff;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid var(--border);">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.76 12.09a1 1 0 0 0 1.48 0C13.95 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+            </div>
+            <div><div style="font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:2px;"><span class="fi-text">Osoite</span><span class="en-text" style="display:none;">Address</span></div><div style="font-size:18px;color:var(--ink);font-weight:500;">Sillankorva 8, 02300 Espoo</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:34px;height:34px;background:#fff;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid var(--border);">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div><div style="font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:2px;"><span class="fi-text">Aukioloajat</span><span class="en-text" style="display:none;">Hours</span></div><div style="font-size:18px;color:var(--ink);font-weight:500;"><span class="fi-text">Ma–Pe 8:00–17:00</span><span class="en-text" style="display:none;">Mon–Fri 8:00–17:00</span></div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:34px;height:34px;background:#fff;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid var(--border);">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div><div style="font-size:14px;font-weight:700;letter-spacing:0.05em;color:var(--ink-60);margin-bottom:2px;">Email</div><a href="mailto:info@3aservice.fi" style="font-size:18px;color:var(--ink);font-weight:500;text-decoration:none;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--ink)'">info@3aservice.fi</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- FOOTER -->
 <footer style="padding:48px 24px 0;">
   <div style="max-width:1100px;margin:0 auto;">
-    <div class="footer-grid" style="padding-bottom:40px;">
-      <div><img src="../logo/pomelli_bdna_image_0509.webp" alt="3A Service Oy" style="height:48px;width:auto;margin-bottom:14px;display:block;"><p style="font-size:14px;"><span class="fi-text">Luotettavaa autohuoltoa Espoossa.</span><span class="en-text" style="display:none;">Reliable car service in Espoo.</span></p><div style="display:flex;gap:8px;margin-top:16px;"><a href="https://www.facebook.com/profile.php?id=61556218666083" target="_blank" style="width:34px;height:34px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);transition:background .15s;" onmouseover="this.style.background='var(--brand)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/3a_service_oy/" target="_blank" style="width:34px;height:34px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);transition:background .15s;" onmouseover="this.style.background='var(--brand)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a></div></div>
-      <div><h4><span class="fi-text">Palvelut</span><span class="en-text" style="display:none;">Services</span></h4><a href="maaraikaishuolto.html"><span class="fi-text">Määräaikaishuolto</span><span class="en-text" style="display:none;">Scheduled Maintenance</span></a><a href="jakohihna.html"><span class="fi-text">Jakohihnan Vaihto</span><span class="en-text" style="display:none;">Timing Belt</span></a><a href="katsastus.html"><span class="fi-text">Katsastushuolto</span><span class="en-text" style="display:none;">Inspection</span></a><a href="sahkotyot.html"><span class="fi-text">Sähkötyöt</span><span class="en-text" style="display:none;">Electrical</span></a><a href="vikadiagnostiikka.html"><span class="fi-text">Vikadiagnostiikka</span><span class="en-text" style="display:none;">Diagnostics</span></a><a href="renkaat.html"><span class="fi-text">Renkaiden Palvelut</span><span class="en-text" style="display:none;">Tire Services</span></a><a href="oljynvaihto.html"><span class="fi-text">Öljynvaihto</span><span class="en-text" style="display:none;">Oil Change</span></a><a href="jarrut.html"><span class="fi-text">Jarrujen Vaihto</span><span class="en-text" style="display:none;">Brake Service</span></a><a href="ilmastointi.html"><span class="fi-text">Ilmastointi</span><span class="en-text" style="display:none;">AC Service</span></a><a href="vaihteisto-kytkin.html"><span class="fi-text">Vaihteisto &amp; Kytkin</span><span class="en-text" style="display:none;">Gearbox &amp; Clutch</span></a><a href="alusta.html"><span class="fi-text">Alusta &amp; Jousitus</span><span class="en-text" style="display:none;">Suspension</span></a><a href="pesula.html"><span class="fi-text">Autopesula</span><span class="en-text" style="display:none;">Car Wash</span></a></div>
-      <div><h4><span class="fi-text">Yhteystiedot</span><span class="en-text" style="display:none;">Contact</span></h4><a href="tel:+358449773677">+358 44 977 3677</a><a href="mailto:info@3aservice.fi">info@3aservice.fi</a><a href="https://maps.app.goo.gl/68533AxtrqMYACAVA" target="_blank">Sillankorva 8, 02300 Espoo</a><a href="/index.html#contact" style="margin-top:6px;"><span class="fi-text">Ma–Pe 8:00–17:00</span><span class="en-text" style="display:none;">Mon–Fri 8:00–17:00</span></a></div>
+    <div class="footer-grid" style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:40px;">
+      <div>
+        <img src="../logo/pomelli_bdna_image_0509.webp" alt="3A Service Oy" style="height:48px;width:auto;margin-bottom:14px;display:block;">
+        <p style="font-size:18px;"><span class="fi-text">Luotettavaa autohuoltoa Espoossa.</span><span class="en-text" style="display:none;">Reliable car service in Espoo.</span></p>
+        <div style="display:flex;gap:8px;margin-top:16px;">
+          <a href="https://www.facebook.com/profile.php?id=61556218666083" target="_blank" style="width:34px;height:34px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);transition:background .15s;" onmouseover="this.style.background='var(--brand)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/3a_service_oy/" target="_blank" style="width:34px;height:34px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);transition:background .15s;" onmouseover="this.style.background='var(--brand)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4><span class="fi-text">Palvelut</span><span class="en-text" style="display:none;">Services</span></h4>
+        <a href="/services/maaraikaishuolto.html"><span class="fi-text">Määräaikaishuolto</span><span class="en-text" style="display:none;">Scheduled Maintenance</span></a>
+        <a href="/services/jakohihna.html"><span class="fi-text">Jakohihnan Vaihto</span><span class="en-text" style="display:none;">Timing Belt</span></a>
+        <a href="/services/oljynvaihto.html"><span class="fi-text">Öljynvaihto</span><span class="en-text" style="display:none;">Oil Change</span></a>
+        <a href="/services/jarrut.html"><span class="fi-text">Jarrujen Vaihto</span><span class="en-text" style="display:none;">Brake Service</span></a>
+        <a href="/services/ilmastointi.html"><span class="fi-text">Ilmastointi</span><span class="en-text" style="display:none;">AC Service</span></a>
+        <a href="/services/vaihteisto-kytkin.html"><span class="fi-text">Vaihteisto & Kytkin</span><span class="en-text" style="display:none;">Gearbox & Clutch</span></a>
+        <a href="/services/alusta.html"><span class="fi-text">Alusta & Jousitus</span><span class="en-text" style="display:none;">Suspension</span></a>
+        <a href="/services/katsastus.html"><span class="fi-text">Katsastushuolto</span><span class="en-text" style="display:none;">Inspection</span></a>
+        <a href="/services/sahkotyot.html"><span class="fi-text">Sähkötyöt</span><span class="en-text" style="display:none;">Electrical</span></a>
+        <a href="/services/vikadiagnostiikka.html"><span class="fi-text">Vikadiagnostiikka</span><span class="en-text" style="display:none;">Diagnostics</span></a>
+        <a href="/services/renkaat.html"><span class="fi-text">Renkaiden Palvelut</span><span class="en-text" style="display:none;">Tire Services</span></a>
+        <a href="/services/pesula.html"><span class="fi-text">Autopesula</span><span class="en-text" style="display:none;">Car Wash</span></a>
+      </div>
+      <div>
+        <h4><span class="fi-text">Yhteystiedot</span><span class="en-text" style="display:none;">Contact</span></h4>
+        <a href="tel:+358449773677">+358 44 977 3677</a>
+        <a href="mailto:info@3aservice.fi">info@3aservice.fi</a>
+        <a href="https://maps.app.goo.gl/68533AxtrqMYACAVA" target="_blank">Sillankorva 8, 02300 Espoo</a>
+        <a href="#contact"><span class="fi-text">Ma–Pe 8:00–17:00</span><span class="en-text" style="display:none;">Mon–Fri 8:00–17:00</span></a>
+      </div>
     </div>
-    <div style="border-top:1px solid rgba(255,255,255,0.08);padding:18px 0;"><p style="font-size:14px;color:rgba(255,255,255,0.35);">© 2026 3A Service Oy | Autohuolto</p></div>
+    <div class="footer-bottom-bar" style="border-top:1px solid rgba(255,255,255,0.15);padding:28px 0;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;">
+      <div>
+        <p style="font-size:16px;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:0;"><span class="fi-text">© 2026 3A Service Oy. Kaikki oikeudet pidätetään. AD-valtuutettu autokorjaamo Espoossa.</span><span class="en-text" style="display:none;">© 2026 3A Service Oy. All rights reserved. AD-authorized repair shop in Espoo.</span></p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;align-items:flex-end;">
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);"><span class="fi-text">Y-tunnus: 3336677-9</span><span class="en-text" style="display:none;">Business ID: 3336677-9</span></div>
+        <div style="display:flex;gap:24px;flex-wrap:nowrap;justify-content:flex-end;align-items:center;">
+          <a href="/privacy.html" style="font-size:15px;color:rgba(255,255,255,0.65);text-decoration:none;transition:color .2s;border-bottom:1px solid transparent;padding-bottom:2px;white-space:nowrap;display:inline-block;line-height:1.2;" onmouseover="this.style.color='var(--brand)';this.style.borderBottomColor='var(--brand)'" onmouseout="this.style.color='rgba(255,255,255,0.65)';this.style.borderBottomColor='transparent'"><span class="fi-text">Tietosuojakäytäntö</span><span class="en-text" style="display:none;">Privacy Policy</span></a>
+          <a href="/terms.html" style="font-size:15px;color:rgba(255,255,255,0.65);text-decoration:none;transition:color .2s;border-bottom:1px solid transparent;padding-bottom:2px;white-space:nowrap;display:inline-block;line-height:1.2;" onmouseover="this.style.color='var(--brand)';this.style.borderBottomColor='var(--brand)'" onmouseout="this.style.color='rgba(255,255,255,0.65)';this.style.borderBottomColor='transparent'"><span class="fi-text">Käyttöehdot</span><span class="en-text" style="display:none;">Terms of Service</span></a>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
+
 
 <!-- MOBILE STICKY CTA -->
 <div id="mobile-sticky">
