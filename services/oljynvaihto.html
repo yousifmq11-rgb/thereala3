@@ -207,6 +207,9 @@
     .drawer-section-label{padding:14px 24px 6px;font-size:15px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-60);border-bottom:1px solid var(--border);}
     *:focus-visible{outline:2px solid var(--brand);outline-offset:2px;}
     ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-thumb{background:var(--brand);border-radius:3px;}
+    .content-h3{font-family:'Oswald',sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink);margin-bottom:12px;line-height:1.2;}
+    .content-h3::before{content:'';display:inline-block;width:3px;height:18px;background:var(--brand);border-radius:2px;margin-right:10px;vertical-align:middle;position:relative;top:-1px;}
+    .content-p{font-size:16px;line-height:1.8;color:var(--ink-60);font-weight:400;max-width:100%;margin:0 0 24px;}
     .alert-banner{background:rgba(232,137,10,0.08);border:1.5px solid rgba(232,137,10,0.3);border-radius:12px;padding:16px 20px;display:flex;align-items:flex-start;gap:12px;margin-bottom:20px;}
     .srv-main-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;max-width:1100px;margin:0 auto;}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;}
@@ -349,15 +352,15 @@
   <div class="srv-main-grid">
     <div class="reveal">
       <p class="section-tag fi-text">Mitä sisältyy</p><p class="section-tag en-text" style="display:none;">What's included</p>
-      <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;letter-spacing:-0.03em;margin:12px 0 32px;line-height:1.1;">
+      <h2 class="content-h3" style="margin:32px 0 12px;">
         <span class="fi-text">Kattava öljynvaihto&shy;paketti</span><span class="en-text" style="display:none;">Complete oil change package</span>
       </h2>
       <div>
-        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><div style="font-weight:600;font-size:16px;margin-bottom:5px;"><span class="fi-text">Moottoriöljyn vaihto</span><span class="en-text" style="display:none;">Engine oil change</span></div><div style="font-size:16px;color:var(--ink-60);font-weight:400;"><span class="fi-text">Oikea öljylaatu ja -määrä automallisi mukaan — täyssynteettinen tai puolisynteettinen</span><span class="en-text" style="display:none;">Correct oil grade and quantity for your model — full synthetic or semi-synthetic</span></div></div></div>
-        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><div style="font-weight:600;font-size:16px;margin-bottom:5px;"><span class="fi-text">Öljynsuodattimen vaihto</span><span class="en-text" style="display:none;">Oil filter replacement</span></div><div style="font-size:16px;color:var(--ink-60);font-weight:400;"><span class="fi-text">Uusi suodatin estää epäpuhtauksia kiertämästä moottorissa</span><span class="en-text" style="display:none;">New filter prevents contaminants from circulating through the engine</span></div></div></div>
-        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><div style="font-weight:600;font-size:16px;margin-bottom:5px;"><span class="fi-text">Nestetasojen tarkistus</span><span class="en-text" style="display:none;">Fluid level check</span></div><div style="font-size:16px;color:var(--ink-60);font-weight:400;"><span class="fi-text">Jäähdytysneste, jarruneste, ohjaustehostin ja lasinpesuneste tarkistetaan</span><span class="en-text" style="display:none;">Coolant, brake fluid, power steering fluid and washer fluid are checked</span></div></div></div>
-        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><div style="font-weight:600;font-size:16px;margin-bottom:5px;"><span class="fi-text">Rengaspaineiden tarkistus</span><span class="en-text" style="display:none;">Tyre pressure check</span></div><div style="font-size:16px;color:var(--ink-60);font-weight:400;"><span class="fi-text">Tarkistamme ja säädämme rengaspaineet oikeisiin arvoihin</span><span class="en-text" style="display:none;">We check and adjust tyre pressures to the correct values</span></div></div></div>
-        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><div style="font-weight:600;font-size:16px;margin-bottom:5px;"><span class="fi-text">Huoltokirjamerkintä</span><span class="en-text" style="display:none;">Service book stamp</span></div><div style="font-size:16px;color:var(--ink-60);font-weight:400;"><span class="fi-text">Täytämme huoltokirjan — takuusi säilyy EU-lain mukaisesti</span><span class="en-text" style="display:none;">We fill in the service book — your warranty stays intact under EU law</span></div></div></div>
+        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><div style="font-weight:500;font-size:16px;margin-bottom:5px;"><span class="fi-text">Moottoriöljyn vaihto</span><span class="en-text" style="display:none;">Engine oil change</span></div><div style="font-size:16px;color:var(--ink-60);font-weight:400;"><span class="fi-text">Oikea öljylaatu ja -määrä automallisi mukaan — täyssynteettinen tai puolisynteettinen</span><span class="en-text" style="display:none;">Correct oil grade and quantity for your model — full synthetic or semi-synthetic</span></div></div></div>
+        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><div style="font-weight:500;font-size:16px;margin-bottom:5px;"><span class="fi-text">Öljynsuodattimen vaihto</span><span class="en-text" style="display:none;">Oil filter replacement</span></div><div style="font-size:16px;color:var(--ink-60);font-weight:400;"><span class="fi-text">Uusi suodatin estää epäpuhtauksia kiertämästä moottorissa</span><span class="en-text" style="display:none;">New filter prevents contaminants from circulating through the engine</span></div></div></div>
+        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><div style="font-weight:500;font-size:16px;margin-bottom:5px;"><span class="fi-text">Nestetasojen tarkistus</span><span class="en-text" style="display:none;">Fluid level check</span></div><div style="font-size:16px;color:var(--ink-60);font-weight:400;"><span class="fi-text">Jäähdytysneste, jarruneste, ohjaustehostin ja lasinpesuneste tarkistetaan</span><span class="en-text" style="display:none;">Coolant, brake fluid, power steering fluid and washer fluid are checked</span></div></div></div>
+        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><div style="font-weight:500;font-size:16px;margin-bottom:5px;"><span class="fi-text">Rengaspaineiden tarkistus</span><span class="en-text" style="display:none;">Tyre pressure check</span></div><div style="font-size:16px;color:var(--ink-60);font-weight:400;"><span class="fi-text">Tarkistamme ja säädämme rengaspaineet oikeisiin arvoihin</span><span class="en-text" style="display:none;">We check and adjust tyre pressures to the correct values</span></div></div></div>
+        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><div style="font-weight:500;font-size:16px;margin-bottom:5px;"><span class="fi-text">Huoltokirjamerkintä</span><span class="en-text" style="display:none;">Service book stamp</span></div><div style="font-size:16px;color:var(--ink-60);font-weight:400;"><span class="fi-text">Täytämme huoltokirjan — takuusi säilyy EU-lain mukaisesti</span><span class="en-text" style="display:none;">We fill in the service book — your warranty stays intact under EU law</span></div></div></div>
       </div>
     </div>
 
@@ -367,26 +370,26 @@
 <!-- DETAILED CONTENT SECTION -->
 <section style="padding:80px 24px;background:#fff;">
   <div style="max-width:880px;margin:0 auto;">
-    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;letter-spacing:-0.03em;margin-bottom:32px;line-height:1.1;">
+    <h2 class="content-h3" style="margin:32px 0 12px;">
       <span class="fi-text">Miksi öljynvaihto on kriittinen autosi kunnossapidolle?</span>
     </h2>
 
-    <p style="font-size:16px;line-height:1.8;color:var(--ink-60);margin-bottom:24px;font-weight:400;"><span class="fi-text">Moottoriöljy on autosi sydämen verenkierto. Sen päätehtävät ovat voitelu, jäähdytys ja puhdistus. Jokaisen kääntymisen yhteydessä öljy kulkee moottorin jokaisen liikkuvan osan ohi, poistaa lika-aineet ja poikkeamat, jäähdyttää komponentteja ja estää korroosiota. Laadukas öljy ylläpitää sopivaa viskositeettia niin korkeissa kuin matalissa lämpötiloissa, mikä on kriittistä moottorisi tehokkuuden kannalta. Öljynvaihto on myös osa <a href="/services/maaraikaishuolto.html" style="color:var(--brand);font-weight:600;text-decoration:none;">määräaikaishuoltoa</a> — voit yhdistää molemmat samalle käynnille.</span></p>
+    <p class="content-p"><span class="fi-text">Moottoriöljy on autosi sydämen verenkierto. Sen päätehtävät ovat voitelu, jäähdytys ja puhdistus. Jokaisen kääntymisen yhteydessä öljy kulkee moottorin jokaisen liikkuvan osan ohi, poistaa lika-aineet ja poikkeamat, jäähdyttää komponentteja ja estää korroosiota. Laadukas öljy ylläpitää sopivaa viskositeettia niin korkeissa kuin matalissa lämpötiloissa, mikä on kriittistä moottorisi tehokkuuden kannalta. Öljynvaihto on myös osa <a href="/services/maaraikaishuolto.html" style="color:var(--brand);font-weight:600;text-decoration:none;">määräaikaishuoltoa</a> — voit yhdistää molemmat samalle käynnille.</span></p>
 
-    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);text-transform:none;"><span class="fi-text">Öljyn laadun merkitys</span></h2>
-    <p style="font-size:16px;line-height:1.8;color:var(--ink-60);margin-bottom:24px;font-weight:400;"><span class="fi-text">3A Servicellä käytämme vain OEM-laadukkaita, täyssynteettisiä öljyjä, jotka täyttävät auton valmistajan tarkat vaatimukset. Täyssynteettinen öljy kestää korkeampia lämpötiloja, vaihtaa harvemmin ja tarjoaa paremman suojan kuin mineraaliöljy. Väärän viskositeetin käyttäminen (esim. 5W-40 kun pitää olla 5W-30) voi johtaa moottorivaurioihin, heikentyneeseen polttoainetehoon ja ennenaikaiseen kulumiseen.</span></p>
+    <h2 class="content-h3" style="margin:32px 0 12px;"><span class="fi-text">Öljyn laadun merkitys</span></h2>
+    <p class="content-p"><span class="fi-text">3A Servicellä käytämme vain OEM-laadukkaita, täyssynteettisiä öljyjä, jotka täyttävät auton valmistajan tarkat vaatimukset. Täyssynteettinen öljy kestää korkeampia lämpötiloja, vaihtaa harvemmin ja tarjoaa paremman suojan kuin mineraaliöljy. Väärän viskositeetin käyttäminen (esim. 5W-40 kun pitää olla 5W-30) voi johtaa moottorivaurioihin, heikentyneeseen polttoainetehoon ja ennenaikaiseen kulumiseen.</span></p>
 
-    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);text-transform:none;"><span class="fi-text">Kuinka usein vaihto vaaditaan?</span></h2>
-    <p style="font-size:16px;line-height:1.8;color:var(--ink-60);margin-bottom:24px;font-weight:400;"><span class="fi-text">Modernit autot vaativat öljynvaihtoa tyypillisesti joka 10 000–30 000 km:n välein, riippuen moottorityypistä ja öljyn laadusta. Dieselmoottoreissa ja turboahdetetuissa moottoreissa saattaa olla tiheämpi välivaihto. Aina tarkista oman auton huolto-oppaasta tarkka suositus. Laiminlyödyt vaihdot johtavat öljyn likaantumiseen, viskositeetin heikkenemiseen ja lopulta moottorin vaurioihin, jotka voivat maksaa tuhansia euroja.</span></p>
+    <h2 class="content-h3" style="margin:32px 0 12px;"><span class="fi-text">Kuinka usein vaihto vaaditaan?</span></h2>
+    <p class="content-p"><span class="fi-text">Modernit autot vaativat öljynvaihtoa tyypillisesti joka 10 000–30 000 km:n välein, riippuen moottorityypistä ja öljyn laadusta. Dieselmoottoreissa ja turboahdetetuissa moottoreissa saattaa olla tiheämpi välivaihto. Aina tarkista oman auton huolto-oppaasta tarkka suositus. Laiminlyödyt vaihdot johtavat öljyn likaantumiseen, viskositeetin heikkenemiseen ja lopulta moottorin vaurioihin, jotka voivat maksaa tuhansia euroja.</span></p>
 
-    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);text-transform:none;"><span class="fi-text">Vaihdon etäisyydet ja merkit</span></h2>
-    <p style="font-size:16px;line-height:1.8;color:var(--ink-60);margin-bottom:24px;font-weight:400;"><span class="fi-text">Merkkejä siitä, että öljy tarvitsee vaihtoa: öljyn taso laskee tarkistusmerkin alle, öljy on muuttunut mustaksi tai paksumaisen näköiseksi, öljyvaroituslamppuvetolaatikossa on syttyneenä, tai huoltomuistutin ilmestyy kojelautaan. Nämä kaikki signaalit osoittavat, että öljy ei enää suojaa moottoriasi tehokkaasti.</span></p>
+    <h2 class="content-h3" style="margin:32px 0 12px;"><span class="fi-text">Vaihdon etäisyydet ja merkit</span></h2>
+    <p class="content-p"><span class="fi-text">Merkkejä siitä, että öljy tarvitsee vaihtoa: öljyn taso laskee tarkistusmerkin alle, öljy on muuttunut mustaksi tai paksumaisen näköiseksi, öljyvaroituslamppuvetolaatikossa on syttyneenä, tai huoltomuistutin ilmestyy kojelautaan. Nämä kaikki signaalit osoittavat, että öljy ei enää suojaa moottoriasi tehokkaasti.</span></p>
 
-    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);text-transform:none;"><span class="fi-text">3A Servicen öljynvaihto-prosessi Espoossa</span></h2>
-    <p style="font-size:16px;line-height:1.8;color:var(--ink-60);margin-bottom:24px;font-weight:400;"><span class="fi-text">Kun tuo autosi 3A Servicelle öljynvaihdoksi, prosessi on seuraava: Ensin tarkistamme auton merkki- ja mallitiedot varmistaaksemme oikean öljylaadun. Seuraavaksi poistetaan vanha, kulunut öljy turvallisesti ja kierrätystavoissa. Vaihdetaan öljynsuodatin (uusi suodatin on aina pakollinen), lisätään uutta, laadukasta öljyä täsmälleen oikean määrän, ja tehdään lopuksi huolellinen tarkistus muista nesteistä ja järjestelmistä. Koko prosessi kestää tyypillisesti 30–40 minuuttia, ja saat virallisen huoltokirjan merkinnän, mikä säilyttää auton takuun EU-lain mukaisesti. Huomaat kojelaudassa varoitusvalon? Kysy myös <a href="/services/vikadiagnostiikka.html" style="color:var(--brand);font-weight:600;text-decoration:none;">vikadiagnostiikasta</a> — selvitämme vian samalla käynnillä.</span></p>
+    <h2 class="content-h3" style="margin:32px 0 12px;"><span class="fi-text">3A Servicen öljynvaihto-prosessi Espoossa</span></h2>
+    <p class="content-p"><span class="fi-text">Kun tuo autosi 3A Servicelle öljynvaihdoksi, prosessi on seuraava: Ensin tarkistamme auton merkki- ja mallitiedot varmistaaksemme oikean öljylaadun. Seuraavaksi poistetaan vanha, kulunut öljy turvallisesti ja kierrätystavoissa. Vaihdetaan öljynsuodatin (uusi suodatin on aina pakollinen), lisätään uutta, laadukasta öljyä täsmälleen oikean määrän, ja tehdään lopuksi huolellinen tarkistus muista nesteistä ja järjestelmistä. Koko prosessi kestää tyypillisesti 30–40 minuuttia, ja saat virallisen huoltokirjan merkinnän, mikä säilyttää auton takuun EU-lain mukaisesti. Huomaat kojelaudassa varoitusvalon? Kysy myös <a href="/services/vikadiagnostiikka.html" style="color:var(--brand);font-weight:600;text-decoration:none;">vikadiagnostiikasta</a> — selvitämme vian samalla käynnillä.</span></p>
 
-    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);text-transform:none;"><span class="fi-text">Hinta ja vertailu merkkikorjaamoihin</span></h2>
-    <p style="font-size:16px;line-height:1.8;color:var(--ink-60);margin-bottom:24px;font-weight:400;"><span class="fi-text">3A Service tarjoaa öljynvaihdon alkaen 69 €. Hinta sisältää korkealaatuisen öljyn, uuden suodattimen ja ammattilaisen työskentelyn. Merkkikorjaamoissa sama palvelu maksaa tyypillisesti 150–200 €. Olemme AD-valtuutettu korjaamo, joten takuusi säilyy EU-lain mukaisesti — kuten merkkikorjaamolla, mutta edullisemmin. Suosittelemme yhdistämään öljynvaihdon <a href="/services/maaraikaishuolto.html" style="color:var(--brand);font-weight:600;text-decoration:none;">määräaikaishuoltoon</a> tai <a href="/services/jakohihna.html" style="color:var(--brand);font-weight:600;text-decoration:none;">jakohihnan vaihtoon</a> — usein nämä tehdään samanaikaisesti.</span></p>
+    <h2 class="content-h3" style="margin:32px 0 12px;"><span class="fi-text">Hinta ja vertailu merkkikorjaamoihin</span></h2>
+    <p class="content-p"><span class="fi-text">3A Service tarjoaa öljynvaihdon alkaen 69 €. Hinta sisältää korkealaatuisen öljyn, uuden suodattimen ja ammattilaisen työskentelyn. Merkkikorjaamoissa sama palvelu maksaa tyypillisesti 150–200 €. Olemme AD-valtuutettu korjaamo, joten takuusi säilyy EU-lain mukaisesti — kuten merkkikorjaamolla, mutta edullisemmin. Suosittelemme yhdistämään öljynvaihdon <a href="/services/maaraikaishuolto.html" style="color:var(--brand);font-weight:600;text-decoration:none;">määräaikaishuoltoon</a> tai <a href="/services/jakohihna.html" style="color:var(--brand);font-weight:600;text-decoration:none;">jakohihnan vaihtoon</a> — usein nämä tehdään samanaikaisesti.</span></p>
 
   </div>
 </section>
@@ -395,7 +398,7 @@
 <section style="background:#fff;padding:80px 24px;">
   <div style="max-width:1280px;margin:0 auto;">
     <div class="reveal" style="text-align:center;margin-bottom:64px;">
-      <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:600;letter-spacing:0.02em;line-height:1.2;color:var(--ink);margin-bottom:16px;">
+      <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,4vw,40px);font-weight:600;letter-spacing:0.02em;line-height:1.2;color:var(--ink);margin-bottom:16px;">
         <span class="fi-text">Öljynvaihto ammattitaidolla</span><span class="en-text" style="display:none;">Professional oil change</span>
       </h2>
     </div>
@@ -407,7 +410,7 @@
           <div style="display:flex;gap:16px;align-items:flex-start;">
             <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:500;font-size:16px;">✓</div>
             <div style="flex:1;">
-              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Ammattimekanikot</h3>
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:500;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Ammattimekanikot</h3>
               <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Pitkä kokemus ja sertifikaatit</p>
             </div>
           </div>
@@ -415,7 +418,7 @@
           <div style="display:flex;gap:16px;align-items:flex-start;">
             <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:500;font-size:16px;">✓</div>
             <div style="flex:1;">
-              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Oikea öljylaatu</h3>
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:500;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Oikea öljylaatu</h3>
               <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Valitsemme juuri autoosi sopivan öljyn</p>
             </div>
           </div>
@@ -423,7 +426,7 @@
           <div style="display:flex;gap:16px;align-items:flex-start;">
             <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:500;font-size:16px;">✓</div>
             <div style="flex:1;">
-              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">30–40 minuuttia</h3>
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:500;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">30–40 minuuttia</h3>
               <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Nopea ja tehokas prosessi</p>
             </div>
           </div>
@@ -431,7 +434,7 @@
           <div style="display:flex;gap:16px;align-items:flex-start;">
             <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:500;font-size:16px;">✓</div>
             <div style="flex:1;">
-              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">12 kuukauden takuu</h3>
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:500;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">12 kuukauden takuu</h3>
               <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Kaikille tehdyille töille</p>
             </div>
           </div>
@@ -439,7 +442,7 @@
           <div style="display:flex;gap:16px;align-items:flex-start;">
             <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:500;font-size:16px;">✓</div>
             <div style="flex:1;">
-              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Läpinäkyvä hinnoittelu</h3>
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:500;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Läpinäkyvä hinnoittelu</h3>
               <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Alkaen 69€ — ei piilotettuja maksuja</p>
             </div>
           </div>
@@ -447,7 +450,7 @@
           <div style="display:flex;gap:16px;align-items:flex-start;">
             <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:500;font-size:16px;">✓</div>
             <div style="flex:1;">
-              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Kaikki automerkit</h3>
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:500;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Kaikki automerkit</h3>
               <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Audi, BMW, Mercedes, Toyota, Volvo...</p>
             </div>
           </div>
@@ -460,41 +463,41 @@
     </div>
 
     <!-- Miksi valita 3A Service Espoosta -->
-    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;letter-spacing:0.02em;line-height:1.2;color:var(--ink);margin-top:80px;margin-bottom:48px;">Miksi valita 3A Service Espoosta?</h2>
+    <h2 class="content-h3" style="margin:32px 0 12px;">Miksi valita 3A Service Espoosta?</h2>
     <div style="display:grid;grid-template-columns:1fr;gap:24px;">
       <div style="display:flex;gap:16px;align-items:flex-start;">
         <div style="flex:1;">
-          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">AD-valtuutettu korjaamo</h3>
+          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:500;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">AD-valtuutettu korjaamo</h3>
           <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Takuusi säilyy EU-lain mukaisesti</p>
         </div>
       </div>
       <div style="display:flex;gap:16px;align-items:flex-start;">
         <div style="flex:1;">
-          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Sertifioidut mekanikot</h3>
+          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:500;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Sertifioidut mekanikot</h3>
           <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Pitkä kokemus ja ammattitaito</p>
         </div>
       </div>
       <div style="display:flex;gap:16px;align-items:flex-start;">
         <div style="flex:1;">
-          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Kaikki automerkit</h3>
+          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:500;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Kaikki automerkit</h3>
           <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Audi, BMW, Mercedes, Toyota, Volvo ja paljon muita</p>
         </div>
       </div>
       <div style="display:flex;gap:16px;align-items:flex-start;">
         <div style="flex:1;">
-          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Läpinäkyvä hinnoittelu</h3>
+          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:500;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Läpinäkyvä hinnoittelu</h3>
           <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Ei piilotettuja maksuja, kilpailukykyiset hinnat</p>
         </div>
       </div>
       <div style="display:flex;gap:16px;align-items:flex-start;">
         <div style="flex:1;">
-          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Nopea palvelu</h3>
+          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:500;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Nopea palvelu</h3>
           <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Öljynvaihto valmiina 30–40 minuutissa</p>
         </div>
       </div>
       <div style="display:flex;gap:16px;align-items:flex-start;">
         <div style="flex:1;">
-          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">12 kuukauden takuu</h3>
+          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:500;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">12 kuukauden takuu</h3>
           <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Kaikille tehdyille töille vakiotakuu</p>
         </div>
       </div>
@@ -506,7 +509,7 @@
 <section style="background:#fff;padding:80px 24px;">
   <div style="max-width:1280px;margin:0 auto;">
     <div class="reveal" style="text-align:center;margin-bottom:56px;">
-      <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:600;letter-spacing:0.02em;line-height:1.2;color:var(--ink);margin-bottom:16px;">
+      <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,4vw,40px);font-weight:600;letter-spacing:0.02em;line-height:1.2;color:var(--ink);margin-bottom:16px;">
         <span class="fi-text">Huollamme kaikki automerkit</span><span class="en-text" style="display:none;">We service all car brands</span>
       </h2>
       <p style="font-size:16px;color:var(--ink-60);line-height:1.7;max-width:600px;margin:0 auto;font-weight:400;">
@@ -541,7 +544,7 @@
 <section style="padding:56px 24px;background:#fff;">
   <div style="max-width:960px;margin:0 auto;text-align:center;">
     <p class="section-tag" style="text-align:center;margin-bottom:10px;"><span class="fi-text">ASIAKASARVOSTELUT</span><span class="en-text" style="display:none;">CUSTOMER REVIEWS</span></p>
-    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,40px);font-weight:600;text-transform:uppercase;color:var(--ink);margin-bottom:8px;">
+    <h2 class="content-h3" style="margin:32px 0 12px;">
       <span class="fi-text">Todentuneet arvostelut AutoJerryltä</span><span class="en-text" style="display:none;">Verified Reviews via AutoJerry</span>
     </h2>
     <p style="font-size:16px;color:var(--ink-60);margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;">
@@ -607,10 +610,10 @@
 <section id="faq" style="background:#fff;padding:80px 24px;">
   <div style="max-width:880px;margin:0 auto;">
     <div class="reveal" style="text-align:center;margin-bottom:56px;">
-      <p class="section-tag fi-text" style="margin-bottom:10px;">UKK</p>
+      <p class="section-tag fi-text" style="margin-bottom:10px;">FAQ</p>
       <p class="section-tag en-text" style="display:none;margin-bottom:10px;">FAQ</p>
       <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(32px,5vw,52px);font-weight:600;letter-spacing:0.02em;text-transform:uppercase;margin:0;">
-        <span class="fi-text">Usein kysyttyä öljynvaihdosta</span><span class="en-text" style="display:none;">Frequently asked questions</span>
+        <span class="fi-text">Usein kysyttyä</span><span class="en-text" style="display:none;">Frequently asked questions</span>
       </h2>
     </div>
     <div class="reveal">
