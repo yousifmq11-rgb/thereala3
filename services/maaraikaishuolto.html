@@ -302,6 +302,7 @@
       .hero-cta-wrap{flex-direction:column!important;gap:10px!important;}
       .hero-cta-wrap a{width:100%!important;justify-content:center!important;}
       .why-us-img{aspect-ratio:16/9!important;max-height:260px!important;}
+      .related-grid{grid-template-columns:1fr!important;}
       .hero-sep{display:none!important;}
       .srv-main-grid{grid-template-columns:1fr!important;gap:32px!important;}
       .footer-grid{grid-template-columns:1fr!important;gap:24px!important;}
@@ -747,87 +748,82 @@
 </section>
 
 <!-- RELATED SERVICES — internal linking for SEO/AEO/GEO -->
-<section style="background:var(--surface);padding:80px 24px;">
+<section style="background:var(--surface);padding:72px 24px;">
   <div style="max-width:1100px;margin:0 auto;">
-    <div class="reveal" style="text-align:center;margin-bottom:48px;">
-      <p class="section-tag fi-text" style="margin-bottom:12px;">KATSO MYÖS</p>
-      <h2 style="font-size:clamp(26px,3.5vw,40px);"><span class="fi-text">Muut autohuoltopalvelumme Espoossa</span><span class="en-text" style="display:none;">Our other car services in Espoo</span></h2>
-      <p style="font-size:16px;color:var(--ink-60);max-width:560px;margin:16px auto 0;line-height:1.7;"><span class="fi-text">Määräaikaishuollon yhteydessä tarkistamme tarvittaessa myös muut kriittiset järjestelmät.</span><span class="en-text" style="display:none;">During maintenance we can also check other critical systems.</span></p>
+    <div class="reveal" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:40px;">
+      <div>
+        <p class="section-tag fi-text" style="margin-bottom:8px;">KATSO MYÖS</p>
+        <h2 style="font-size:clamp(22px,3vw,34px);margin:0;"><span class="fi-text">Usein samalla käynnillä</span><span class="en-text" style="display:none;">Often on the same visit</span></h2>
+      </div>
+      <a href="/index.html#services-scroll-wrapper" style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--brand);text-decoration:none;white-space:nowrap;" class="hide-mobile">
+        <span class="fi-text">Kaikki palvelut</span><span class="en-text" style="display:none;">All services</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
     </div>
-    <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;">
+
+    <div class="reveal related-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
 
       <!-- Jakohihnan vaihto -->
-      <a href="/services/jakohihna.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s,box-shadow .2s;" onmouseover="this.style.borderColor='rgba(232,137,10,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
-        <div style="width:44px;height:44px;background:var(--brand-l);border-radius:12px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93L16.24 7.76M4.93 4.93l2.83 2.83M12 2v3M12 19v3M4.93 19.07l2.83-2.83M16.24 16.24l2.83 2.83M2 12h3M19 12h3"/></svg>
+      <a href="/services/jakohihna.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:32px 28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:16px;transition:border-color .2s,transform .2s,box-shadow .2s;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='var(--brand)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 16px 40px rgba(232,137,10,0.12)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div style="width:48px;height:48px;background:var(--brand-l);border-radius:14px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.25);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <span style="font-size:12px;font-weight:700;letter-spacing:0.08em;color:var(--brand);background:var(--brand-l);padding:4px 10px;border-radius:99px;border:1px solid rgba(232,137,10,0.25);">alkaen 300 €</span>
         </div>
         <div>
-          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;text-transform:none;letter-spacing:0;color:var(--ink);">Jakohihnan Vaihto</h3>
-          <p style="font-size:14px;color:var(--ink-60);line-height:1.6;font-weight:400;">Alkaen 300 € — vaihdetaan ennen katkeamista</p>
+          <h3 style="font-family:'Oswald',sans-serif;font-size:20px;font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.02em;color:var(--ink);">Jakohihnan Vaihto</h3>
+          <p style="font-size:15px;color:var(--ink-60);line-height:1.65;font-weight:400;margin:0;"><span class="fi-text">Vaihdetaan ajoissa — ennen kuin katkennut hihna aiheuttaa moottorivaurion.</span><span class="en-text" style="display:none;">Replace before it snaps and causes engine damage.</span></p>
         </div>
-        <span style="font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">Lue lisää →</span>
+        <div style="display:flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">
+          <span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
       </a>
 
       <!-- Öljynvaihto -->
-      <a href="/services/oljynvaihto.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s,box-shadow .2s;" onmouseover="this.style.borderColor='rgba(232,137,10,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
-        <div style="width:44px;height:44px;background:var(--brand-l);border-radius:12px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><path d="M12 2L8 7H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><line x1="12" y1="12" x2="12" y2="17"/></svg>
+      <a href="/services/oljynvaihto.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:32px 28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:16px;transition:border-color .2s,transform .2s,box-shadow .2s;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='var(--brand)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 16px 40px rgba(232,137,10,0.12)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div style="width:48px;height:48px;background:var(--brand-l);border-radius:14px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.25);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>
+          </div>
+          <span style="font-size:12px;font-weight:700;letter-spacing:0.08em;color:var(--brand);background:var(--brand-l);padding:4px 10px;border-radius:99px;border:1px solid rgba(232,137,10,0.25);">alkaen 69 €</span>
         </div>
         <div>
-          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;text-transform:none;letter-spacing:0;color:var(--ink);">Öljynvaihto</h3>
-          <p style="font-size:14px;color:var(--ink-60);line-height:1.6;font-weight:400;">Alkaen 69 € — nopea käynti ilman ajanvarausta</p>
+          <h3 style="font-family:'Oswald',sans-serif;font-size:20px;font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.02em;color:var(--ink);">Öljynvaihto</h3>
+          <p style="font-size:15px;color:var(--ink-60);line-height:1.65;font-weight:400;margin:0;"><span class="fi-text">Nopea käynti ilman ajanvarausta — moottori kiittää heti perästä.</span><span class="en-text" style="display:none;">Quick drop-in visit, no appointment needed.</span></p>
         </div>
-        <span style="font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">Lue lisää →</span>
+        <div style="display:flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">
+          <span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
       </a>
 
       <!-- Jarrupalvelu -->
-      <a href="/services/jarrut.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s,box-shadow .2s;" onmouseover="this.style.borderColor='rgba(232,137,10,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
-        <div style="width:44px;height:44px;background:var(--brand-l);border-radius:12px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+      <a href="/services/jarrut.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:32px 28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:16px;transition:border-color .2s,transform .2s,box-shadow .2s;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='var(--brand)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 16px 40px rgba(232,137,10,0.12)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div style="width:48px;height:48px;background:var(--brand-l);border-radius:14px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.25);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
+          </div>
+          <span style="font-size:12px;font-weight:700;letter-spacing:0.08em;color:var(--brand);background:var(--brand-l);padding:4px 10px;border-radius:99px;border:1px solid rgba(232,137,10,0.25);">tarkistamme aina</span>
         </div>
         <div>
-          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;text-transform:none;letter-spacing:0;color:var(--ink);">Jarrupalvelu</h3>
-          <p style="font-size:14px;color:var(--ink-60);line-height:1.6;font-weight:400;">Jarrupalat, -levyt ja jarrunesteen vaihto</p>
+          <h3 style="font-family:'Oswald',sans-serif;font-size:20px;font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.02em;color:var(--ink);">Jarrupalvelu</h3>
+          <p style="font-size:15px;color:var(--ink-60);line-height:1.65;font-weight:400;margin:0;"><span class="fi-text">Jarrupalat, -levyt ja neste — tarkistamme kunnon jokaisen huollon yhteydessä.</span><span class="en-text" style="display:none;">Pads, discs and fluid — checked at every service visit.</span></p>
         </div>
-        <span style="font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">Lue lisää →</span>
+        <div style="display:flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">
+          <span class="fi-text">Lue lisää</span><span class="en-text" style="display:none;">Learn more</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
       </a>
 
-      <!-- Vikadiagnostiikka -->
-      <a href="/services/vikadiagnostiikka.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s,box-shadow .2s;" onmouseover="this.style.borderColor='rgba(232,137,10,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
-        <div style="width:44px;height:44px;background:var(--brand-l);border-radius:12px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
-        <div>
-          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;text-transform:none;letter-spacing:0;color:var(--ink);">Vikadiagnostiikka</h3>
-          <p style="font-size:14px;color:var(--ink-60);line-height:1.6;font-weight:400;">Vikakoodien luku — selvitämme mikä vikana</p>
-        </div>
-        <span style="font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">Lue lisää →</span>
-      </a>
+    </div>
 
-      <!-- Katsastushuolto -->
-      <a href="/services/katsastus.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s,box-shadow .2s;" onmouseover="this.style.borderColor='rgba(232,137,10,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
-        <div style="width:44px;height:44px;background:var(--brand-l);border-radius:12px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </div>
-        <div>
-          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;text-transform:none;letter-spacing:0;color:var(--ink);">Katsastushuolto</h3>
-          <p style="font-size:14px;color:var(--ink-60);line-height:1.6;font-weight:400;">Huolto ennen katsastusta — läpäise varmasti</p>
-        </div>
-        <span style="font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">Lue lisää →</span>
+    <!-- mobile: link to all services -->
+    <div class="hide-desktop reveal" style="text-align:center;margin-top:28px;">
+      <a href="/index.html#services-scroll-wrapper" style="font-size:15px;font-weight:700;color:var(--brand);text-decoration:none;">
+        <span class="fi-text">Katso kaikki palvelut →</span><span class="en-text" style="display:none;">See all services →</span>
       </a>
-
-      <!-- Renkaat -->
-      <a href="/services/renkaat.html" style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s,box-shadow .2s;" onmouseover="this.style.borderColor='rgba(232,137,10,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
-        <div style="width:44px;height:44px;background:var(--brand-l);border-radius:12px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(232,137,10,0.2);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="22"/><line x1="2" y1="12" x2="8" y2="12"/><line x1="16" y1="12" x2="22" y2="12"/></svg>
-        </div>
-        <div>
-          <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;text-transform:none;letter-spacing:0;color:var(--ink);">Renkaiden Palvelut</h3>
-          <p style="font-size:14px;color:var(--ink-60);line-height:1.6;font-weight:400;">Renkaan vaihto, tasapainotus ja säilytys</p>
-        </div>
-        <span style="font-size:14px;font-weight:700;color:var(--brand);margin-top:auto;">Lue lisää →</span>
-      </a>
-
     </div>
   </div>
 </section>
