@@ -153,7 +153,10 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;overflow-x:hidden;}
     body{font-family:'Roboto',sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;padding-top:80px;overflow-x:hidden;width:100%;max-width:100%;touch-action:manipulation;overscroll-behavior-y:contain;}
-    h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:600;}
+    h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;line-height:1.15;}
+    h1{line-height:1.08;font-weight:700;}
+    h2{line-height:1.15;font-weight:600;}
+    h3{line-height:1.2;font-weight:600;}
     *{max-width:100%;}
     iframe{max-width:100%;width:100%;}
     .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:#fff;font-family:'Roboto',sans-serif;font-weight:500;border:none;cursor:pointer;border-radius:8px;padding:13px 24px;font-size:14px;transition:background .18s,transform .14s,box-shadow .18s;box-shadow:0 4px 16px rgba(232,137,10,0.3);text-decoration:none;white-space:nowrap;}
@@ -282,11 +285,11 @@
       <a href="#faq" class="nav-link fi-text">FAQ</a><a href="#faq" class="nav-link en-text" style="display:none;">FAQ</a>
     </nav>
     <div style="flex:1;"></div>
-    <div class="lang-pill hide-mobile"><button class="lang-btn active" data-lang="fi" onclick="setLang('fi')">FI</button><button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button></div>
+    <div class="lang-pill hide-mobile"><button class="lang-btn active" data-lang="fi" onclick="setLang('fi')">FI</div><button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</div></div>
     <a href="tel:+358449773677" class="hide-mobile" title="+358 44 977 3677" aria-label="Soita meille" style="width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.75);transition:background .15s,color .15s;" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='rgba(255,255,255,0.75)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.34a16 16 0 0 0 5.75 5.75l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"/></svg></a>
     <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary hide-mobile fi-text" style="padding:9px 20px;font-size:14px;display:inline-flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Varaa aika</a>
     <a href="https://bucolic-bavarois-096a81.netlify.app" class="btn-primary hide-mobile en-text" style="padding:9px 20px;font-size:14px;display:none;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Book Now</a>
-    <button class="hide-desktop" onclick="openDrawer()" aria-label="Avaa valikko" style="background:none;border:none;cursor:pointer;padding:8px;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <button class="hide-desktop" onclick="openDrawer()" aria-label="Avaa valikko" style="background:none;border:none;cursor:pointer;padding:8px;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
   </div>
 </header>
 
@@ -370,19 +373,19 @@
 
     <p style="font-size:16px;line-height:1.8;color:var(--ink-60);margin-bottom:24px;font-weight:400;"><span class="fi-text">Moottoriöljy on autosi sydämen verenkierto. Sen päätehtävät ovat voitelu, jäähdytys ja puhdistus. Jokaisen kääntymisen yhteydessä öljy kulkee moottorin jokaisen liikkuvan osan ohi, poistaa lika-aineet ja poikkeamat, jäähdyttää komponentteja ja estää korroosiota. Laadukas öljy ylläpitää sopivaa viskositeettia niin korkeissa kuin matalissa lämpötiloissa, mikä on kriittistä moottorisi tehokkuuden kannalta. Öljynvaihto on myös osa <a href="/services/maaraikaishuolto.html" style="color:var(--brand);font-weight:600;text-decoration:none;">määräaikaishuoltoa</a> — voit yhdistää molemmat samalle käynnille.</span></p>
 
-    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);"><span class="fi-text">Öljyn laadun merkitys</span></h2>
+    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);text-transform:none;"><span class="fi-text">Öljyn laadun merkitys</span></h2>
     <p style="font-size:16px;line-height:1.8;color:var(--ink-60);margin-bottom:24px;font-weight:400;"><span class="fi-text">3A Servicellä käytämme vain OEM-laadukkaita, täyssynteettisiä öljyjä, jotka täyttävät auton valmistajan tarkat vaatimukset. Täyssynteettinen öljy kestää korkeampia lämpötiloja, vaihtaa harvemmin ja tarjoaa paremman suojan kuin mineraaliöljy. Väärän viskositeetin käyttäminen (esim. 5W-40 kun pitää olla 5W-30) voi johtaa moottorivaurioihin, heikentyneeseen polttoainetehoon ja ennenaikaiseen kulumiseen.</span></p>
 
-    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);"><span class="fi-text">Kuinka usein vaihto vaaditaan?</span></h2>
+    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);text-transform:none;"><span class="fi-text">Kuinka usein vaihto vaaditaan?</span></h2>
     <p style="font-size:16px;line-height:1.8;color:var(--ink-60);margin-bottom:24px;font-weight:400;"><span class="fi-text">Modernit autot vaativat öljynvaihtoa tyypillisesti joka 10 000–30 000 km:n välein, riippuen moottorityypistä ja öljyn laadusta. Dieselmoottoreissa ja turboahdetetuissa moottoreissa saattaa olla tiheämpi välivaihto. Aina tarkista oman auton huolto-oppaasta tarkka suositus. Laiminlyödyt vaihdot johtavat öljyn likaantumiseen, viskositeetin heikkenemiseen ja lopulta moottorin vaurioihin, jotka voivat maksaa tuhansia euroja.</span></p>
 
-    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);"><span class="fi-text">Vaihdon etäisyydet ja merkit</span></h2>
+    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);text-transform:none;"><span class="fi-text">Vaihdon etäisyydet ja merkit</span></h2>
     <p style="font-size:16px;line-height:1.8;color:var(--ink-60);margin-bottom:24px;font-weight:400;"><span class="fi-text">Merkkejä siitä, että öljy tarvitsee vaihtoa: öljyn taso laskee tarkistusmerkin alle, öljy on muuttunut mustaksi tai paksumaisen näköiseksi, öljyvaroituslamppuvetolaatikossa on syttyneenä, tai huoltomuistutin ilmestyy kojelautaan. Nämä kaikki signaalit osoittavat, että öljy ei enää suojaa moottoriasi tehokkaasti.</span></p>
 
-    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);"><span class="fi-text">3A Servicen öljynvaihto-prosessi Espoossa</span></h2>
+    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);text-transform:none;"><span class="fi-text">3A Servicen öljynvaihto-prosessi Espoossa</span></h2>
     <p style="font-size:16px;line-height:1.8;color:var(--ink-60);margin-bottom:24px;font-weight:400;"><span class="fi-text">Kun tuo autosi 3A Servicelle öljynvaihdoksi, prosessi on seuraava: Ensin tarkistamme auton merkki- ja mallitiedot varmistaaksemme oikean öljylaadun. Seuraavaksi poistetaan vanha, kulunut öljy turvallisesti ja kierrätystavoissa. Vaihdetaan öljynsuodatin (uusi suodatin on aina pakollinen), lisätään uutta, laadukasta öljyä täsmälleen oikean määrän, ja tehdään lopuksi huolellinen tarkistus muista nesteistä ja järjestelmistä. Koko prosessi kestää tyypillisesti 30–40 minuuttia, ja saat virallisen huoltokirjan merkinnän, mikä säilyttää auton takuun EU-lain mukaisesti. Huomaat kojelaudassa varoitusvalon? Kysy myös <a href="/services/vikadiagnostiikka.html" style="color:var(--brand);font-weight:600;text-decoration:none;">vikadiagnostiikasta</a> — selvitämme vian samalla käynnillä.</span></p>
 
-    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);"><span class="fi-text">Hinta ja vertailu merkkikorjaamoihin</span></h2>
+    <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;margin:32px 0 16px;color:var(--ink);text-transform:none;"><span class="fi-text">Hinta ja vertailu merkkikorjaamoihin</span></h2>
     <p style="font-size:16px;line-height:1.8;color:var(--ink-60);margin-bottom:24px;font-weight:400;"><span class="fi-text">3A Service tarjoaa öljynvaihdon alkaen 69 €. Hinta sisältää korkealaatuisen öljyn, uuden suodattimen ja ammattilaisen työskentelyn. Merkkikorjaamoissa sama palvelu maksaa tyypillisesti 150–200 €. Olemme AD-valtuutettu korjaamo, joten takuusi säilyy EU-lain mukaisesti — kuten merkkikorjaamolla, mutta edullisemmin. Suosittelemme yhdistämään öljynvaihdon <a href="/services/maaraikaishuolto.html" style="color:var(--brand);font-weight:600;text-decoration:none;">määräaikaishuoltoon</a> tai <a href="/services/jakohihna.html" style="color:var(--brand);font-weight:600;text-decoration:none;">jakohihnan vaihtoon</a> — usein nämä tehdään samanaikaisesti.</span></p>
 
   </div>
@@ -601,7 +604,7 @@
 
 
 <!-- FAQ SECTION -->
-<section id="faq" style="background:var(--surface);padding:100px 24px;">
+<section id="faq" style="background:#fff;padding:80px 24px;">
   <div style="max-width:880px;margin:0 auto;">
     <div class="reveal" style="text-align:center;margin-bottom:56px;">
       <p class="section-tag fi-text" style="margin-bottom:10px;">UKK</p>
@@ -612,59 +615,59 @@
     </div>
     <div class="reveal">
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <div class="faq-q" onclick="toggleFaq(this)">
           <span class="fi-text">Kuinka usein öljy pitää vaihtaa?</span><span class="en-text" style="display:none;">How often should oil be changed?</span>
-          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
         <div class="faq-a"><span class="fi-text">Yleinen suositus on 10 000–15 000 km välein tai kerran vuodessa — kumpi tulee ensin. Turboahdetut moottorit ja dieselit voivat vaatia tiheämpää vaihtoa. Tarkista aina automallisi huolto-oppaasta.</span><span class="en-text" style="display:none;">The general recommendation is every 10,000–15,000 km or once a year — whichever comes first. Turbocharged engines and diesels may require more frequent changes.</span></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <div class="faq-q" onclick="toggleFaq(this)">
           <span class="fi-text">Paljonko öljynvaihto maksaa Espoossa?</span><span class="en-text" style="display:none;">How much does an oil change cost in Espoo?</span>
-          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
         <div class="faq-a"><span class="fi-text">3A Servicellä öljynvaihto alkaa 69 €, sisältäen moottoriöljyn ja öljynsuodattimen. Hinta vaihtelee auton merkistä ja tarvittavasta öljytyypistä. Merkkikorjaamoilla sama palvelu maksaa usein 150–200 €.</span><span class="en-text" style="display:none;">At 3A Service, an oil change starts from 69 €, including engine oil and oil filter. Dealer prices for the same service are typically 150–200 €.</span></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <div class="faq-q" onclick="toggleFaq(this)">
           <span class="fi-text">Vaihdetaanko öljynsuodatin öljynvaihdon yhteydessä?</span><span class="en-text" style="display:none;">Is the oil filter changed with the oil?</span>
-          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
         <div class="faq-a"><span class="fi-text">Kyllä, aina. Öljynsuodatin vaihdetaan jokaisessa öljynvaihdossa. Käytetty suodatin on kyllästynyt epäpuhtauksista eikä suojaa enää moottoria tehokkaasti. Uusi suodatin kuuluu aina pakettiin.</span><span class="en-text" style="display:none;">Yes, always. The oil filter is changed with every oil change. Used filters are saturated with contaminants and no longer protect the engine effectively.</span></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <div class="faq-q" onclick="toggleFaq(this)">
           <span class="fi-text">Mistä tiedän milloin öljy pitää vaihtaa?</span><span class="en-text" style="display:none;">How do I know when oil needs changing?</span>
-          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
         <div class="faq-a"><span class="fi-text">Selkeitä merkkejä ovat: öljymäärän lasku tarkistusmerkin alle, öljyn tummuminen mustaksi tai paksu koostumus, öljyn vaahtoutuminen tai epämiellyttävä haju. Kojelautaan voi syttyä öljypainevalo tai huoltomuistutin. Vaihda viimeistään 15 000 km tai vuoden välein.</span><span class="en-text" style="display:none;">Clear signs include: oil level dropping below the minimum mark, oil turning black or thick, oil foaming, or an unpleasant smell. The dashboard may show an oil pressure warning or service reminder.</span></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <div class="faq-q" onclick="toggleFaq(this)">
           <span class="fi-text">Mikä öljy sopii autooni?</span><span class="en-text" style="display:none;">Which oil is right for my car?</span>
-          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
         <div class="faq-a"><span class="fi-text">Oikea öljylaatu löytyy käyttöoppaasta tai moottorin kannen tarrasta. Yleisimpiä ovat 5W-30 ja 5W-40 täyssynteettinen. Kerro meille automerkki, malli ja vuosimalli — etsimme oikean öljyn puolestasi.</span><span class="en-text" style="display:none;">The correct oil grade is in your owner's manual or on the engine cover sticker. The most common are 5W-30 and 5W-40 full synthetic. Just tell us your make, model and year — we'll find the right oil for you.</span></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <div class="faq-q" onclick="toggleFaq(this)">
           <span class="fi-text">Kauanko öljynvaihto kestää?</span><span class="en-text" style="display:none;">How long does an oil change take?</span>
-          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
         <div class="faq-a"><span class="fi-text">Öljynvaihto kestää yleensä noin 30 minuuttia. Voit odottaa paikan päällä tai jättää auton ja tulla hakemaan myöhemmin.</span><span class="en-text" style="display:none;">An oil change typically takes around 30 minutes. You can wait on-site or leave the car and pick it up later.</span></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <div class="faq-q" onclick="toggleFaq(this)">
           <span class="fi-text">Säilyykö auton takuu jos teen öljynvaihdon muualla kuin merkkikorjaamolla?</span><span class="en-text" style="display:none;">Does car warranty stay valid with non-dealer oil change?</span>
-          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
         <div class="faq-a"><span class="fi-text">Kyllä. EU:n ryhmäpoikkeusasetus takaa oikeuden huollattaa auto missä tahansa AD-valtuutetussa korjaamossa ilman takuun menettämistä. 3A Service on AD-valtuutettu — takuusi säilyy voimassa.</span><span class="en-text" style="display:none;">Yes. EU Block Exemption Regulation guarantees the right to service your car at any AD-authorized workshop without voiding the warranty. 3A Service is AD-authorized — your warranty stays valid.</span></div>
       </div>
       <div class="faq-item" style="border-bottom:none;">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <div class="faq-q" onclick="toggleFaq(this)">
           <span class="fi-text">Kannattaako öljynvaihdon yhteydessä tehdä muutakin?</span><span class="en-text" style="display:none;">Is it worth combining oil change with other services?</span>
-          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
         <div class="faq-a"><span class="fi-text">Ehdottomasti. Öljynvaihdon yhteydessä kannattaa tarkistaa myös ilmansuodatin, polttimot ja rengaspaineet. Monilla asiakkaillamme on tapana yhdistää öljynvaihto <a href="/services/maaraikaishuolto.html" style="color:var(--brand);font-weight:600;text-decoration:none;">vuosittaiseen määräaikaishuoltoon</a> — saat kaiken samalla käynnillä.</span><span class="en-text" style="display:none;">Absolutely. It is worth checking the air filter, bulbs and tyre pressures at the same time. Many customers combine oil change with their annual scheduled maintenance — all done in one visit.</span></div>
       </div>
     </div>
