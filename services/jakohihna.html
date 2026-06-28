@@ -115,6 +115,8 @@
       body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))!important;}
       .btn-primary,.btn-outline{min-height:48px!important;}
     }
+    .why-us-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+    @media(max-width:768px){.why-us-grid{grid-template-columns:1fr;gap:40px;}}
     .brands-carousel{overflow:hidden;position:relative;background:#f8f8f8;}
     .brands-track{display:flex;gap:40px;animation:scrollBrands 6s linear infinite;width:max-content;}
     .brands-track:hover{animation-play-state:paused;}
@@ -177,7 +179,7 @@
 
 <!-- HERO -->
 <section class="hero-section">
-  <img src="/images/jako/jako2.webp" alt="Jakohihnan vaihto Espoo — ammattitaitoinen timing belt vaihto" class="hero-image">
+  <img src="/images/jako/jako1.webp" alt="Jakohihnan vaihto Espoo — ammattitaitoinen timing belt vaihto" class="hero-image">
   <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,5,5,0.52) 0%,rgba(5,5,5,0.74) 100%);z-index:1;"></div>
   <div style="position:relative;z-index:2;text-align:center;max-width:900px;padding:40px 24px;">
     <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(232,137,10,0.18);border:1px solid rgba(232,137,10,0.4);border-radius:99px;padding:8px 18px;margin-bottom:32px;">
@@ -336,6 +338,68 @@
         <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
         <h2 style="font-family:'Oswald',sans-serif;font-size:20px;font-weight:500;margin-bottom:10px;text-transform:uppercase;"><span class="fi-text">Läpinäkyvä hinta</span><span class="en-text" style="display:none;">Transparent pricing</span></h3>
         <p style="font-size:16px;color:var(--ink-60);line-height:1.7;font-weight:400;"><span class="fi-text">Hyväksyt aina tarjouksen ennen töiden aloittamista. Ei piilomaksuja, ei yllätyksiä laskussa.</span><span class="en-text" style="display:none;">You always approve the quote before work starts. No hidden fees, no surprise bills.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section style="background:#fff;padding:80px 24px;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:64px;">
+      <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:600;letter-spacing:0.01em;text-transform:uppercase;line-height:1.15;color:var(--ink);margin-bottom:16px;">
+        <span class="fi-text">Jakohihnan vaihto<br>ammattitaidolla</span><span class="en-text" style="display:none;">Timing belt replacement<br>by professionals</span>
+      </h2>
+    </div>
+    <div class="reveal why-us-grid">
+      <div style="display:flex;flex-direction:column;gap:32px;">
+        <div style="display:grid;grid-template-columns:1fr;gap:24px;">
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:500;font-size:16px;">✓</div>
+            <div style="flex:1;">
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Ammattimekanikot</h3>
+              <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Pitkä kokemus jakohihnan vaihdosta kaikille automerkeille</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:500;font-size:16px;">✓</div>
+            <div style="flex:1;">
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">OEM-laatu osat</h3>
+              <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Alkuperäislaatua vastaavat hihnat, kiristimet ja ohjainrullat</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:500;font-size:16px;">✓</div>
+            <div style="flex:1;">
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Valmis saman päivän aikana</h3>
+              <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Tuo auto aamulla, nouda illalla</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:500;font-size:16px;">✓</div>
+            <div style="flex:1;">
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">12 kuukauden takuu</h3>
+              <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Kaikille tehdyille töille</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:500;font-size:16px;">✓</div>
+            <div style="flex:1;">
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Läpinäkyvä hinnoittelu</h3>
+              <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Alkaen 300 € — ei piilotettuja maksuja</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="flex-shrink:0;margin-top:2px;color:var(--brand);font-weight:500;font-size:16px;">✓</div>
+            <div style="flex:1;">
+              <h3 style="font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:0.01em;color:var(--ink);">Kaikki automerkit</h3>
+              <p style="font-family:'Roboto',sans-serif;font-size:16px;color:var(--ink-60);line-height:1.8;font-weight:400;">Audi, BMW, Mercedes, Toyota, Volvo ja kaikki muut</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;overflow:hidden;border-radius:20px;aspect-ratio:1/1;">
+        <img src="/images/jako/jako2.webp" alt="Jakohihnan vaihto ammattitaidolla — 3A Service Espoo" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
       </div>
     </div>
   </div>
