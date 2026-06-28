@@ -260,6 +260,7 @@
     .hero-image{object-fit:contain;object-position:center;}
     @media(max-width:768px){
       section{padding-top:60px!important;padding-bottom:60px!important;}
+            .hero-breadcrumb{top:88px!important;}
       .hero-section{min-height:100svh!important;padding-top:80px!important;padding-bottom:48px!important;margin-top:-80px!important;}
       .hero-h1{font-size:clamp(32px,9vw,44px)!important;line-height:1.1!important;}
       .hero-image{object-fit:contain;object-position:center;}
@@ -342,19 +343,17 @@
   </div>
 </header>
 
-<!-- BREADCRUMB -->
-<div style="background:#fff;border-bottom:1px solid var(--border);padding:12px 24px;">
-  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink-60);">
-    <a href="/index.html" style="color:var(--ink-60);text-decoration:none;transition:color .15s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--ink-60)'"><span class="fi-text">Etusivu</span><span class="en-text" style="display:none;">Home</span></a>
-    <span>›</span>
-    <a href="/index.html#services-scroll-wrapper" style="color:var(--ink-60);text-decoration:none;transition:color .15s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--ink-60)'"><span class="fi-text">Palvelut</span><span class="en-text" style="display:none;">Services</span></a>
-    <span>›</span>
-    <span style="color:var(--brand);font-weight:500;"><span class="fi-text">Määräaikaishuolto</span><span class="en-text" style="display:none;">Maintenance Service</span></span>
-  </div>
-</div>
-
 <!-- HERO -->
 <section class="hero-section">
+  <div class="hero-breadcrumb" style="position:absolute;top:88px;left:0;right:0;z-index:3;padding:0 24px;">
+    <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:8px;font-size:14px;">
+      <a href="/index.html" style="color:rgba(255,255,255,0.6);text-decoration:none;"><span class="fi-text">Etusivu</span><span class="en-text" style="display:none;">Home</span></a>
+      <span style="color:rgba(255,255,255,0.4);">›</span>
+      <a href="/index.html#services-scroll-wrapper" style="color:rgba(255,255,255,0.6);text-decoration:none;"><span class="fi-text">Palvelut</span><span class="en-text" style="display:none;">Services</span></a>
+      <span style="color:rgba(255,255,255,0.4);">›</span>
+      <span style="color:var(--brand);font-weight:500;"><span class="fi-text">Määräaikaishuolto</span><span class="en-text" style="display:none;">Maintenance Service</span></span>
+    </div>
+  </div>
   <img src="/images/jarrut/random/IMG_9387.webp" alt="Jarrujen vaihto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;background:#0a0a0a;display:none;" class="hero-image">
   <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,5,5,0.60) 0%,rgba(5,5,5,0.75) 100%);z-index:1;"></div>
   <div style="position:relative;z-index:2;text-align:center;max-width:900px;padding:40px 24px;">
